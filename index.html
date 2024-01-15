@@ -6,25 +6,37 @@
     <title>Exclusive E-Commerce</title>
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="exclusive-header-continer">
       <div class="exclusive-top-header-container">
-        <div class="top-header-box">
-          <div class="top-header-text-box">
-            <p class="top-header-text">
-              Summer Sale For All Swim Suits And Free Express Delivery - OFF
-              50%!
-            </p>
-            <ul>
-              <li class="top-header-link">
-                <a href="#"><strong>ShopNow</strong></a>
-              </li>
-            </ul>
+        <div class="top-header-position">
+          <div class="top-header-box">
+            <div class="top-header-text-box">
+              <p class="top-header-text">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%!
+              </p>
+              <ul>
+                <li class="top-header-link">
+                  <a href="#"><strong>ShopNow</strong></a>
+                </li>
+              </ul>
+            </div>
+            <select class="top-header-language" name="" id="language">
+              <option value="" disabled selected hidden>English</option>
+            </select>
           </div>
-          <select class="top-header-language" name="" id="language">
-            <option value="" disabled selected hidden>English</option>
-          </select>
         </div>
       </div>
       <nav class="exclusive-navbar-container">
@@ -39,7 +51,13 @@
         </div>
         <div class="navbar-user-box">
           <div class="navbar-search-box">
-            <input class="navbar-search" type="search" name="" id="" />
+            <input
+              class="navbar-search"
+              type="search"
+              name=""
+              id=""
+              placeholder="What are you looking for?"
+            />
             <img
               class="navbar-search-icon"
               src="images/homepage-header/search-icon.svg"
@@ -52,7 +70,7 @@
               src="images/homepage-header/wishlist-icon.svg"
               alt=""
             />
-            <span class="like-icon-notification"></span>
+            <span class="like-icon-notification">1</span>
           </div>
           <div class="navbar-shoping-box">
             <img
@@ -60,7 +78,7 @@
               src="images/homepage-header/cart-icon.svg"
               alt=""
             />
-            <span class="shop-icon-notification"></span>
+            <span class="shop-icon-notification">1</span>
           </div>
         </div>
       </nav>
@@ -98,7 +116,7 @@
               <div class="advert-title-logo">
                 <img
                   class="advert-logo"
-                  src="images/homepage-header/apple-icon.svg"
+                  src="images/homepage-header/apple-logo.svg"
                   alt=""
                 />
                 <p class="advert-title">iPhone 14 Series</p>
@@ -106,7 +124,8 @@
               <h1 class="advert-promotion-text">Up to 10% <br />off Voucher</h1>
               <div class="advert-btn-icon">
                 <button class="advert-btn">
-                  Shop Now<img
+                  <span class="advert-btn-text">Shop Now</span
+                  ><img
                     class="advert-arrow-icon"
                     src="images/homepage-header/icons arrow-right.svg"
                     alt=""

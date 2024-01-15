@@ -1,0 +1,219 @@
+.exclusive-top-header-container {
+  background-color: black;
+  margin-bottom: 40px;
+}
+.top-header-position {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.top-header-box {
+  width: 860px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.top-header-text-box {
+  display: flex;
+  gap: 8px;
+}
+.top-header-text {
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+.top-header-link {
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+.top-header-language {
+  outline: none;
+  background-color: transparent;
+  color: #fafafa;
+  border: none;
+}
+.exclusive-navbar-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 150px;
+  justify-content: end;
+  padding-bottom: 16px;
+}
+.navbar-link-logo-box {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-logo {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+}
+.navbar-links-box {
+  display: flex;
+  gap: 48px;
+}
+.navbar-link {
+  display: inline;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.navbar-link:hover {
+  text-decoration-line: underline;
+}
+.navbar-user-box {
+  display: flex;
+  flex: 0.5;
+  gap: 20px;
+  align-items: center;
+}
+.navbar-search-box {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 25px;
+  padding: 7px 12px 7px 20px;
+  background-color: #f5f5f5;
+}
+.navbar-search {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+.navbar-like-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.like-icon-notification,
+.shop-icon-notification {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  top: 0;
+  display: none;
+  content: "";
+  background-color: #db4444;
+  border-radius: 50%;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+.navbar-shoping-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.exclusive-aside-section-continer {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+.exclusive-aside-continer {
+  padding: 40px 16px 0 0;
+}
+.aside-links-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.aside-link {
+  display: inline;
+}
+.link-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 215px;
+}
+.exclusive-advertisement-continer {
+  background-color: black;
+  margin: 40px 0 0 45px;
+  max-width: 890px;
+  flex: 1;
+}
+.advertisement-image-text-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.advertisement-text-box {
+  padding-left: 40px;
+}
+.advert-title-logo {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.advert-logo {
+}
+.advert-title {
+  color: #fafafa;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Poppins", sans-serif;
+}
+.advert-promotion-text {
+  color: #fafafa;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1.92px;
+  padding-bottom: 22px;
+}
+.advert-btn {
+  border: none;
+  border-bottom: 1px solid #fafafa;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.advert-btn-text {
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.advertisement-image-box {
+  padding-top: 15px;
+}
+.advert-image {
+  width: 100%;
+}
+.advertisement-transition-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+.adevert-trans {
+  display: inline;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+}
