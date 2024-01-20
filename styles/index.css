@@ -1,0 +1,154 @@
+/* Section Featured Product - Start*/
+.section-fp{
+    background-color: black;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.fp-container{
+    display: flex;
+    justify-content: center;
+    padding: 0 56px 0 56px;
+}
+.fp-content{
+    padding-top: 69px;
+    display: flex;
+    flex-direction: column;
+}
+.fp-content .fp-content-subtitle{
+    color: #00FF66;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+}
+.fp-content .fp-content-title{
+    color: #fafafa;
+    font-size: 48px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 1.92px;
+    margin: 32px 0;
+}
+.fp-content .fp-countdown{
+    max-width: 320px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.fp-content .fp-countdown .fp-countdown-element{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fp-content .fp-countdown .fp-countdown-element .fp-countdown-element-title{
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+}
+.fp-content .fp-countdown .fp-countdown-element .fp-countdown-element-subtitle{
+    display: block;
+    color: black;
+    font-size: 11px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+}
+.fp-content .fp-buy-btn{
+    width: 171px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 16px 48px;
+    background-color: #00FF66;
+    border-style: none;
+    display: inline-flex;
+    gap: 10px;
+    color: #fafafa;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 69px;
+}
+.fp-content .fp-buy-btn:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.fp-product{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.fp-product .fp-product-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.30;
+    background: #D9D9D9; 
+    box-shadow: 200px 200px 200px; 
+    border-radius: 50%; 
+    filter: blur(150px);
+}
+.fp-product .fp-product-img{
+    width: 100%;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .fp-container{
+        flex-wrap: wrap;
+    }
+    .fp-buy-btn{
+        margin-bottom: 40px !important;
+    }
+    .fp-product{
+        max-width: 442px;
+    }
+    .fp-content{
+        padding-top: 29px;
+    }
+}
+
+@media (max-width: 430px) {
+    .fp-container{
+        padding: 0 28px;
+    }
+    .fp-content-title{
+        font-size: 40px !important;
+        line-height: 50px !important;
+    }
+}
+
+@media (max-width: 370px) {
+    .fp-container{
+        padding: 0 10px;
+    }
+    .fp-countdown{
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+}
+
+@media (max-width: 250px) {
+    .fp-content-title{
+        font-size: 30px !important;
+        line-height: 40px !important;
+    }
+    .fp-buy-btn{
+        margin-bottom: 20px !important;
+        width: 150px;
+        padding: 10px 30px;
+    }
+    .fp-countdown{
+        margin-bottom: 20px !important;
+    }
+}
+/* Section Featured Product - End*/
