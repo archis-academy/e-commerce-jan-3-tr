@@ -162,6 +162,9 @@
         left: 5%;
         bottom: 7%;
     }
+    .na-context{
+        padding-bottom: 40px;
+    }
 }
 @media (max-width:500px){
     .na-row-two{
@@ -172,6 +175,9 @@
     }
     .na-services{
         margin: 80px auto;
+    }
+    .na-context{
+        padding-bottom: 35px;
     }
 }
 @media (max-width:400px){
@@ -191,6 +197,9 @@
     .section-na{
         padding: 10px;
     }
+    .na-context{
+        padding-bottom: 30px;
+    }
 }
 @media (max-width:300px){
     .na-gallery-text-title{
@@ -209,6 +218,9 @@
     .section-na{
         padding: 5px;
     }
+    .na-context{
+        padding-bottom: 25px;
+    }
 }
 @media (max-width:230px){
     .na-gallery-text-women h3{
@@ -223,6 +235,9 @@
     .na-gallery-text-women a{
         font-size: 6px;
         line-height: 12px;
+    }
+    .na-context{
+        padding-bottom: 20px;
     }
 }
 /* Section New Arrivals - End*/
