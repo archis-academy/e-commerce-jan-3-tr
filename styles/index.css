@@ -1,0 +1,228 @@
+/* Section New Arrivals - Start*/
+.section-na{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 25px;
+}
+.na-context{
+    padding-bottom: 60px;
+}
+.na-subtitle-cont{
+    display: flex;
+    gap: 16px;
+}
+.na-subtitle-shape{
+    width: 20px;
+    height: 40px;
+    background: #db4444;
+    border-radius: 4px;
+}
+.na-subtitle{
+    color: #db4444;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.na-title-cont{
+    margin-top: 20px;
+}
+.na-title{
+    color: black;
+    font-size: 36px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+}
+.na-gallery{
+    display: flex;
+    gap: 30px;
+}
+.na-gallery img{
+    display: block;
+    width: 100%;
+}
+.na-gallery-col-one{
+    position: relative;
+    display: flex; 
+    flex: 1 1 0; 
+}
+.na-gallery-text{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.na-gallery-text-women{
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+.na-gallery-text-title{
+    font-family: 'Inter',sans-serif; 
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px; 
+    letter-spacing: 0.72px;
+    color: #fafafa;
+}
+.na-gallery-text-description{
+    margin: 16px 0;
+    color: #fafafa;
+    font-family: 'Poppins',sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px; 
+}
+.na-gallery-text-btn{
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; 
+    color: #fafafa;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.na-gallery-text-btn:hover{
+    display: inline-block;
+    scale: 1.1;
+    color: white;
+}
+.na-gallery-col-two{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    gap: 32px;
+}
+.na-row-one{
+    position: relative;
+    flex: 1 1 0;
+}
+.na-row-two{
+    flex: 1 1 0; 
+    display: flex; 
+    gap: 30px;
+}
+.na-row-col-one{
+    flex: 1 1 0;
+    position: relative;
+}
+.na-row-col-two{
+    flex: 1 1 0;
+    position: relative;
+}
+.na-services{
+    display: flex;
+    margin: 140px auto;
+    gap: 88px;
+    max-width: 943px;
+}
+.na-service-delivery{
+    flex: 1 1 0;
+}
+.na-service-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.na-service-customer{
+    flex: 1 1 0;
+}
+.na-service-guarantee{
+    flex: 1 1 0;
+}
+.na-services h2{
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px; 
+    color: #000;
+    text-align: center;
+}
+.na-services h5{
+    color: #000;
+    font-family: 'Poppins',sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+}
+@media (max-width:738px) {
+    .na-gallery{
+        flex-direction: column;
+    }
+    .na-services{
+        flex-direction: column;
+    }
+    .na-gallery-text-women{
+        left: 5%;
+        bottom: 7%;
+    }
+}
+@media (max-width:500px){
+    .na-row-two{
+        flex-direction: column;
+    }
+    .section-na{
+        padding: 15px;
+    }
+    .na-services{
+        margin: 80px auto;
+    }
+}
+@media (max-width:400px){
+    .na-gallery-text-title{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .na-gallery-text-description{
+        margin: 8px 0;
+        font-size: 10px;
+        line-height: 17px;
+    }
+    .na-gallery-text-btn{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .section-na{
+        padding: 10px;
+    }
+}
+@media (max-width:300px){
+    .na-gallery-text-title{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .na-gallery-text-description{
+        margin: 4px 0;
+        font-size: 6px;
+        line-height: 13px;
+    }
+    .na-gallery-text-btn{
+        font-size: 8px;
+        line-height: 16px;
+    }
+    .section-na{
+        padding: 5px;
+    }
+}
+@media (max-width:230px){
+    .na-gallery-text-women h3{
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .na-gallery-text-women p{
+        margin: 4px 0;
+        font-size: 4px;
+        line-height: 8px;
+    }
+    .na-gallery-text-women a{
+        font-size: 6px;
+        line-height: 12px;
+    }
+}
+/* Section New Arrivals - End*/
