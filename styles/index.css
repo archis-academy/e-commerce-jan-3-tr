@@ -28,10 +28,9 @@
 }
 .column-icons {
   position: absolute;
-  left: 215px;
-  bottom: 160px;
-  width: 15px;
-  height: 15px;
+  right: -1px;
+  top: 15px;
+  width: 20px;
 }
 .product-information {
   font-family: "Poppins", sans-serif;
