@@ -1,0 +1,47 @@
+.products {
+    border: 2px solid red;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+.our-products {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: -25px;
+}
+
+.our-products-box {
+    border: 2px solid red;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.our-products-box-img {
+    height: 50px;
+
+}
+
+.products-h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #DB4444;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.products-h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.our-products-lower{
+    display: flex;
+    
+}
