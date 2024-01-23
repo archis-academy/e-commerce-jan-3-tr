@@ -7,17 +7,20 @@
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 .top-header-box {
   width: 860px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 8px;
   padding: 12px 0;
 }
 .top-header-text-box {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 .top-header-text {
   color: #fafafa;
@@ -42,7 +45,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
-  gap: 150px;
+  gap: 110px;
   justify-content: end;
   padding: 0 20px 16px;
 }
@@ -74,8 +77,8 @@
 }
 .navbar-user-box {
   display: flex;
-  flex: 0.5;
-  gap: 20px;
+  flex: 0.6;
+  gap: 10px;
   align-items: center;
 }
 .navbar-search-box {
@@ -267,10 +270,92 @@
   .side-bar-like-icon {
     display: flex;
   }
+  .exclusive-navbar-container {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .navbar-link-logo-box {
+    flex: 0.5;
+  }
+  .navbar-user-box {
+    flex: 2;
+    justify-content: end;
+    max-width: 280px;
+  }
+  .navbar-search-box {
+    gap: 15px;
+    padding: 7px 8px 7px 10px;
+  }
   .navbar-burger-menu-icon {
     display: block;
   }
   .exclusive-advertisement-continer {
     margin: 40px 0 0 0;
+  }
+}
+@media (max-width: 660px) {
+  .advert-promotion-text {
+    font-size: 25px;
+    line-height: 40px;
+    padding-bottom: 10px;
+  }
+  .advert-logo {
+    width: 24px;
+  }
+  .advert-title {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .advert-title-logo {
+    padding-bottom: 10px;
+    gap: 8px;
+  }
+  .advert-btn-text {
+    font-size: 12px;
+  }
+  .advertisement-image-box {
+    flex: 0.8;
+  }
+  .advertisement-transition-box {
+    transform: translate(0, 0);
+    padding: 20px 0;
+  }
+  .advertisement-text-box {
+    padding-left: 20px;
+  }
+  .advertisement-image-text-box {
+    padding-top: 20px;
+  }
+  .top-header-text {
+    font-size: 10px;
+  }
+  .top-header-link {
+    font-size: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .exclusive-navbar-container {
+    position: relative;
+    padding: 0 20px 50px;
+    align-items: center;
+  }
+  .navbar-search-box {
+    width: 86%;
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    justify-content: space-between;
+  }
+  .advert-promotion-text {
+    font-size: 12px;
+    line-height: 20px;
+    padding-bottom: 8px;
+  }
+  .advert-logo {
+    width: 12px;
+  }
+  .advert-title {
+    font-size: 8px;
+    line-height: 12px;
   }
 }
