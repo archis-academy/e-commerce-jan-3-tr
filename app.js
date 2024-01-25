@@ -1,20 +1,31 @@
 const adevertTrans = document.querySelectorAll(".adevert-trans");
-const advertPages = document.querySelectorAll(".exclusive-advertisement-box");
+const advertPages = document.querySelectorAll(".advertisement-image-text-box");
 console.log(adevertTrans);
-
+let advertİndex = 0;
+let advertİnterval = setInterval(nextAdvert, 5000);
 for (let i = 0; i < adevertTrans.length; i++) {
   adevertTrans[i].addEventListener("click", () => {
+    advertİndex = i;
+    clearInterval(advertİnterval);
+    advertİnterval = setInterval(nextAdvert, 5000);
+    console.log(advertİnterval);
     for (let j = 0; j < adevertTrans.length; j++) {
-      adevertTrans[j].style.background = "#fff";
-      adevertTrans[j].style.border = "none";
-      adevertTrans[j].style.opacity = "0.5";
-      advertPages[j].style.animation = "5s advertAnim ease-in 3s infinite";
+      adevertTrans[j].classList.remove("default-trans");
+      advertPages[j].classList.remove("default-advert");
     }
-    adevertTrans[i].style.background = "#db4444";
-    adevertTrans[i].style.border = "2px solid white";
-    adevertTrans[i].style.opacity = "1";
-    advertPages[i].style.animation = "5s advertAnim ease-in 3s infinite";
+    adevertTrans[i].classList.add("default-trans");
+    advertPages[i].classList.add("default-advert");
   });
+}
+console.log(advertİndex);
+console.log(advertİnterval);
+
+function nextAdvert() {
+  advertPages[advertİndex].classList.remove("default-advert");
+  adevertTrans[advertİndex].classList.remove("default-trans");
+  advertİndex = (advertİndex + 1) % advertPages.length;
+  advertPages[advertİndex].classList.add("default-advert");
+  adevertTrans[advertİndex].classList.add("default-trans");
 }
 /*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");

@@ -161,7 +161,7 @@
   justify-content: space-between;
   width: 215px;
 }
-@keyframes advertAnim {
+/* @keyframes advertAnim {
   from {
     animation-delay: 3s;
     transform: translateX(0);
@@ -170,7 +170,7 @@
     animation-delay: 3s;
     transform: translateX(-100%);
   }
-}
+} */
 .exclusive-advertisement-continer {
   background-color: black;
   margin: 40px 0 0 45px;
@@ -180,19 +180,19 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  white-space: nowrap;
-}
-.exclusive-advertisement-box {
-  display: inline-flex;
-  animation: 5s advertAnim ease-in infinite;
 }
 .advertisement-image-text-box {
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   width: 885px;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  top: 0;
 }
-
+.advertisement-image-text-box.default-advert {
+  display: inline-flex;
+}
 .advertisement-text-box {
   padding-left: 40px;
 }
