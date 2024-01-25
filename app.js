@@ -1,4 +1,5 @@
 const adevertTrans = document.querySelectorAll(".adevert-trans");
+const advertPages = document.querySelectorAll(".exclusive-advertisement-box");
 console.log(adevertTrans);
 
 for (let i = 0; i < adevertTrans.length; i++) {
@@ -7,10 +8,12 @@ for (let i = 0; i < adevertTrans.length; i++) {
       adevertTrans[j].style.background = "#fff";
       adevertTrans[j].style.border = "none";
       adevertTrans[j].style.opacity = "0.5";
+      advertPages[j].style.animation = "5s advertAnim ease-in 3s infinite";
     }
     adevertTrans[i].style.background = "#db4444";
     adevertTrans[i].style.border = "2px solid white";
     adevertTrans[i].style.opacity = "1";
+    advertPages[i].style.animation = "5s advertAnim ease-in 3s infinite";
   });
 }
 /*Featured Product - Start*/
