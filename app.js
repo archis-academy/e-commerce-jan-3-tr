@@ -302,4 +302,8 @@ urunKart.innerHTML = bestSellingProducts.map(
       </div>
       
     </section>`
-).join("");
+    ).join("");
+
+ 
+    
+ 
