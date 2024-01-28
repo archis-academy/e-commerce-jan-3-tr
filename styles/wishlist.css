@@ -93,19 +93,19 @@
 
 .wl-content-img {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 10px;
     margin: auto;
+    transition: 0.2s ease-in;
 }
 
 .wl-black-addtocart {
-    margin-top: -40px;
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: black;
-
+    z-index: 1;
 }
 
 .wl-addtocart-text {
@@ -182,6 +182,11 @@
     cursor: pointer;
 }
 
+.wl-eyes {
+    cursor: pointer;
+
+}
+
 
 .wl-square-up-logos {
     display: flex;
@@ -193,8 +198,8 @@
 }
 
 .wl-only-image-div {
-    width: 230px;
-    height: 225px;
+    width: 270px;
+    height: 186px
 }
 
 .wl-stars-and-rate {
@@ -227,25 +232,52 @@
 .popup-container {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.popup-content {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
     padding: 20px;
+    background-color: #000000;
+    color: white;
+    z-index: 1;
+    width: 200px;
+    height: 350px;
+    max-height: 350px;
+    overflow: scroll;
 }
 
-.close-button {
+.popup-close {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 15px;
+    font-size: 20px;
     cursor: pointer;
+}
+
+.popup-button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.popup-close {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    border-color: white;
+    border-style: solid;
+}
+
+/*Zoom için kodlar */
+.wl-only-image-div {
+    overflow: hidden;
+    position: relative;
+}
+
+.zoomed {
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in-out;
 }

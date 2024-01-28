@@ -35,7 +35,7 @@
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="gucci_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -58,7 +58,7 @@
 
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="cooler_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -80,7 +80,7 @@
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="gp11_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -102,7 +102,7 @@
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="jacket_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -131,14 +131,14 @@
           <div class="wl-content-square">
             <div class="wl-square-up-logos">
               <img src="/images/Discount-percent.png" alt="" class="wl-discount">
-              <img src="/images/Fill Eye.png" alt="" class="wl-dustbin">
+              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
             </div>
             <div class="wl-only-image-div">
               <img src="/images/ideapad-gaming-3i-01-500x500 1.png" alt="" class="wl-content-img">
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="laptop_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -159,14 +159,14 @@
           <div class="wl-content-square">
             <div class="wl-square-up-logos">
               <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/Fill Eye.png" alt="" class="wl-dustbin">
+              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
             </div>
             <div class="wl-only-image-div">
               <img src="/images/computer.png" alt="" class="wl-content-img">
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="monitor_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -187,14 +187,14 @@
           <div class="wl-content-square">
             <div class="wl-square-up-logos">
               <img src="/images/New Button.png" alt="" class="wl-discount">
-              <img src="/images/Fill Eye.png" alt="" class="wl-dustbin">
+              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
             </div>
             <div class="wl-only-image-div">
               <img src="/images/ps-controller1.png" alt="" class="wl-content-img">
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="havit_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -215,14 +215,14 @@
           <div class="wl-content-square">
             <div class="wl-square-up-logos">
               <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/Fill Eye.png" alt="" class="wl-dustbin">
+              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
             </div>
             <div class="wl-only-image-div">
               <img src="/images/keyboard.png" alt="" class="wl-content-img">
             </div>
             <div class="wl-black-addtocart">
               <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text">Add To Cart</button>
+              <button class="wl-addtocart-text" id="ak900_added">Add To Cart</button>
             </div>
           </div>
           <div class="wl-explanations">
@@ -242,12 +242,12 @@
       </div>
     </div>
   </div>
-  <button id="openButton">Pencereyi Aç</button>
-  <div id="popup-cart" class="popup-container">
-    <div class="popup-content">
-      <span id="closeButton" class="close-button">×</span>
-      <p>Popup içeriği burada olabilir.</p>
-    </div>
+
+
+  <div id="popup" class="popup-container">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <p id="popup-header">Eklenenler :<br></p>
+    <p id="popup-content"></p>
   </div>
 
   <script src="wishlist.js"></script>

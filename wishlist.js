@@ -44,12 +44,6 @@ let gucci_addtocartbutton = gucci_addtocart.querySelector(".wl-addtocart-text");
 console.log(gucci_addtocartbutton.textContent);
 
 let cart = [];
-gucci_addtocartbutton.addEventListener('click', function () {
-
-    cart.push(isim_gucci);
-    console.log(cart[0]);
-    alert("ada");
-});
 
 
 
@@ -89,42 +83,109 @@ console.log(cooler_guncel_fiyat.textContent);
 //      Örneğin, alınan ürün adını başka bir yere ekleyebilirsiniz.
 // });
 
+function openPopup(buttonId) {
+    let yeniSatir = document.createElement("br");
 
-var openButton = document.getElementById('openButton');
-var popupcart = document.getElementById('popup-cart');
-var closeButton = document.getElementById('closeButton');
+    let popup = document.getElementById('popup');
+    let popupContent = document.getElementById('popup-content');
 
-openButton.addEventListener('click', function () {
-    popupcart.style.display = 'block';
-});
+    // Her butona özgü içerik ataması
+    if (buttonId === 'gucci_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\nGucci Bag is added';
 
-closeButton.addEventListener('click', function () {
-    popupcart.style.display = 'none';
-});
+    } else if (buttonId === 'cooler_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\nCooler is added';
 
-popupcart.addEventListener('click', function (event) {
-    if (event.target === popup - cart) {
-        popupcart.style.display = 'none';
+    } else if (buttonId === 'gp11_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\ngp11 is added';
+
+    } else if (buttonId === 'jacket_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\njacket is added';
+
+    } else if (buttonId === 'laptop_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\nLaptop is added';
+
+    } else if (buttonId === 'monitor_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\nMonitor is added';
+
+    } else if (buttonId === 'havit_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\nHavit is added';
     }
+    else if (buttonId === 'ak900_added') {
+        popupContent.appendChild(yeniSatir);
+        popupContent.innerText = popupContent.textContent + '\nAk900 is added';
+    }
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    let popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+// Butonlara tıklandığında ilgili popup'ı açan fonksiyon
+document.getElementById('gucci_added').addEventListener('click', function () {
+    openPopup('gucci_added');
+});
+
+document.getElementById('cooler_added').addEventListener('click', function () {
+    openPopup('cooler_added');
+});
+
+document.getElementById('gp11_added').addEventListener('click', function () {
+    openPopup('gp11_added');
+});
+
+document.getElementById('jacket_added').addEventListener('click', function () {
+    openPopup('jacket_added');
+});
+
+document.getElementById('laptop_added').addEventListener('click', function () {
+    openPopup('laptop_added');
+});
+
+document.getElementById('monitor_added').addEventListener('click', function () {
+    openPopup('monitor_added');
+});
+
+document.getElementById('havit_added').addEventListener('click', function () {
+    openPopup('havit_added');
+});
+
+document.getElementById('ak900_added').addEventListener('click', function () {
+    openPopup('ak900_added');
 });
 
 
 
 
+let zoomContainers = document.querySelectorAll('.wl-only-image-div');
 
+zoomContainers.forEach(function (zoomContainer) {
+    let zoomImage = zoomContainer.querySelector('.wl-content-img');
 
+    zoomContainer.addEventListener('mouseenter', function () {
+        zoomImage.classList.add('zoomed');
+    });
 
+    zoomContainer.addEventListener('mouseleave', function () {
+        zoomImage.classList.remove('zoomed');
+    });
 
+    zoomContainer.addEventListener('mousemove', function (e) {
+        let x = (e.clientX - zoomContainer.offsetLeft) / zoomContainer.clientWidth;
+        let y = (e.clientY - zoomContainer.offsetTop) / zoomContainer.clientHeight;
 
-
-
-
-
-
-
-
-
-
+        zoomImage.style.transformOrigin = (x * 100) + '% ' + (y * 100) + '%';
+    });
+});
 
 
 
