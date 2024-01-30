@@ -267,11 +267,13 @@ const urunler = [
   },
 ];
 
+
 function indirimYap(fiyat, indirimYuzdesi) {
 return fiyat - (fiyat * indirimYuzdesi) / 100;
 }
+
 bestSellingProducts = [];
-bestSellingProducts.push(urunler[2],urunler[3], urunler[4],urunler[5]);
+bestSellingProducts.push(urunler[2],urunler[7], urunler[4],urunler[5]);
 const urunKart = document.querySelector(".cl-boxes");
 
 urunKart.innerHTML = bestSellingProducts.map(
@@ -303,6 +305,9 @@ urunKart.innerHTML = bestSellingProducts.map(
     
   </section>`
   ).join("");
+
+  
+ 
 
 /*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
