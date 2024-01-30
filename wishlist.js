@@ -17,13 +17,13 @@
   }
   paketcard.innerHTML = paketler.map((paket) => 
    `
-   <div class="card">
+   <div class="container-card">
    <img onlick="deleteurun(${paket.id})" class="icons" src="images/icon-delete.svg"/>
-     <img class="canta" src="${paket.image}" alt="${paket.title}" />
-     <p class="lorem">Add To Cart</p>
+     <img class="column-product" src="${paket.image}" alt="${paket.title}" />
+     <p class="col-paragraph">Add To Cart</p>
      <img class="computer" src="images/Cart1.svg" alt="" />
      <div>
-       <p class="gucci">${paket.title
+       <p class="explanation-product">${paket.title
            .substring(0, 20)
            .concat(" ...")
        }</p>
@@ -37,11 +37,11 @@
 
   justForYouList.innerHTML = justForYou.map((paket) => 
   `
-  <div class="card">
-    <img class="canta" src="${paket.image}" alt="${paket.title}" />
-    <p class="lorem">Add To Cart</p>
+  <div class="container-card">
+    <img class="column-product" src="${paket.image}" alt="${paket.title}" />
+    <p class="col-paragraph">Add To Cart</p>
     <div>
-      <p class="gucci">${paket.title
+      <p class="explanation-product">${paket.title
           .substring(0, 20)
           .concat(" ...")
       }</p>
@@ -50,11 +50,11 @@
       <p>${paket.price}₺</p>
     </div>
     <div class="vectors">
-    <img class="vector" src="images/Vector.png" alt="yıldızlar" />
-    <img class="vector" src="images/Vector.png" alt="yıldızlar" />
-    <img class="vector" src="images/Vector.png" alt="yıldızlar" />
-    <img class="vector" src="images/Vector.png" alt="yıldızlar" />
-    <img class="vector" src="images/Vector.png" alt="yıldızlar" />
+    <img class="vector" src="images/Vector.png" alt="" />
+    <img class="vector" src="images/Vector.png" alt="" />
+    <img class="vector" src="images/Vector.png" alt="" />
+    <img class="vector" src="images/Vector.png" alt="" />
+    <img class="vector" src="images/Vector.png" alt="" />
   </div>
   </div>
   `
