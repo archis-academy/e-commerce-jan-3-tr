@@ -1,11 +1,10 @@
   const adimlar =JSON.parse(localStorage.getItem("ürünler"));
-  console.log(adimlar);
   
   const kalanPaketler =[];
   const paketler = [];
   const justForYou=[];
   const justForYouList =document.getElementById("justForYou");
-  justForYou.push(adimlar[1], adimlar[2], adimlar[3], adimlar[4]);
+  justForYou.push(adimlar[1], adimlar[2], adimlar[3], adimlar[15]);
 
   paketler.push(adimlar[8], adimlar[9], adimlar[10], adimlar[11]);
   const paketcard = document.getElementById("paketcard");
@@ -90,6 +89,7 @@
       `
     ).join("");
   }
+
   renderUrunler();
 
   

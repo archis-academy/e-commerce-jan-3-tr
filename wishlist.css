@@ -1,3 +1,60 @@
+.header-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  color: #fafafa;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  height: 50px;
+}
+.nav-bars{
+
+
+}
+.title-p{
+  color: var(--Text2, #000);
+  font-family: "Inter",sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+}
+.li-p{
+  color: var(--Text2, #000);
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+.eng {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-col-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 600px;
+  height: 18px;
+}
+.list-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: -200px;
+
+}
 .containers {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +74,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: -300px;
   position: relative;
 }
 .columns-menu,
@@ -26,6 +82,7 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  position: relative;
 }
 .col-p {
   font-family: "Poppins", sans-serif;
@@ -84,6 +141,22 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+
+.oranger {
+  border-radius: 4px;
+  background-color: #db4444;
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  gap: 10px;
+  position: absolute;
+  top: 80px;
+  left: 35px;
 }
 .prices {
   font-family: "Poppins", sans-serif;
