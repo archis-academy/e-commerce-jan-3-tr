@@ -25,6 +25,7 @@
 }
 
 .products-h5 {
+    border: 2px solid red;
     font-family: 'Poppins', sans-serif;
     color: #DB4444;
     font-size: 16px;
@@ -34,6 +35,7 @@
 }
 
 .products-h3 {
+    border: 2px solid red;
     font-family: 'Inter', sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -44,4 +46,45 @@
 .our-products-lower{
     display: flex;
     
+}
+
+.our-products-box-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.products-button{
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+}
+.viewbtn{
+    border: 2px solid red;
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.button-view{
+    background-color: #DB4444;
+    color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 24px; 
+    border: none;
+    border: 5px;
+    padding: 5px 20px 5px 20px;
+
+}
+
+.samet{
+    display: flex;
+}
+
+.samet-h1{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
