@@ -22,10 +22,10 @@
         <div class="login-form-context">
           <h2 class="login-title">Log in to Exclusive</h2>
           <h5 class="login-subtitle">Enter your details below</h5>
-          <form class="login-form">
+          <form class="login-form" id="login-form">
             <input
               class="login-form-text"
-              id="name"
+              id="email-login"
               type="text"
               placeholder="Email or Phone Number"
               required
@@ -33,7 +33,7 @@
             />
             <input
               class="login-form-password"
-              id="password"
+              id="password-login"
               type="password"
               placeholder="Password"
               required
@@ -41,7 +41,7 @@
             />
 
             <div class="login-form-btn-forget">
-              <button class="login-form-btn" id="btn" type="submit">Log In</button>
+              <button class="login-form-btn" id="log-in-btn" type="submit">Log In</button>
               <a class="login-form-forget" href="#">Forget Password?</a>
             </div>
 
@@ -53,5 +53,6 @@
         </div>
       </div>
     </section>
+    <script src="login.js"></script>
   </body>
 </html>

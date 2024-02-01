@@ -22,11 +22,11 @@
             <div class="register-form-context">
               <h2 class="register-title">Register to Exclusive</h2>
               <h5 class="register-subtitle">Enter your details below</h5>
-              <form class="register-form">
+              <form class="register-form" id="register-form">
                 <input
                   class="register-form-fullname"
                   name="name"
-                  id="name"
+                  id="name-register"
                   type="text"
                   placeholder="Fullname"
                   required
@@ -35,7 +35,7 @@
                 <input
                   class="register-form-mail"
                   name="email"
-                  id="email"
+                  id="email-register"
                   type="text"
                   placeholder="Email or Phone Number"
                   required
@@ -44,7 +44,7 @@
                 <input
                   class="register-form-password"
                   name="password"
-                  id="password"
+                  id="password-register"
                   type="password"
                   placeholder="Password"
                   required
@@ -52,12 +52,13 @@
                 />
     
                 <div class="register-form-btn-container">
-                  <button class="register-form-btn" id="btn" type="submit">Register</button>
+                  <button class="register-form-btn" id="register-btn" type="submit">Register</button>
+                  <a href="login.html">Log In</a>
                 </div>
               </form>
             </div>
         </div>
     </section>
-   
+   <script src="register.js"></script>
 </body>
 </html>
