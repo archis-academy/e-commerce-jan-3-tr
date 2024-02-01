@@ -26,102 +26,12 @@ for (let i = 0; i < dustbin.length; i++) {
     });
 }
 
-let gucci = document.getElementById('gucci-bag');
-let ikincialt_gucci = gucci.querySelector('.wl-explanations');
-
-let isim_gucci = ikincialt_gucci.querySelector(".wl-item-name")
-console.log(isim_gucci.textContent);
-
-let gucci_fiyatlar = ikincialt_gucci.querySelector(".item-prices");
-
-let gucci_guncel_fiyat = gucci_fiyatlar.querySelector(".wl-orange-price");
-console.log(gucci_guncel_fiyat.textContent);
-
-let gucci_square = gucci.querySelector('.wl-content-square');
-let gucci_addtocart = gucci_square.querySelector(".wl-black-addtocart");
-let gucci_addtocartbutton = gucci_addtocart.querySelector(".wl-addtocart-text");
-
-console.log(gucci_addtocartbutton.textContent);
-
-let cart = [];
-
-
-
-
-let liquidcooler = document.getElementById('liquid-cooler');
-let ikincialt_liquidcooler = liquidcooler.querySelector('.wl-explanations');
-
-let isim_cooler = ikincialt_liquidcooler.querySelector(".wl-item-name")
-console.log(isim_cooler.textContent);
-
-let cooler_fiyatlar = ikincialt_liquidcooler.querySelector(".item-prices");
-
-let cooler_guncel_fiyat = cooler_fiyatlar.querySelector(".wl-orange-price");
-console.log(cooler_guncel_fiyat.textContent);
-
-
-
-
-
-
-//  Wishlist item containerını seç
-// let wishlistItem = document.querySelector('.wishlist-one-div');
-
-//  Add To Cart butonunu seç
-// let addToCartButton = wishlistItem.querySelector('.wl-addtocart-text');
-
-//  Ürün adını gösteren elementi seç
-// let itemNameElement = wishlistItem.querySelector('.wl-item-name');
-
-//  Add To Cart butonuna tıklama olayını ekle
-// addToCartButton.addEventListener('click', function () {
-//     // Ürün adını al ve konsola yazdır
-//     let itemName = itemNameElement.textContent.trim();
-//     console.log('Ürün Adı: ' + itemName);
-
-//      Burada istediğiniz işlemleri gerçekleştirebilirsiniz.
-//      Örneğin, alınan ürün adını başka bir yere ekleyebilirsiniz.
-// });
 
 function openPopup(buttonId) {
     let yeniSatir = document.createElement("br");
-
     let popup = document.getElementById('popup');
     let popupContent = document.getElementById('popup-content');
 
-    // Her butona özgü içerik ataması
-    if (buttonId === 'gucci_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\nGucci Bag is added';
-
-    } else if (buttonId === 'cooler_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\nCooler is added';
-
-    } else if (buttonId === 'gp11_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\ngp11 is added';
-
-    } else if (buttonId === 'jacket_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\njacket is added';
-
-    } else if (buttonId === 'laptop_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\nLaptop is added';
-
-    } else if (buttonId === 'monitor_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\nMonitor is added';
-
-    } else if (buttonId === 'havit_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\nHavit is added';
-    }
-    else if (buttonId === 'ak900_added') {
-        popupContent.appendChild(yeniSatir);
-        popupContent.innerText = popupContent.textContent + '\nAk900 is added';
-    }
     popup.style.display = 'block';
 }
 
@@ -130,44 +40,7 @@ function closePopup() {
     popup.style.display = 'none';
 }
 
-// Butonlara tıklandığında ilgili popup'ı açan fonksiyon
-document.getElementById('gucci_added').addEventListener('click', function () {
-    openPopup('gucci_added');
-});
-
-document.getElementById('cooler_added').addEventListener('click', function () {
-    openPopup('cooler_added');
-});
-
-document.getElementById('gp11_added').addEventListener('click', function () {
-    openPopup('gp11_added');
-});
-
-document.getElementById('jacket_added').addEventListener('click', function () {
-    openPopup('jacket_added');
-});
-
-document.getElementById('laptop_added').addEventListener('click', function () {
-    openPopup('laptop_added');
-});
-
-document.getElementById('monitor_added').addEventListener('click', function () {
-    openPopup('monitor_added');
-});
-
-document.getElementById('havit_added').addEventListener('click', function () {
-    openPopup('havit_added');
-});
-
-document.getElementById('ak900_added').addEventListener('click', function () {
-    openPopup('ak900_added');
-});
-
-
-
-
 let zoomContainers = document.querySelectorAll('.wl-only-image-div');
-
 zoomContainers.forEach(function (zoomContainer) {
     let zoomImage = zoomContainer.querySelector('.wl-content-img');
 
@@ -190,3 +63,61 @@ zoomContainers.forEach(function (zoomContainer) {
 
 
 
+let items = [
+    {
+        id: 1,
+        itemName: "Gucci Duffle Bag",
+        price: "$960",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 2,
+        itemName: "RGB liquid CPU Cooler",
+        price: "$1960",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 3,
+        itemName: "GP11 Shooter USB Gamepad",
+        price: "$550",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 4,
+        itemName: "Quilted Satin Jacket",
+        price: "$750",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 5,
+        itemName: "ASUS FHD Gaming Laptop",
+        price: "$960",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 6,
+        itemName: "IPS LCD Gaming Monitor",
+        price: "$1160",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 7,
+        itemName: "HAVIT HV-G92 Gamepad",
+        price: "$560",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+    {
+        id: 8,
+        itemName: "AK-900 Wired Keyboard",
+        price: "$200",
+        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
+        discount: true,
+    },
+];
