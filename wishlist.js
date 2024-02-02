@@ -1,4 +1,4 @@
-const productcard = document.getElementById("productcard");
+const productcard = document.getElementById("productcard"); 
 
 function renderUrunler() {
   const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts"));
