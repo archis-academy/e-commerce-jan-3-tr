@@ -140,3 +140,54 @@ userIconOpen.addEventListener("click", () => {
     isOpenUserCard = !isOpenUserCard;
   }
 });
+function indirimYap(fiyat, indirimYuzdesi) {
+  return fiyat - (fiyat * indirimYuzdesi) / 100;
+}
+bestSellingProducts = [];
+getUrunlerByCategory().then((urunler) => {
+  bestSellingProducts.push(urunler[2], urunler[3], urunler[4], urunler[6]);
+  const urunKart = document.querySelector(".cl-boxes");
+
+  urunKart.innerHTML = bestSellingProducts
+    .map(
+      (urun) =>
+        `<section class="productCard">
+    <div class="box-img">
+        <div class="column-icons">
+          <img src="images/heart small.png" alt="" />
+          <img src="images/Group.png" alt="" />
+        </div>
+        <img class="product-images" src="${urun.image}" alt="${urun.title}" />
+    </div>
+    <div><p class="product-information">${urun.title
+      .substring(0, 20)
+      .concat(" ...")} </p>
+    </div>
+    <div class="prices">
+      <p class="price">${urun.price}₺</p>
+      <strike class="discounted-price">${indirimYap(urun.price, 20)}₺</strike>
+    </div>
+    <div class="stars-icons">
+      <img src="images/Vector.png" alt="" />
+      <img src="images/Vector.png" alt="" />
+      <img src="images/Vector.png" alt="" />
+      <img src="images/Vector.png" alt="" />
+      <img src="images/Vector.png" alt="" />
+      <p class="point">(65)</p>
+    </div>
+    
+  </section>`
+    )
+    .join("");
+});
+const logOut = document.querySelector("#isLogOut");
+isLogin = JSON.parse(localStorage.getItem("isLogin"));
+logOut.addEventListener("click", () => {
+  console.log("test");
+  isLogin = false;
+  localStorage.setItem("isLogin", isLogin);
+  window.location.href = "login.html";
+});
+if (isLogin == null) {
+  window.location.href = "register.html";
+}
