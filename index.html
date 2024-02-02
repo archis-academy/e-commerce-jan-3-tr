@@ -43,10 +43,9 @@
         <div class="navbar-link-logo-box">
           <h1 class="navbar-logo">Exclusive</h1>
           <ul class="navbar-links-box">
-            <li class="navbar-link"><a href="#">Home</a></li>
+            <li class="navbar-link"><a href="index.html">Home</a></li>
             <li class="navbar-link"><a href="#">Contact</a></li>
             <li class="navbar-link"><a href="#">About</a></li>
-            <li class="navbar-link"><a href="#">Sign Up</a></li>
           </ul>
         </div>
         <div class="navbar-user-box">
@@ -63,6 +62,7 @@
               src="images/homepage-header/search-icon.svg"
               alt=""
             />
+            <div id="" class="search-category-data"></div>
           </div>
           <div class="navbar-like-box">
             <img
@@ -79,6 +79,81 @@
               alt=""
             />
             <span class="shop-icon-notification">1</span>
+          </div>
+          <div class="navbar-user-logIn-box">
+            <img
+              class="navbar-user-icon"
+              src="images/homepage-header/user-icon.svg"
+              alt="user-icon"
+            />
+            <div class="user-logIn-links-card">
+              <ul class="user-logIn-links-list">
+                <li>
+                  <a class="user-logIn-link" href="#">
+                    <svg
+                      class="user-logIn-icon"
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Manage My Account</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Group.svg"
+                    />
+                    My Order</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/icon-cancel.svg"
+                    />
+                    My Cancellations</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Icon-Reviews.svg"
+                    />
+                    My Reviews</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Icon-logout.svg"
+                    />
+                    Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
           <img
             class="navbar-burger-menu-icon"
@@ -103,7 +178,10 @@
           </li>
           <li class="aside-link">
             <a class="link-dropdown mens-dropdown" href="#">
-              <div id="categoryData" class="category-data"></div>
+              <div
+                id="categoryData"
+                class="category-data mens-category-data"
+              ></div>
               <p>Men’s Fashion</p>
               <img
                 class="link-dropdown-arrow"
@@ -232,10 +310,80 @@
           />
           <span class="like-icon-notification">1</span>
         </div>
-        <img
-          class="side-bar-bottom-icon"
-          src="images/homepage-header/user-icon.svg"
-        />
+        <div class="bottom-side-user-box">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/user-icon.svg"
+          />
+          <div class="user-logIn-links-card bottom-side-bar-card">
+            <ul class="user-logIn-links-list">
+              <li>
+                <a class="user-logIn-link" href="#">
+                  <svg
+                    class="user-logIn-icon"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Manage My Account</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Group.svg"
+                  />
+                  My Order</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/icon-cancel.svg"
+                  />
+                  My Cancellations</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-Reviews.svg"
+                  />
+                  My Reviews</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-logout.svg"
+                  />
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
     <!-- Featured Product -->
@@ -362,5 +510,6 @@
       </div>
     </section>
     <script src="app.js"></script>
+    <script src="shared.js"></script>
   </body>
 </html>

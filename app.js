@@ -1,78 +1,3 @@
-const apiEndPoint = "https://fakestoreapi.com/products";
-const searchInput = document.querySelector("#searchInput");
-async function getUrunlerByCategory(kategori) {
-  const responseUrunler = await fetch(`${apiEndPoint}?category=${kategori}`);
-  const urunler = await responseUrunler.json();
-  return urunler;
-}
-
-function kategoriUrunEkleme(kategori) {
-  const urunListesiDiv = document.getElementById("categoryData");
-  const womansCategoryBtn = document.querySelector(".womans-dropdown");
-  const mensCategoryBtn = document.querySelector(".mens-dropdown");
-  let isOpenWoman = false;
-  let isOpenMen = false;
-
-  womansCategoryBtn.addEventListener("click", () => {
-    if (!isOpenWoman) {
-      urunListesiDiv.style.display = "block";
-      isOpenMen = false;
-      isOpenWoman = !isOpenWoman;
-
-      console.log("deneme");
-    } else {
-      urunListesiDiv.style.display = "none";
-      isOpenWoman = !isOpenWoman;
-    }
-  });
-  mensCategoryBtn.addEventListener("click", () => {
-    if (!isOpenMen) {
-      urunListesiDiv.style.display = "block";
-      isOpenWoman = false;
-      isOpenMen = !isOpenMen;
-    } else {
-      urunListesiDiv.style.display = "none";
-      isOpenMen = !isOpenMen;
-    }
-  });
-  getUrunlerByCategory(kategori).then((urunler) => {
-    searchInput.addEventListener("keyup", (event) => {
-      const filteredProducts = urunler.filter((urun) => {
-        return urun.title.toLowerCase();
-      });
-      console.log(filteredProducts);
-    });
-
-    urunler.forEach((urun) => {
-      const urunDiv = document.createElement("div");
-      urunDiv.className = "category-urun";
-
-      urunDiv.innerHTML = `
-      <img class="category-images" src="${urun.image}"/>
-      <div>
-      <h6 class="category-name">${urun.category}</h6>
-      <p class="category-title">${urun.title}</p>
-      </div>
-       `;
-      womansCategoryBtn.addEventListener("click", () => {
-        if (urun.category == "women's clothing") {
-          urunListesiDiv.appendChild(urunDiv);
-        } else {
-          urunListesiDiv.removeChild(urunDiv);
-        }
-      });
-      mensCategoryBtn.addEventListener("click", () => {
-        if (urun.category == "men's clothing") {
-          urunListesiDiv.appendChild(urunDiv);
-        } else {
-          urunListesiDiv.removeChild(urunDiv);
-        }
-      });
-    });
-  });
-}
-
-kategoriUrunEkleme("title");
 const adevertTrans = document.querySelectorAll(".adevert-trans");
 const advertPages = document.querySelectorAll(".advertisement-image-text-box");
 console.log(adevertTrans);
@@ -92,32 +17,6 @@ for (let i = 0; i < adevertTrans.length; i++) {
     advertPages[i].classList.add("default-advert");
   });
 }
-console.log(advertİndex);
-console.log(advertİnterval);
-
-function nextAdvert() {
-  advertPages[advertİndex].classList.remove("default-advert");
-  adevertTrans[advertİndex].classList.remove("default-trans");
-  advertİndex = (advertİndex + 1) % advertPages.length;
-  advertPages[advertİndex].classList.add("default-advert");
-  adevertTrans[advertİndex].classList.add("default-trans");
-}
-
-const burgerMenu = document.querySelector(".navbar-burger-menu-icon");
-const asideBar = document.querySelector(".exclusive-aside-continer");
-const scrollBody = document.body;
-let isBurgerOpen = false;
-burgerMenu.addEventListener("click", () => {
-  if (!isBurgerOpen) {
-    asideBar.style.display = "inline-block";
-    scrollBody.style.overflowY = "hidden";
-    isBurgerOpen = !isBurgerOpen;
-  } else {
-    asideBar.style.display = "none";
-    scrollBody.style.overflowY = "scroll";
-    isBurgerOpen = !isBurgerOpen;
-  }
-});
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 1010) {
     asideBar.style.display = "inline-block";
@@ -128,6 +27,14 @@ window.addEventListener("resize", () => {
     isBurgerOpen = !isBurgerOpen;
   }
 });
+function nextAdvert() {
+  advertPages[advertİndex].classList.remove("default-advert");
+  adevertTrans[advertİndex].classList.remove("default-trans");
+  advertİndex = (advertİndex + 1) % advertPages.length;
+  advertPages[advertİndex].classList.add("default-advert");
+  adevertTrans[advertİndex].classList.add("default-trans");
+}
+
 /*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
 const fpHours = document.getElementById("fp-hours");
