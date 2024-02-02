@@ -28,9 +28,7 @@ function renderUrunler() {
       `
       )
       .join("");
-  } else {
-    productcard.innerHTML = `<p>Wishlist is empty</p>`;
-  }
+  } 
 }
 
 renderUrunler();
