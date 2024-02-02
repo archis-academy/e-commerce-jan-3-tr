@@ -4,252 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exclusive E-Commerce Wishlist</title>
-  <link rel="stylesheet" href="styles/shared.css">
-  <link rel="stylesheet" href="styles/wishlist.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet" />
-
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="wishlist.css" />
+  <link rel="stylesheet" href="wishlist.js" />
+  <link rel="stylesheet" href="styles/shared.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="wishlist-div">
-    <div class="wishlist-up">
-      <div class="wishlist-header">
-        <div class="wishlist-header-left">
-          Wishlist(4)
-        </div>
-        <button class="wishlist-header-right">
-          Move All To Bag
-        </button>
-      </div>
-      <div class="wishlist-all-divs">
-        <div class="wishlist-one-div" id="gucci-bag">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount">
-              <img src="/images/dustbin.png" alt="" class="wl-dustbin" id="ornekcop">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/Gucci-Savoy-medium-duffle-bag 1.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="gucci_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">Gucci Duffle Bag</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$960</div>
-              <div class="wl-grey-price">$1160</div>
-            </div>
-          </div>
-        </div>
-        <div class="wishlist-one-div" id="liquid-cooler">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/dustbin.png" alt="" class="wl-dustbin">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/gammaxx-l240-argb-1-500x500 1.png" alt="" class="wl-content-img">
-            </div>
-
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="cooler_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">RGB liquid CPU Cooler</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$1960</div>
-              <div class="wl-grey-price"></div>
-            </div>
-          </div>
-        </div>
-        <div class="wishlist-one-div" id="shooter-gamepad">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/dustbin.png" alt="" class="wl-dustbin">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/ps-controller2.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="gp11_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">GP11 Shooter USB Gamepad</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$550</div>
-              <div class="wl-grey-price"></div>
-            </div>
-          </div>
-        </div>
-        <div class="wishlist-one-div" id="satin-jacket">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/dustbin.png" alt="" class="wl-dustbin">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/satin-jacket 1.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="jacket_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">Quilted Satin Jacket</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$750</div>
-              <div class="wl-grey-price"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <div class="containers">
+    <div class="columns-menu">
+      <h3 class="col-p">Wishlist</h3>
+      <img class="araba" src="images/Cart1.jpg" alt="" />
+      <a class="columns-href" href="#">Move All To Bag</a>
     </div>
-    <div class="wishlist-down">
-      <div class="wishlist-header">
-        <div class="wishlist-header-left">
-          <div class="wl-orange-box"></div>
-          Just For You
-        </div>
-        <button class="wishlist-header-right">
-          See All
-        </button>
-      </div>
-      <div class="wishlist-all-divs">
-        <div class="wishlist-one-div" id="gaming-laptop">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount">
-              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/ideapad-gaming-3i-01-500x500 1.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="laptop_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">ASUS FHD Gaming Laptop</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$960</div>
-              <div class="wl-grey-price">$1160</div>
-            </div>
-            <div class="wl-stars-and-rate">
-              <div class="wl-stars">
-                <img src="/images/Five star.png" alt="" srcset="">
-              </div>
-              <div class="wl-rate">(65)</div>
-            </div>
-          </div>
-        </div>
-        <div class="wishlist-one-div" id="gaming-monitor">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/computer.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="monitor_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">IPS LCD Gaming Monitor</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$1160</div>
-              <div class="wl-grey-price"></div>
-            </div>
-            <div class="wl-stars-and-rate">
-              <div class="wl-stars">
-                <img src="/images/Five star.png" alt="" srcset="">
-              </div>
-              <div class="wl-rate">(65)</div>
-            </div>
-          </div>
-        </div>
-        <div class="wishlist-one-div" id="havit-gamepad">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/New Button.png" alt="" class="wl-discount">
-              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/ps-controller1.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="havit_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">HAVIT HV-G92 Gamepad</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$560</div>
-              <div class="wl-grey-price"></div>
-            </div>
-            <div class="wl-stars-and-rate">
-              <div class="wl-stars">
-                <img src="/images/Five star.png" alt="" srcset="">
-              </div>
-              <div class="wl-rate">(65)</div>
-            </div>
-          </div>
-        </div>
-        <div class="wishlist-one-div" id="wired-keyboard">
-          <div class="wl-content-square">
-            <div class="wl-square-up-logos">
-              <img src="/images/Discount-percent.png" alt="" class="wl-discount-invisible">
-              <img src="/images/Fill Eye.png" alt="" class="wl-eyes">
-            </div>
-            <div class="wl-only-image-div">
-              <img src="/images/keyboard.png" alt="" class="wl-content-img">
-            </div>
-            <div class="wl-black-addtocart">
-              <img src="/images/Cart1.png" alt="" class="wl-addtocart-shopcardimg">
-              <button class="wl-addtocart-text" id="ak900_added">Add To Cart</button>
-            </div>
-          </div>
-          <div class="wl-explanations">
-            <div class="wl-item-name">AK-900 Wired Keyboard</div>
-            <div class="item-prices">
-              <div class="wl-orange-price">$200</div>
-              <div class="wl-grey-price"></div>
-            </div>
-            <div class="wl-stars-and-rate">
-              <div class="wl-stars">
-                <img src="/images/Five star.png" alt="" srcset="">
-              </div>
-              <div class="wl-rate">(65)</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="columns-1" id="productcard"></div>
+    <div class="columns-menu-1">
+      <h3 class="col-just">Just For You</h3>
+      <a class="columns-href" href="#">See All</a>
     </div>
+    <div class="columns-1" id="justForYou"></div>
   </div>
-
-
-  <div id="popup" class="popup-container">
-    <span class="popup-close" onclick="closePopup()">&times;</span>
-    <p id="popup-header">Eklenenler :<br></p>
-    <p id="popup-content"></p>
-  </div>
-
   <script src="wishlist.js"></script>
 </body>
 

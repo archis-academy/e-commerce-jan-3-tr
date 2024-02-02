@@ -1,123 +1,85 @@
-//id ile yapılabilir.
+const productcard = document.getElementById("productcard");
 
-// document.getElementById('ornekcop').addEventListener('click', function () {
-//     var parentElement = document.getElementById('ornekdiv');
+fetch("https://fakestoreapi.com/products")
+    .then(response => response.json())
 
-//     if (parentElement.style.display !== 'none') {
-//         parentElement.style.display = 'none';
-//     } else {
-//         parentElement.style.display = 'block';
-//     }
-// });
+// API'den ürün bilgilerini çek
+fetch("https://fakestoreapi.com/products")
+    .then(response => response.json())
+productcard.innerHTML = htmlContent;
 
-//class ile yapılabilir.
-let dustbin = document.getElementsByClassName('wl-dustbin');
-// Her birine tıklama olayı ekle
-for (let i = 0; i < dustbin.length; i++) {
-    dustbin[i].addEventListener('click', function () {
-        // Tıklanan elementin parent'ını bul
-        let parentElement = this.parentNode.parentNode.parentNode;
-        // Toggle görünürlüğü kapat
-        if (parentElement.style.display !== 'none') {
-            parentElement.style.display = 'none';
-        } else {
-            parentElement.style.display = 'block';
-        }
-    });
+
+function renderUrunler() {
+    const wishlistProducts = JSON.parse(localStorage.getItem("products"));
+
+    if (wishlistProducts) {
+        productcard.innerHTML = wishlistProducts
+            .map(
+                (product) =>
+                    `
+      <div class="container-card">
+        <img onclick="deleteurun(${product.id
+                    })" class="icons" src="images/icon-delete.svg"/>
+        <img class="column-product" src="${product.image}" alt="${product.title
+                    }" />
+        <p class="col-paragraph">Add To Cart</p>
+        <div>
+          <p class="explanation-product">${product.title
+                        .substring(0, 20)
+                        .concat(" ...")}</p>
+        </div>
+        <div class="prices">
+          <p>${product.price}₺</p>
+        </div>
+      </div>
+      `
+            )
+            .join("");
+    } else {
+        productcard.innerHTML = `<p>Wishlist is empty</p>`;
+    }
 }
 
+renderUrunler();
 
-function openPopup(buttonId) {
-    let yeniSatir = document.createElement("br");
-    let popup = document.getElementById('popup');
-    let popupContent = document.getElementById('popup-content');
-
-    popup.style.display = 'block';
+function deleteurun(urunId) {
+    const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts"));
+    const kalanUrunler = wishlistProducts.filter((urun) => {
+        return urun.id !== urunId;
+    });
+    localStorage.setItem("wishlistProducts", JSON.stringify(kalanUrunler));
+    renderUrunler();
 }
 
-function closePopup() {
-    let popup = document.getElementById('popup');
-    popup.style.display = 'none';
-}
+//buradan sonrası chatgpt
 
-let zoomContainers = document.querySelectorAll('.wl-only-image-div');
-zoomContainers.forEach(function (zoomContainer) {
-    let zoomImage = zoomContainer.querySelector('.wl-content-img');
+// birleştiremedim. çünkü idrak edemedim tam olarak. süreç nasıl işliyor? Önce başka bir yerden 
+//bilgileri fotoğrafları alıp html css yazıp sonra mı onları silip apı yazıyoruz. bunun süreçlerini baştan sonra görmem gerek.
+const productcard = document.getElementById("productcard");
 
-    zoomContainer.addEventListener('mouseenter', function () {
-        zoomImage.classList.add('zoomed');
-    });
+// API'den ürün bilgilerini çek
+fetch("https://fakestoreapi.com/products")
+    .then(response => response.json())
+    .then(products => {
+        // Ürünleri işleyerek HTML içeriği oluştur
+        const htmlContent = products
+            .map(product => `
+        <div class="container-card">
+          <!-- ... (diğer HTML içeriği) ... -->
+          <img onclick="deleteurun(${product.id})" class="icons" src="images/icon-delete.svg"/>
+          <img class="column-product" src="${product.image}" alt="${product.title}" />
+          <p class="col-paragraph">Add To Cart</p>
+          <div>
+            <p class="explanation-product">${product.title.substring(0, 20).concat(" ...")}</p>
+          </div>
+          <div class="prices">
+            <p>${product.price}₺</p>
+          </div>
+        </div>
+      `)
+            .join("");
 
-    zoomContainer.addEventListener('mouseleave', function () {
-        zoomImage.classList.remove('zoomed');
-    });
-
-    zoomContainer.addEventListener('mousemove', function (e) {
-        let x = (e.clientX - zoomContainer.offsetLeft) / zoomContainer.clientWidth;
-        let y = (e.clientY - zoomContainer.offsetTop) / zoomContainer.clientHeight;
-
-        zoomImage.style.transformOrigin = (x * 100) + '% ' + (y * 100) + '%';
-    });
-});
-
-
-
-
-let items = [
-    {
-        id: 1,
-        itemName: "Gucci Duffle Bag",
-        price: "$960",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 2,
-        itemName: "RGB liquid CPU Cooler",
-        price: "$1960",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 3,
-        itemName: "GP11 Shooter USB Gamepad",
-        price: "$550",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 4,
-        itemName: "Quilted Satin Jacket",
-        price: "$750",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 5,
-        itemName: "ASUS FHD Gaming Laptop",
-        price: "$960",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 6,
-        itemName: "IPS LCD Gaming Monitor",
-        price: "$1160",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 7,
-        itemName: "HAVIT HV-G92 Gamepad",
-        price: "$560",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-    {
-        id: 8,
-        itemName: "AK-900 Wired Keyboard",
-        price: "$200",
-        image: "images/Gucci-Savoy-medium-duffle-bag 1.png",
-        discount: true,
-    },
-];
+        // Oluşturulan HTML içeriğini sayfada göster
+        productcard.innerHTML = htmlContent;
+    })
+    .catch(error => console.error("API çağrısı başarısız:", error));
