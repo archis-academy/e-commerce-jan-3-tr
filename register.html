@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive E-Commerce Login</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <section class="section-register">
+        <div class="container-register-img">
+            <img src="images/login-image.png" alt="cart" />
+        </div>
+        <div class="container-register-form">
+            <div class="register-form-context">
+              <h2 class="register-title">Register to Exclusive</h2>
+              <h5 class="register-subtitle">Enter your details below</h5>
+              <form class="register-form" id="register-form">
+                <input
+                  class="register-form-fullname"
+                  name="name"
+                  id="name-register"
+                  type="text"
+                  placeholder="Fullname"
+                  required
+                  autocomplete="off"
+                />
+                <input
+                  class="register-form-mail"
+                  name="email"
+                  id="email-register"
+                  type="text"
+                  placeholder="Email or Phone Number"
+                  required
+                  autocomplete="off"
+                />
+                <input
+                  class="register-form-password"
+                  name="password"
+                  id="password-register"
+                  type="password"
+                  placeholder="Password"
+                  required
+                  autocomplete="off"
+                />
+    
+                <div class="register-form-btn-container">
+                  <button class="register-form-btn" id="register-btn" type="submit">Register</button>
+                  <a href="login.html">Log In</a>
+                </div>
+              </form>
+            </div>
+        </div>
+    </section>
+   <script src="register.js"></script>
+</body>
+</html>

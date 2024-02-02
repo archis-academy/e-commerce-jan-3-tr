@@ -1,27 +1,27 @@
-.section-login{
+.section-register{
     display: flex;
     padding: 25px;
-    max-width: 1335px;
+    max-width: 1400px;
     margin: 0 auto;
 }
-.container-login-img{
+.container-register-img{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.container-login-img>img{
+.container-register-img>img{
     width: 100%;
 }
-.container-login-form{
+.container-register-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.login-form-context{
+.register-form-context{
     margin-left: clamp(25px,7vw,129px);
 }
-.login-title{
+.register-title{
     font-family: 'Inter',sans-serif;
     font-size: 36px;
     font-weight: 500;
@@ -29,18 +29,18 @@
     letter-spacing: 1.44px;
     color: black;
 }
-.login-subtitle{
+.register-subtitle{
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; 
     margin: 24px 0 48px 0;
 }
-.login-form{
+.register-form{
     display: flex;
     flex-direction: column;
 }
-.login-form-text{
+.register-form-fullname{
     padding-bottom: 8px;
     border-style: none;
     border-bottom: 1px solid gray;
@@ -50,13 +50,24 @@
     line-height: 24px; 
     outline: none;
 }
-.login-form-text::placeholder{
+.register-form-mail{
+    padding-bottom: 8px;
+    border-style: none;
+    border-bottom: 1px solid gray;
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; 
+    outline: none;
+    margin-top: 40px;
+}
+.register-form-mail::placeholder{
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; 
 }
-.login-form-password{
+.register-form-password{
     margin: 40px 0;
     padding-bottom: 8px;
     border-style: none;
@@ -67,20 +78,30 @@
     line-height: 24px; 
     outline: none;
 }
-.login-form-password::placeholder{
+.register-form-password::placeholder{
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; 
 }
-.login-form-btn-forget{
+.register-form-btn-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+}
+.register-form-btn-container a{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
-    gap: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #db4444;;
 }
-.login-form-btn{
-    width: 143px;
+.register-form-btn{
+    width: 180px;
     height: 56px;
     border-radius: 4px;
     background-color: #db4444;
@@ -91,69 +112,46 @@
     line-height: 24px;
     border-style: none;
 }
-.login-form-btn:hover{
+.register-form-btn:hover{
     transform: scale(1.05);
     cursor: pointer;
 }
-.login-form-forget{
-    display: flex;
-    align-items: center;
-    font-family: 'Poppins',sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #db4444;;
-}
-.login-form-forget:hover{
-    transform: scale(1.1);
-}
-.login-form-register{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Poppins',sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #db4444;;
-}
-.login-form-register a:hover{
-    transform: scale(1.1);
-}
+
 @media (max-width:600px){
-    .section-login{
+    .section-register{
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .login-form-context{
+    .register-form-context{
         width: 100%;
         margin: 50px 0 0 0;
     }
 }
 @media (max-width:275px){
-    .login-form-btn-forget{
+    .register-form-btn-forget{
         flex-wrap: wrap;
     }
-    .section-login{
+    .section-register{
         padding: 10px;
+    }
+    .register-form-btn-container{
+        flex-wrap: wrap;
     }
 }
 @media (max-width:225px){
-    .login-title{
+    .register-title{
         font-size: 30px;
         line-height: 40px;
     }
-    .login-form-context{
+    .register-form-context{
         margin: 10px 0 0 0;
     }
-    .login-subtitle{
+    .register-subtitle{
         margin: 12px 0 24px 0;
     }
-    .login-form-password{
+    .register-form-password{
         margin: 20px 0;
-    }
-    .login-form-register{
-        flex-wrap: wrap;
     }
 }
