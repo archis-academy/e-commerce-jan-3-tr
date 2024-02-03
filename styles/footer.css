@@ -30,12 +30,12 @@ body {
     padding-top: 80px;
 }
 
-.column1 {
+.footer-column1 {
     display: flex;
     flex-direction: column;
 }
 
-.column-header {
+.footer-column-header {
     font-family: Inter;
     font-size: 24px;
     font-weight: 700;
@@ -45,7 +45,7 @@ body {
     padding-bottom: 30px;
 }
 
-.column-content-sub {
+.footer-column-content-sub {
     font-family: Poppins;
     font-size: 20px;
     font-weight: 500;
@@ -55,7 +55,7 @@ body {
     padding-bottom: 20px;
 }
 
-.column-content {
+.footer-column-content {
 
     font-family: Poppins;
     font-size: 16px;
@@ -68,13 +68,13 @@ body {
 
 
 
-.icon-send {
+.footer-icon-send {
     /* İsteğe bağlı olarak ayarlayabilirsiniz */
     transform: translate(150px, -35px);
     /* Yukarıdaki iki satır, ikonun dikeyde ortalanmasını sağlar */
 }
 
-.column1-input {
+.footer-column1-input {
     padding-left: 10px;
     width: 191px;
     height: 40px;
@@ -90,7 +90,7 @@ body {
     /* Metni dikeyde ortala */
 }
 
-.column5-text {
+.footer-column5-text {
     font-family: Poppins;
     font-size: 12px;
     font-weight: 500;
@@ -101,19 +101,19 @@ body {
     padding-bottom: 10px;
 }
 
-.column5-logos {
+.footer-column5-logos {
     display: flex;
     flex-direction: row;
 }
 
-.column5-right {
+.footer-column5-right {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
     padding-bottom: 10px;
 }
 
-.column5-end-logos {
+.footer-column5-end-logos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
