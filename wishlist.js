@@ -51,7 +51,6 @@ const productcard = document.getElementById("productcard");
 const wishlist_item_count = document.getElementById("wishlist-item-count");
 let count = 0;
 
-
 function renderUrunler() {
   // API'den ürün bilgilerini çek
   const wishlistProducts = JSON.parse(localStorage.getItem("products"));// bunda da hiçbirşey almıyoruz. localstoragede bir şey yok?
