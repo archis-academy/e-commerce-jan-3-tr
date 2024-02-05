@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Cards</title>
+  <link rel="stylesheet" href="styles/about.css">
 </head>
 <body>
-    <h1>ali</h1>
+  <main class="container">
+    <div class="box" onclick="cardColor(this, 0)"></div>
+    <div class="box" onclick="cardColor(this, 1)"></div>
+    <div class="box" onclick="cardColor(this, 2)"></div>
+  </main>
+
+  <section class="container-column">
+    <div class="column-img-one">
+      <img class="column-img" src="images/04-perfume.jpg" alt="">
+      <p>Tom Cruise</p>
+    </div>
+    <div class="column-img-two">
+      <img class="column-img" src="images/01-playstation.jpg" alt="">
+      <p>Emma Watson</p>
+    </div>
+    <div class="column-img-three">
+      <img class="column-img" src="images/06-customer.png" alt="">
+      <p>Will Smith</p>
+    </div>
+  </section>
+
+  <div class="button-container">
+    <button class="round-button" onclick="changeImage(0)"></button>
+    <button class="round-button" onclick="changeImage(1)"></button>
+    <button class="round-button" onclick="changeImage(2)"></button>
+  </div>
+
+  <div class="image-container">
+    <img id="main-image" src="" alt="Main Image">
+  </div>
+
+  <script src="about.js"></script>
 </body>
 </html>
