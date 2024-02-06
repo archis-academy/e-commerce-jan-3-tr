@@ -1,13 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive E-Commerce Login</title>
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/login.css">
-  </head>
-  <body>
 
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive E-Commerce Login</title>
+  <link rel="stylesheet" href="styles/shared.css" />
+  <link rel="stylesheet" href="styles/login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <section class="section-login">
+    <div class="container-login-img">
+      <img src="images/login-image.png" alt="cart" />
+    </div>
+    <div class="container-login-form">
+      <div class="login-form-context">
+        <h2 class="login-title">Log in to Exclusive</h2>
+        <h5 class="login-subtitle">Enter your details below</h5>
+        <form class="login-form" id="login-form">
+          <input class="login-form-text" id="email-login" type="text" placeholder="Email or Phone Number" required
+            autocomplete="off" />
+          <input class="login-form-password" id="password-login" type="password" placeholder="Password" required
+            autocomplete="off" />
+
+          <div class="login-form-btn-forget">
+            <button class="login-form-btn" id="log-in-btn" type="submit">Log In</button>
+            <a class="login-form-forget" href="#">Forget Password?</a>
+          </div>
+
+          <div class="login-form-register">
+            <p>Don't have an account?</p>
+            <a href="/register.html">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-columns">
+
+        <div class="footer-column1">
+          <div class="footer-column-header">
+            Exclusive
+          </div>
+          <div class="footer-column-content-sub">
+            Subscribe
+          </div>
+          <div class="footer-column-content">
+            Get 10% off your first order
+          </div>
+          <div class="footer-input-column-div"><input class="footer-column1-input" placeholder="Enter Your E-mail">
+            <img class="footer-icon-send" src="/images/icon-send.svg" alt="" srcset="">
+          </div>
+        </div>
+
+        <div class="footer-column2">
+          <div class="footer-column-header">
+            Support
+          </div>
+          <div class="footer-column-content">
+            111 Bijoy sarani, Dhaka, <br> DH 1515, Bangladesh.
+          </div>
+          <div class="footer-column-content">
+            exclusive@gmail.com
+          </div>
+          <div class="footer-column-content">
+            +88015-88888-9999
+          </div>
+
+        </div>
+
+        <div class="footer-column3">
+          <div class="footer-column-header">
+            Account
+          </div>
+          <div class="footer-column-content">
+            My Account
+          </div>
+          <div class="footer-column-content">
+            Login / Register
+          </div>
+          <div class="footer-column-content">
+            Cart
+          </div>
+          <div class="footer-column-content">
+            Wishlist
+          </div>
+          <div class="footer-column-content">
+            Shop
+          </div>
+        </div>
+
+
+        <div class="footer-column4">
+          <div class="footer-column-header">
+            Quick Link
+          </div>
+          <div class="footer-column-content">
+            Privacy Policy
+          </div>
+          <div class="footer-column-content">
+            Terms Of Use
+          </div>
+          <div class="footer-column-content">
+            FAQ
+          </div>
+          <div class="footer-column-content">
+            Contact
+          </div>
+        </div>
+
+        <div class="footer-column5">
+          <div class="footer-column-header">
+            Download App
+          </div>
+          <div class="footer-column5-text">Save $3 with App New User Only</div>
+          <div class="footer-column5-logos">
+            <div class="footer-column5-left">
+              <img src="/images/qr-code.png" alt="" srcset="">
+            </div>
+            <div class="footer-column5-right">
+              <img src="/images/badge-google-play.svg" alt="" srcset="">
+              <img src="/images/badge-app-store.svg" alt="" srcset="">
+            </div>
+          </div>
+          <div class="footer-column5-end-logos">
+            <img src="/images/icon-facebook.svg" alt="" srcset="">
+            <img src="/images/icon-twitter.svg" alt="" srcset="">
+            <img src="/images/icon-instagram.svg" alt="" srcset="">
+            <img src="/images/icon-linkedin.svg" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-line"></div>
+        <div class="footer-text"><img src="/images/Group.png" alt="" srcset="" id="footer-copyright-img">
+          Copyright
+          Rimel 2022. All right
+          reserved</div>
+      </div>
+    </div>
+  </footer>
+  <script src="login.js"></script>
+</body>
+
 </html>
