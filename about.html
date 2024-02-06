@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Cards</title>
-  <link rel="stylesheet" href="styles/about.css">
-</head>
-<body>
-  <main class="container">
-    <div class="box" onclick="cardColor(this, 0)"></div>
-    <div class="box" onclick="cardColor(this, 1)"></div>
-    <div class="box" onclick="cardColor(this, 2)"></div>
-  </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Cards</title>
+    <link rel="stylesheet" href="styles/about.css" />
+  </head>
+  <body>
+    <section class="container-one">
+      <div class="dev-about-col">
+        <h1 class="title-about">Our Story</h1>
+        <p class="p-container-about">
+          Launced in 2015, Exclusive is South Asia’s premier online shopping
+          makterplace with an active presense in Bangladesh. Supported by wide
+          range of tailored marketing, data and service solutions, Exclusive has
+          10,500 sallers and 300 brands and serves 3 millioons customers across
+          the region. <br />
+          <br /><br />
+          Exclusive has more than 1 Million products to offer, growing at a very
+          fast. Exclusive offers a diverse assotment in categories ranging from
+          consumer.
+        </p>
+      </div>
+      <div class="img-container-about">
+        <img class="side-img" src="images/Side Image.png" alt="" />
+      </div>
+    </section>
 
-  <section class="container-column">
-    <div class="column-img-one">
-      <img class="column-img" src="images/04-perfume.jpg" alt="">
-      <p>Tom Cruise</p>
+    <main class="container-about">
+      <div class="box">
+        <img src="images/Services.png" alt="" />
+        <strong class="number-about">10.5 K</strong>
+        <p>Sallers active our site</p>
+      </div>
+      <div class="box">
+        <img src="images/dolar.png" alt="" />
+        <strong class="number-about">33 K</strong>
+        <p>Customer active in our site</p>
+      </div>
+      <div class="box">
+        <img src="images/dolarss.png" alt="" />
+        <strong class="number-about">45.5 K</strong>
+        <p>Mopnthly Produduct Sale</p>
+      </div>
+      <div class="box">
+        <img src="images/ticket.png" alt="" />
+        <strong class="number-about">25 K</strong>
+        <p>Anual gross sale in our site</p>
+      </div>
+    </main>
+
+    <section class="container-column-about">
+      <div class="column-img-one">
+        <img class="column-img" src="images/04-perfume.jpg" alt="" />
+        <p>Tom Cruise</p>
+      </div>
+      <div class="column-img-two">
+        <img class="column-img" src="images/01-playstation.jpg" alt="" />
+        <p>Emma Watson</p>
+      </div>
+      <div class="column-img-three">
+        <img class="column-img" src="images/06-customer.png" alt="" />
+        <p>Will Smith</p>
+      </div>
+    </section>
+
+    <div class="button-container">
+      <button class="round-button"></button>
+      <button class="round-button"></button>
+      <button class="round-button"></button>
     </div>
-    <div class="column-img-two">
-      <img class="column-img" src="images/01-playstation.jpg" alt="">
-      <p>Emma Watson</p>
+
+    <div class="container-end">
+      <div class="columns-end">
+        <img class="img-end" src="images/ticket.png" alt="" />
+        <strong class="st-end">FREE AND FAST DELIVERY</strong>
+        <p class="p-end">Free delivery for all orders over $140</p>
+      </div>
+      <div class="columns-end">
+        <img class="img-end" src="images/ticket.png" alt="" />
+        <strong class="st-end">24/7 CUSTOMER SERVICE</strong>
+        <p class="p-end">Friendly 24/7 customer support</p>
+      </div>
+      <div class="columns-end">
+        <img class="img-end" src="images/ticket.png" alt="" />
+        <strong class="st-end">MONEY BACK GUARANTEE</strong>
+        <p class="p-end">We reurn money within 30 days</p>
+      </div>
     </div>
-    <div class="column-img-three">
-      <img class="column-img" src="images/06-customer.png" alt="">
-      <p>Will Smith</p>
-    </div>
-  </section>
 
-  <div class="button-container">
-    <button class="round-button" onclick="changeImage(0)"></button>
-    <button class="round-button" onclick="changeImage(1)"></button>
-    <button class="round-button" onclick="changeImage(2)"></button>
-  </div>
-
-  <div class="image-container">
-    <img id="main-image" src="" alt="Main Image">
-  </div>
-
-  <script src="about.js"></script>
-</body>
+    <script src="about.js"></script>
+  </body>
 </html>

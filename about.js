@@ -1,39 +1,43 @@
+const boxes = document.querySelectorAll(".box");
 
-
-const wishlistProducts = JSON.parse(localStorage.getItem("urunler"));
-
-function cardColor(click, index) {
-  const box = document.querySelectorAll(".box");
-
-  box.forEach(function (card) {
-    card.classList.remove("active");
-  });
-
-  click.classList.add("active");
+boxes.forEach((box) => {
+    box.addEventListener("click" , ()=>{
+        boxes.forEach((box) => 
+        box.classList.remove("active"));
+        box.classList.add("active");
+    })
+});
 
  
   
-}
-
-const urunKart = document.querySelector(".container");
-urunKart.innerHTML = wishlistProducts.map((urun) =>
-  `
-  <div class="box" onclick="cardColor(this, ${urun.id - 1})">
-    <img class="orange" src="${urun.image}" alt="">
-    <p class="price">${urun.price}</p>
-    <p class="sl">${urun.title.substring(0, 20).concat("...")}</p>
-  </div>
-`
-).join("");
-
-const images = [
-  "images/04-perfume.jpg",
-  "images/01-playstation.jpg",
-  "images/06-customer.png",
-];
-
-function changeImage(index) {
-  const mainImage = document.getElementById("main-image");
-  mainImage.src = images[index];
-  changeImage(index);
-}
+const imageSets = [
+    ["images/image 46.png", "images/image 47.png", "images/image 51.png"],
+    ["images/iphone-pink.png", "images/login-image.png", "images/qr-code.png"],
+    ["images/playstation5.png", "images/image 46.png", "images/image 51.png"]
+  ];
+  
+  const roundButtons = document.querySelectorAll(".round-button");
+  const columnImages = document.querySelectorAll(".column-img");
+  
+  const imagesPerSet = 3;
+  
+  function updateColumnImages(startIndex) {
+    for (let i = 0; i < columnImages.length; i++) {
+      const imageIndex = startIndex + i;
+      if (imageIndex < imageSets[currentImageSetIndex].length) {
+        columnImages[i].src = imageSets[currentImageSetIndex][imageIndex];
+      } else {
+        columnImages[i].src = ""; 
+      }
+    }
+  }
+  
+  let currentImageSetIndex = 0;
+  
+  roundButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      currentImageSetIndex = index; 
+      updateColumnImages(0);
+    });
+  });
+  
