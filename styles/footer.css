@@ -25,9 +25,10 @@ body {
 
 .footer-columns {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 80px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 30px
 }
 
 .footer-column1 {
@@ -69,26 +70,26 @@ body {
 
 
 .footer-icon-send {
-    /* İsteğe bağlı olarak ayarlayabilirsiniz */
-    transform: translate(150px, -35px);
-    /* Yukarıdaki iki satır, ikonun dikeyde ortalanmasını sağlar */
+    position: absolute;
+    bottom: 22%;
+    right: 5%;
 }
 
 .footer-column1-input {
-    padding-left: 10px;
-    width: 191px;
-    height: 40px;
+    padding: 10px;
     border: 1.5px solid #FAFAFA;
     background-color: transparent;
     border-radius: 5px;
     text-align: left;
-    /* Metni yatayda ortala */
-    display: flex;
-    justify-content: center;
-    /* Metni dikeyde ortala */
-    align-items: center;
-    /* Metni dikeyde ortala */
+    width: 191px;
+    /* word-wrap: break-word; */
 }
+
+/* .footer-column1-input::placeholder {
+    word-wrap: break-word;
+} */
+
+
 
 .footer-column5-text {
     font-family: Poppins;
@@ -104,6 +105,10 @@ body {
 .footer-column5-logos {
     display: flex;
     flex-direction: row;
+}
+
+.footer-input-column-div {
+    position: relative;
 }
 
 .footer-column5-right {
@@ -142,4 +147,25 @@ body {
 #footer-copyright-img {
     transform: translate(0px, 5px);
     opacity: 50%;
+}
+
+
+@media(max-width: 378px) {
+    .footer-columns {
+        justify-content: flex-start;
+    }
+
+    .footer-column5-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 300px) {
+    .footer-column1-input {
+        width: 90%;
+    }
+
+
 }
