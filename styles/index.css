@@ -1,3 +1,142 @@
+.cl-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 30px;
+
+}
+
+.cl-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  max-width: 1350px;
+  flex-wrap: wrap;
+
+}
+
+.box-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 150px;
+  padding: 20px;
+  background-color: rgb(244, 240, 240);
+  position: relative;
+}
+
+.column-icons {
+  position: absolute;
+  right: -1px;
+  top: 15px;
+  width: 20px;
+}
+
+.product-information {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.prices {
+  display: flex;
+  gap: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #db4444;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.discounted-price,
+.point {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.stars-icons {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  gap: 3px;
+}
+
+.header-container {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cl-header-column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.cl-p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.brown {
+  background-color: #db4444;
+  width: 30px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.cl-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.cl-btn {
+  background-color: #db4444;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  padding: 16px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
 /* Section Featured Product - Start*/
 
 body {
@@ -348,6 +487,15 @@ body {
   font-weight: 600;
   line-height: 28px;
   color: #000;
+  text-align: center;
+}
+
+.na-services h5 {
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
   text-align: center;
 }
 
