@@ -266,13 +266,104 @@ const urunler = [
     },
   },
 ];
+function indirimYap(fiyat, indirimYuzdesi) {
+  return fiyat - (fiyat * indirimYuzdesi) / 100;
+}
+bestSellingProducts = [];
+bestSellingProducts.push(urunler[2], urunler[3], urunler[4], urunler[5]);
+const urunKart = document.querySelector(".cl-boxes");
+
+urunKart.innerHTML = bestSellingProducts.map(
+  (urun) =>
+    `<section class="productCard">
+      <div class="box-img">
+          <div class="column-icons">
+            <img src="images/heart small.png" alt="" />
+            <img src="images/Group.png" alt="" />
+          </div>
+          <img src="${urun.image}" alt="${urun.title}" />
+      </div>
+      <div><p class="product-information">${urun.title
+      .substring(0, 20)
+      .concat(" ...")} </p>
+      </div>
+      <div class="prices">
+        <p class="price">${urun.price}₺</p>
+        <strike class="discounted-price">${indirimYap(urun.price, 20)}₺</strike>
+      </div>
+      <div class="stars-icons">
+        <img src="images/Vector.png" alt="" />
+        <img src="images/Vector.png" alt="" />
+        <img src="images/Vector.png" alt="" />
+        <img src="images/Vector.png" alt="" />
+        <img src="images/Vector.png" alt="" />
+        <p class="point">(65)</p>
+      </div>
+      
+    </section>`
+).join("");
+
+/*Featured Product - Start*/
+const fpDays = document.getElementById("fp-days");
+const fpHours = document.getElementById("fp-hours");
+const fpMinutes = document.getElementById("fp-minutes");
+const fpSeconds = document.getElementById("fp-seconds");
+
+let seconds = 86400;
+
+function timer() {
+  let days = Math.floor(seconds / 24 / 60 / 60);
+  let hoursLeft = Math.floor(seconds - days * 86400);
+  let hours = Math.floor(hoursLeft / 3600);
+  let minutesLeft = Math.floor(hoursLeft - hours * 3600);
+  let minutes = Math.floor(minutesLeft / 60);
+  let remainingSeconds = seconds % 60;
+
+  function twoDigits(n) {
+    return n <= 9 ? "0" + n : n;
+  }
+
+  fpDays.innerText = twoDigits(days);
+  localStorage.setItem("remainingDays", days);
+
+  fpHours.innerText = twoDigits(hours);
+  localStorage.setItem("remainingHours", hours);
+
+  fpMinutes.innerText = twoDigits(minutes);
+  localStorage.setItem("remainingMinutes", minutes);
+
+  fpSeconds.innerText = twoDigits(remainingSeconds);
+  localStorage.setItem("remainingSeconds", remainingSeconds);
+
+  if (seconds === 0) {
+    seconds = 86400;
+  } else {
+    seconds--;
+  }
+}
+
+if (localStorage.getItem("remainingDays")) {
+  let remainingDays = parseInt(localStorage.getItem("remainingDays"));
+  let remainingHours = parseInt(localStorage.getItem("remainingHours"));
+  let remainingMinutes = parseInt(localStorage.getItem("remainingMinutes"));
+  let remainingSeconds = parseInt(localStorage.getItem("remainingSeconds"));
+  let totalSeconds =
+    remainingDays * 86400 +
+    remainingHours * 3600 +
+    remainingMinutes * 60 +
+    remainingSeconds;
+  seconds = totalSeconds;
+}
+
+setInterval("timer()", 1000);
+
 
 const newProductsContainer = document.querySelector("#newProductsContainer");
 
 let currentProductsAmountFirst = 0;
 let currentProductsAmountSecond = 8;
 
-async function fetchProducts (){
+async function fetchProducts() {
   const response = await fetch("https://fakestoreapi.com/products");
   const data = await response.json();
 
@@ -281,11 +372,28 @@ async function fetchProducts (){
   const currentProducts = data.slice(currentProductsAmountFirst, currentProductsAmountSecond);
 
   newProductsContainer.innerHTML = currentProducts.map((product) => {
-    return `<div class="samet" >
-              <h1 class = "samet-h1">${product.title}</h1>
-              <img src=(${product.image})" />
-              <p>${product.price}</p>
-            </div>`;
+    return `<div class="newproduct-box" >
+                <div class="newproduct-box-one">
+                 <img  class="newproduct-box-img" src="${product.image}"/>
+                 <div class="newproduct-box-icon">
+                  <button class="newproduct-icon"><img src="images/heart small.png" alt="heart small.png"></button>
+                  <button class="newproduct-icon"><img src="images/"Group.png" alt="Group.png"></button>
+                 </div>
+                </div>
+                 <h1 class="newproduct-box-h1">${product.title}</h1>
+                 <div class="newproduct-box-two">
+                 <p class="newproduct-box-p">$</p>
+                 <p class="newproduct-box-p">${product.price}</p>
+                 <div class="newproduct-box-stars">
+                 <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+                 <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+                 <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+                 <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+                 <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+                 </div>
+                 </div>
+                 </div>
+              </div>`;
   }).join("");
 }
 fetchProducts();
@@ -299,8 +407,8 @@ const changeBtnRight = document.querySelector("#changeBtnRight");
 
 changeBtnRight.addEventListener("click", changeProducts);
 
-function changeProducts () {
-  if(currentProductsAmountSecond === 16){
+function changeProducts() {
+  if (currentProductsAmountSecond === 16) {
     currentProductsAmountFirst = 0;
     currentProductsAmountSecond = 8;
   } else {
@@ -310,8 +418,9 @@ function changeProducts () {
   fetchProducts();
 }
 
-function addToWishlist(product){
-
-  
+function addToWishlist(product) {
 }
+
+
+/*Featured Product - End*/
 
