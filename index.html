@@ -1,169 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive E-Commerce</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/shared.css" />
-    <link rel="stylesheet" href="styles/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Poppins:wght@500&family=Salsa&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Inter:wght@600&family=Poppins:wght@500&family=Salsa&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/index.css">
-  </head>
-  <body>
-    <div id="container" class="header-container">
-      <div class="cl-header-column">
-        <span class="brown"></span>
-        <p class="cl-p">This Month</p>
-      </div>
-      <div class="cl-header-row">
-        <p>Best Selling Products</p>
-        <a class="cl-btn" href="#">View All</a>
-      </div>
-    </div>
-    <div class="cl-container">
-      <div class="cl-boxes">
-   
-      </div>
 
-      <div class="cl-box">
-        
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive E-Commerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/shared.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Poppins:wght@500&family=Salsa&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Inter:wght@600&family=Poppins:wght@500&family=Salsa&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/shared.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+  <div id="container" class="header-container">
+    <div class="cl-header-column">
+      <span class="brown"></span>
+      <p class="cl-p">This Month</p>
+    </div>
+    <div class="cl-header-row">
+      <p>Best Selling Products</p>
+      <a class="cl-btn" href="#">View All</a>
+    </div>
+  </div>
+  <div class="cl-container">
+    <div class="cl-boxes">
+    </div>
+  </div>
+  <!-- Featured Product -->
+  <!-- I use classname's names with fp -->
+  <section class="section-fp">
+    <div class="fp-container">
+      <div class="fp-content">
+        <h5 class="fp-content-subtitle">Categories</h5>
+        <h1 class="fp-content-title">Enhance Your<br />Music Experience</h1>
+        <div class="fp-countdown">
+          <div class="fp-countdown-element">
+            <p class="fp-countdown-element-title" id="fp-days"></p>
+            <p class="fp-countdown-element-subtitle">Days</p>
+          </div>
+          <div class="fp-countdown-element">
+            <p class="fp-countdown-element-title" id="fp-hours"></p>
+            <p class="fp-countdown-element-subtitle">Hours</p>
+          </div>
+          <div class="fp-countdown-element">
+            <p class="fp-countdown-element-title" id="fp-minutes"></p>
+            <p class="fp-countdown-element-subtitle">Minutes</p>
+          </div>
+          <div class="fp-countdown-element">
+            <p class="fp-countdown-element-title" id="fp-seconds"></p>
+            <p class="fp-countdown-element-subtitle">Seconds</p>
+          </div>
+        </div>
+        <button class="fp-buy-btn">Buy Now!</button>
+      </div>
+      <div class="fp-product">
+        <div class="fp-product-shadow"></div>
+        <img class="fp-product-img" src="images/feautured-product.png" alt="feautured-product" />
       </div>
     </div>
- <!-- Featured Product -->
-    <!-- I use classname's names with fp -->
-    <section class="section-fp">
-      <div class="fp-container">
-        <div class="fp-content">
-          <h5 class="fp-content-subtitle">Categories</h5>
-          <h1 class="fp-content-title">Enhance Your<br />Music Experience</h1>
-          <div class="fp-countdown">
-            <div class="fp-countdown-element">
-              <p class="fp-countdown-element-title" id="fp-days"></p>
-              <p class="fp-countdown-element-subtitle">Days</p>
-            </div>
-            <div class="fp-countdown-element">
-              <p class="fp-countdown-element-title" id="fp-hours"></p>
-              <p class="fp-countdown-element-subtitle">Hours</p>
-            </div>
-            <div class="fp-countdown-element">
-              <p class="fp-countdown-element-title" id="fp-minutes"></p>
-              <p class="fp-countdown-element-subtitle">Minutes</p>
-            </div>
-            <div class="fp-countdown-element">
-              <p class="fp-countdown-element-title" id="fp-seconds"></p>
-              <p class="fp-countdown-element-subtitle">Seconds</p>
-            </div>
-          </div>
-          <button class="fp-buy-btn">Buy Now!</button>
-        </div>
-        <div class="fp-product">
-          <div class="fp-product-shadow"></div>
-          <img
-            class="fp-product-img"
-            src="images/feautured-product.png"
-            alt="feautured-product"
-          />
+  </section>
+  <!-- New Arrivals -->
+  <!-- I use classname's names with na -->
+  <section class="section-na">
+    <div class="na-context">
+      <div class="na-subtitle-cont">
+        <div class="na-subtitle-shape"></div>
+        <h5 class="na-subtitle">Featured</h5>
+      </div>
+      <div class="na-title-cont">
+        <h1 class="na-title">New Arrival</h1>
+      </div>
+    </div>
+    <div class="na-gallery">
+      <div class="na-gallery-col-one">
+        <img src="images/01-playstation.jpg" alt="playstation5">
+        <div class="na-gallery-text">
+          <h3 class="na-gallery-text-title">PlayStation 5</h3>
+          <p class="na-gallery-text-description">Black and White version of the PS5<br>coming out on sale.</p>
+          <a class="na-gallery-text-btn" href="#">Shop Now</a>
         </div>
       </div>
-    </section>
-    <!-- New Arrivals -->
-    <!-- I use classname's names with na -->
-    <section class="section-na">
-      <div class="na-context">
-        <div class="na-subtitle-cont">
-          <div class="na-subtitle-shape"></div>
-          <h5 class="na-subtitle">Featured</h5>
-        </div>
-        <div class="na-title-cont">
-          <h1 class="na-title">New Arrival</h1>
-        </div>
-      </div>
-      <div class="na-gallery">
-        <div class="na-gallery-col-one">
-          <img src="images/01-playstation.jpg" alt="playstation5">
-          <div class="na-gallery-text">
-            <h3 class="na-gallery-text-title">PlayStation 5</h3>
-            <p class="na-gallery-text-description">Black and White version of the PS5<br>coming out on sale.</p>
+      <div class="na-gallery-col-two">
+        <div class="na-row-one">
+          <img src="images/02-woman-black-hat.jpg" alt="women collections">
+          <div class="na-gallery-text na-gallery-text-women">
+            <h3 class="na-gallery-text-title">Women’s Collections</h3>
+            <p class="na-gallery-text-description">Featured woman collections that<br>give you another vibe.</p>
             <a class="na-gallery-text-btn" href="#">Shop Now</a>
           </div>
         </div>
-        <div class="na-gallery-col-two">
-          <div class="na-row-one">
-            <img src="images/02-woman-black-hat.jpg" alt="women collections">
-            <div class="na-gallery-text na-gallery-text-women">
-              <h3 class="na-gallery-text-title">Women’s Collections</h3>
-              <p class="na-gallery-text-description">Featured woman collections that<br>give you another vibe.</p>
+        <div class="na-row-two">
+          <div class="na-row-col-one">
+            <img src="images/03-speaker.jpg" alt="speakers">
+            <div class="na-gallery-text">
+              <h3 class="na-gallery-text-title">Speakers</h3>
+              <p class="na-gallery-text-description">Amazon wireless speakers</p>
               <a class="na-gallery-text-btn" href="#">Shop Now</a>
             </div>
           </div>
-          <div class="na-row-two">
-            <div class="na-row-col-one">
-              <img src="images/03-speaker.jpg" alt="speakers">
-              <div class="na-gallery-text">
-                <h3 class="na-gallery-text-title">Speakers</h3>
-                <p class="na-gallery-text-description">Amazon wireless speakers</p>
-                <a class="na-gallery-text-btn" href="#">Shop Now</a>
-              </div>
-            </div>
-            <div class="na-row-col-two">
-              <img src="images/04-perfume.jpg" alt="perfume">
-              <div class="na-gallery-text">
-                <h3 class="na-gallery-text-title">Perfume</h3>
-                <p class="na-gallery-text-description">GUCCI INTENSE OUD EDP</p>
-                <a class="na-gallery-text-btn" href="#">Shop Now</a>
-              </div>
+          <div class="na-row-col-two">
+            <img src="images/04-perfume.jpg" alt="perfume">
+            <div class="na-gallery-text">
+              <h3 class="na-gallery-text-title">Perfume</h3>
+              <p class="na-gallery-text-description">GUCCI INTENSE OUD EDP</p>
+              <a class="na-gallery-text-btn" href="#">Shop Now</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="na-services">
-        <div class="na-service-delivery">
-          <div class="na-service-icon">
-            <img src="images/05-delivery.png" alt="icon-delivery">
+    </div>
+    <div class="na-services">
+      <div class="na-service-delivery">
+        <div class="na-service-icon">
+          <img src="images/05-delivery.png" alt="icon-delivery">
+        </div>
+        <div class="na-service-context">
+          <h2>FREE AND FAST DELIVER</h2>
+          <h5>Free delivery for all orders over $140</h5>
+        </div>
+      </div>
+      <div class="na-service-customer">
+        <div class="na-service-icon">
+          <img src="images/06-customer.png" alt="icon-delivery">
+        </div>
+        <div class="na-service-context">
+          <h2>24/7 CUSTOMER SERVICE</h2>
+          <h5>Friendly 24/7 customer support</h5>
+        </div>
+      </div>
+      <div class="na-service-guarantee">
+        <div class="na-service-icon">
+          <img src="images/07-guarantee.png" alt="icon-delivery">
+        </div>
+        <div class="na-service-context">
+          <h2>MONEY BACK GUARANTEE</h2>
+          <h5>We reurn money within 30 days</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-columns">
+
+        <div class="footer-column1">
+          <div class="footer-column-header">
+            Exclusive
           </div>
-          <div class="na-service-context">
-            <h2>FREE AND FAST DELIVER</h2>
-            <h5>Free delivery for all orders over $140</h5>
+          <div class="footer-column-content-sub">
+            Subscribe
+          </div>
+          <div class="footer-column-content">
+            Get 10% off your first order
+          </div>
+          <div class="footer-input-column-div"><input class="footer-column1-input" placeholder="Enter Your E-mail">
+            <img class="footer-icon-send" src="/images/icon-send.svg" alt="" srcset="">
           </div>
         </div>
-        <div class="na-service-customer">
-          <div class="na-service-icon">
-            <img src="images/06-customer.png" alt="icon-delivery">
+
+        <div class="footer-column2">
+          <div class="footer-column-header">
+            Support
           </div>
-          <div class="na-service-context">
-            <h2>24/7 CUSTOMER SERVICE</h2>
-            <h5>Friendly 24/7 customer support</h5>
+          <div class="footer-column-content">
+            111 Bijoy sarani, Dhaka, <br> DH 1515, Bangladesh.
+          </div>
+          <div class="footer-column-content">
+            exclusive@gmail.com
+          </div>
+          <div class="footer-column-content">
+            +88015-88888-9999
+          </div>
+
+        </div>
+
+        <div class="footer-column3">
+          <div class="footer-column-header">
+            Account
+          </div>
+          <div class="footer-column-content">
+            My Account
+          </div>
+          <div class="footer-column-content">
+            Login / Register
+          </div>
+          <div class="footer-column-content">
+            Cart
+          </div>
+          <div class="footer-column-content">
+            Wishlist
+          </div>
+          <div class="footer-column-content">
+            Shop
           </div>
         </div>
-        <div class="na-service-guarantee">
-          <div class="na-service-icon">
-            <img src="images/07-guarantee.png" alt="icon-delivery">
+
+
+        <div class="footer-column4">
+          <div class="footer-column-header">
+            Quick Link
           </div>
-          <div class="na-service-context">
-            <h2>MONEY BACK GUARANTEE</h2>
-            <h5>We reurn money within 30 days</h5>
+          <div class="footer-column-content">
+            Privacy Policy
+          </div>
+          <div class="footer-column-content">
+            Terms Of Use
+          </div>
+          <div class="footer-column-content">
+            FAQ
+          </div>
+          <div class="footer-column-content">
+            Contact
+          </div>
+        </div>
+
+        <div class="footer-column5">
+          <div class="footer-column-header">
+            Download App
+          </div>
+          <div class="footer-column5-text">Save $3 with App New User Only</div>
+          <div class="footer-column5-logos">
+            <div class="footer-column5-left">
+              <img src="/images/qr-code.png" alt="" srcset="">
+            </div>
+            <div class="footer-column5-right">
+              <img src="/images/badge-google-play.svg" alt="" srcset="">
+              <img src="/images/badge-app-store.svg" alt="" srcset="">
+            </div>
+          </div>
+          <div class="footer-column5-end-logos">
+            <img src="/images/icon-facebook.svg" alt="" srcset="">
+            <img src="/images/icon-twitter.svg" alt="" srcset="">
+            <img src="/images/icon-instagram.svg" alt="" srcset="">
+            <img src="/images/icon-linkedin.svg" alt="" srcset="">
           </div>
         </div>
       </div>
-    </section>
-    <script src="app.js"></script>
-  </body>
+      <div class="footer-bottom">
+        <div class="footer-line"></div>
+        <div class="footer-text"><img src="/images/Group.png" alt="" srcset="" id="footer-copyright-img">
+          Copyright
+          Rimel 2022. All right
+          reserved</div>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
 </html>
