@@ -59,7 +59,8 @@ body {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  padding-bottom: 20px;
+  margin-top: 0px;
+  padding-bottom: 16px;
 }
 
 .footer-column-content {
