@@ -8,12 +8,26 @@ boxes.forEach((box) => {
     })
 });
 
- 
+
+
+
+boxes.forEach((box) => {
+  box.addEventListener("click", () => {
+    // Diğer kutuların üzerindeki vurguları kaldır
+    boxes.forEach((otherBox) => {
+      otherBox.classList.remove('clicked');
+    });
+
+    // Tıklanan kutuyu vurgula
+    box.classList.add('clicked');
+  });
+});
+
   
 const imageSets = [
     ["images/image 46.png", "images/image 47.png", "images/image 51.png"],
-    ["images/iphone-pink.png", "images/login-image.png", "images/qr-code.png"],
-    ["images/playstation5.png", "images/image 46.png", "images/image 51.png"]
+    ["images/resim1.jpg", "images/resim2.jpg", "images/resim3.webp"],
+    ["images/reism3.jpg", "images/image 46.png", "images/image 51.png"]
   ];
   
   const roundButtons = document.querySelectorAll(".round-button");
@@ -40,4 +54,6 @@ const imageSets = [
       updateColumnImages(0);
     });
   });
+
   
+ 

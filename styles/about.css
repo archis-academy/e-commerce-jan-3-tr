@@ -1,7 +1,7 @@
 .container-one,
 .img-container-about {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 200px;
   margin-top: 20px;
@@ -33,6 +33,9 @@
   align-items: center;
   height: 85vh;
   flex-wrap: wrap;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box {
@@ -45,6 +48,7 @@
   align-items: center;
   cursor: pointer;
   gap: 10px;
+  
 }
 .box.active {
   background-color: orangered;
@@ -58,9 +62,17 @@
 }
 .number-about {
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-style: normal;
+  
+}
+.clickable {
+  cursor: pointer;
+}
+
+.clicked {
+  color: white;
 }
 .column-img {
   width: 300px;
@@ -91,14 +103,15 @@
   align-items: center;
   gap: 250px;
   flex-wrap: wrap;
-  
+  text-align: center; 
 }
-.img-end {
-  width: 100px;
-  margin-right: -150px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+.st-end{
+  display: block;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-.p-end {
-  margin-left: -50px;
+.about-p{
+  font-family: "Roboto",sans-serif;
 }
