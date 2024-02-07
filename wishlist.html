@@ -65,12 +65,14 @@
             <span class="like-icon-notification">1</span>
           </div>
           <div class="navbar-shoping-box">
-            <img
-              class="navbar-shop-icon"
-              src="images/homepage-header/cart-icon.svg"
-              alt=""
-            />
-            <span class="shop-icon-notification">1</span>
+            <a href="cart.html">
+              <img
+                class="navbar-shop-icon"
+                src="images/homepage-header/cart-icon.svg"
+                alt=""
+              />
+              <span class="shop-icon-notification">1</span>
+            </a>
           </div>
           <div class="navbar-user-logIn-box">
             <img
@@ -135,7 +137,7 @@
                     My Reviews</a
                   >
                 </li>
-                <li>
+                <li id="isLogOut">
                   <a class="user-logIn-link" href="#"
                     ><img
                       class="user-logIn-icon"
@@ -164,12 +166,14 @@
           />
         </a>
         <div class="navbar-shoping-box side-bar-shop-icon">
-          <img
-            class="navbar-shop-icon"
-            src="images/homepage-header/cart-icon.svg"
-            alt=""
-          />
-          <span class="shop-icon-notification">1</span>
+          <a href="cart.html">
+            <img
+              class="navbar-shop-icon"
+              src="images/homepage-header/cart-icon.svg"
+              alt=""
+            />
+            <span id="shopIconNotice" class="shop-icon-notification">1</span>
+          </a>
         </div>
         <div class="navbar-like-box side-bar-like-icon">
           <a href="wishlist.html">
@@ -178,8 +182,8 @@
               src="images/homepage-header/wishlist-icon.svg"
               alt=""
             />
+            <span id="likeIconNotice" class="like-icon-notification">1</span>
           </a>
-          <span class="like-icon-notification">1</span>
         </div>
         <div class="bottom-side-user-box">
           <img
@@ -243,7 +247,7 @@
                   My Reviews</a
                 >
               </li>
-              <li>
+              <li id="isLogOut">
                 <a class="user-logIn-link" href="#"
                   ><img
                     class="user-logIn-icon"
@@ -298,5 +302,6 @@
       </ul>
     </aside>
     <script src="shared.js"></script>
+    <script src="wishlist.html"></script>
   </body>
 </html>

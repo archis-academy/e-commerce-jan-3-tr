@@ -299,7 +299,7 @@ a {
   .navbar-links-box,
   .navbar-like-box,
   .navbar-shoping-box,
-  .exclusive-aside-continer,
+  .exclusive-aside-section-continer .exclusive-aside-continer,
   .aside-section-between-line,
   .navbar-user-box .navbar-user-logIn-box {
     display: none;

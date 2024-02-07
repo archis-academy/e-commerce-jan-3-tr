@@ -1,19 +1,18 @@
-const adevertTrans = document.querySelectorAll(".adevert-trans");
+const advertTrans = document.querySelectorAll(".advert-trans");
 const advertPages = document.querySelectorAll(".advertisement-image-text-box");
-console.log(adevertTrans);
-let advertİndex = 0;
-let advertİnterval = setInterval(nextAdvert, 5000);
-for (let i = 0; i < adevertTrans.length; i++) {
-  adevertTrans[i].addEventListener("click", () => {
-    advertİndex = i;
-    clearInterval(advertİnterval);
-    advertİnterval = setInterval(nextAdvert, 5000);
-    console.log(advertİnterval);
-    for (let j = 0; j < adevertTrans.length; j++) {
-      adevertTrans[j].classList.remove("default-trans");
+let advertIndex = 0;
+let advertInterval = setInterval(nextAdvert, 5000);
+for (let i = 0; i < advertTrans.length; i++) {
+  advertTrans[i].addEventListener("click", () => {
+    advertIndex = i;
+    clearInterval(advertInterval);
+    advertInterval = setInterval(nextAdvert, 5000);
+    console.log(advertInterval);
+    for (let j = 0; j < advertTrans.length; j++) {
+      advertTrans[j].classList.remove("default-trans");
       advertPages[j].classList.remove("default-advert");
     }
-    adevertTrans[i].classList.add("default-trans");
+    advertTrans[i].classList.add("default-trans");
     advertPages[i].classList.add("default-advert");
   });
 }
@@ -28,11 +27,11 @@ window.addEventListener("resize", () => {
   }
 });
 function nextAdvert() {
-  advertPages[advertİndex].classList.remove("default-advert");
-  adevertTrans[advertİndex].classList.remove("default-trans");
-  advertİndex = (advertİndex + 1) % advertPages.length;
-  advertPages[advertİndex].classList.add("default-advert");
-  adevertTrans[advertİndex].classList.add("default-trans");
+  advertPages[advertIndex].classList.remove("default-advert");
+  advertTrans[advertIndex].classList.remove("default-trans");
+  advertIndex = (advertIndex + 1) % advertPages.length;
+  advertPages[advertIndex].classList.add("default-advert");
+  advertTrans[advertIndex].classList.add("default-trans");
 }
 
 /*Featured Product - Start*/
