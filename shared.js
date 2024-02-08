@@ -214,7 +214,6 @@ getUrunlerByCategory().then((urunler) => {
   defaultFavoriteProduct();
   defaultShopingProduct();
 });
-
 let shopingProducts = [];
 function shopCartProduct(productId) {
   document.getElementById(`productShopCart-${productId}`).style.display =
