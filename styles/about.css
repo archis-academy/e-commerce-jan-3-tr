@@ -1,8 +1,13 @@
-.container-one,
-.img-container-about {
+.container-one {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+.img-container-about {
   gap: 200px;
   margin-top: 20px;
   flex-wrap: wrap;
@@ -48,9 +53,11 @@
   align-items: center;
   cursor: pointer;
   gap: 10px;
-  
 }
 .box.active {
+  background-color: orangered;
+}
+.round-button.active {
   background-color: orangered;
 }
 
@@ -65,7 +72,6 @@
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-style: normal;
-  
 }
 .clickable {
   cursor: pointer;
@@ -74,44 +80,59 @@
 .clicked {
   color: white;
 }
+
 .column-img {
+  display: flex;
+  flex-wrap: wrap;
   width: 300px;
   height: 350px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .round-button {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: gray;
   margin: 0 5px;
   cursor: pointer;
   border: none;
 }
 
-.container-end {
+.container-cl-about {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 250px;
   flex-wrap: wrap;
-  text-align: center; 
+  text-align: center;
+ 
 }
-.st-end{
+.about-p-cl {
   display: block;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-.about-p{
-  font-family: "Roboto",sans-serif;
+.about-p {
+  font-family: "Roboto", sans-serif;
+}
+.about-p-one {
+  font-family: "Roboto", sans-serif;
+  margin-top: -20px;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
 }

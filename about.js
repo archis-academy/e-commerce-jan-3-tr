@@ -13,16 +13,24 @@ boxes.forEach((box) => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
-    // Diğer kutuların üzerindeki vurguları kaldır
     boxes.forEach((otherBox) => {
       otherBox.classList.remove('clicked');
     });
 
-    // Tıklanan kutuyu vurgula
     box.classList.add('clicked');
   });
 });
 
+
+const buttons = document.querySelectorAll(".round-button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((otherBox)=> {
+      otherBox.classList.remove('active');
+    });
+    button.classList.add('active');
+  })
+})
   
 const imageSets = [
     ["images/image 46.png", "images/image 47.png", "images/image 51.png"],
