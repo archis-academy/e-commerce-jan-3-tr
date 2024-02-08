@@ -386,7 +386,15 @@ async function fetchProducts() {
                <div class="newproduct-box-two">
                <p class="newproduct-box-p">$</p>
                <p class="newproduct-box-p">${product.price}</p>
+               <div class="newproduct-box-stars">
+               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
                </div>
+               <p class="point">(32)</p>
+              </div>
             </div>`;
   }).join("");
 }
