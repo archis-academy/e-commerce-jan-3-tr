@@ -214,7 +214,7 @@ getUrunlerByCategory().then((urunler) => {
   defaultFavoriteProduct();
   defaultShopingProduct();
 });
-let shopingProducts = [];
+let cartProducts = [];
 function shopCartProduct(productId) {
   document.getElementById(`productShopCart-${productId}`).style.display =
     "none";
@@ -224,22 +224,22 @@ function shopCartProduct(productId) {
     (product) => product.id === productId
   );
 
-  const unparsedProducts = localStorage.getItem("shopingProducts");
+  const unparsedProducts = localStorage.getItem("cartProducts");
 
   if (unparsedProducts) {
-    shopingProducts = JSON.parse(unparsedProducts);
+    cartProducts = JSON.parse(unparsedProducts);
   }
 
-  const isMatch = shopingProducts.find(
+  const isMatch = cartProducts.find(
     (product) => product.id === newShopingProduct.id
   );
 
   if (!isMatch) {
-    const productsToAdd = [...shopingProducts, newShopingProduct];
+    const productsToAdd = [...cartProducts, newShopingProduct];
 
-    localStorage.setItem("shopingProducts", JSON.stringify(productsToAdd));
+    localStorage.setItem("cartProducts", JSON.stringify(productsToAdd));
 
-    shopingProducts = productsToAdd;
+    cartProducts = productsToAdd;
   } else {
     shopingDeleteProduct(productId);
   }
@@ -250,17 +250,17 @@ function shopingDeleteProduct(productId) {
   document.getElementById(`productShopCart-${productId}`).style.display =
     "inline-block";
   document.getElementById(`checkIcon-${productId}`).style.display = "none";
-  const newShopingProduct = shopingProducts.filter(
+  const newShopingProduct = cartProducts.filter(
     (product) => product.id !== productId
   );
-  localStorage.setItem("shopingProducts", JSON.stringify(newShopingProduct));
-  shopingProducts = newShopingProduct;
+  localStorage.setItem("cartProducts", JSON.stringify(newShopingProduct));
+  cartProducts = newShopingProduct;
   noticeShopingCart();
 }
 function defaultShopingProduct(productId) {
-  const defaultShoping = localStorage.getItem("shopingProducts");
-  shopingProducts = JSON.parse(defaultShoping);
-  shopingProducts.forEach((i) => {
+  const defaultShoping = localStorage.getItem("cartProducts");
+  cartProducts = JSON.parse(defaultShoping) || [];
+  cartProducts.forEach((i) => {
     productId = i.id;
     document.getElementById(`productShopCart-${productId}`).style.display =
       "none";
@@ -312,7 +312,7 @@ function deleteProduct(productId) {
 
 function defaultFavoriteProduct(productId) {
   const defaultWishlist = localStorage.getItem("wishlistProducts");
-  wishlistProducts = JSON.parse(defaultWishlist);
+  wishlistProducts = JSON.parse(defaultWishlist) || [];
   wishlistProducts.forEach((i) => {
     productId = i.id;
     document.getElementById(`product-${productId}`).style.fill = "red";
@@ -324,7 +324,7 @@ const wishlistNotice = document.querySelector(".like-icon-notification");
 const bottomBarWishlistNotice = document.getElementById("likeIconNotice");
 function noticeWishlist() {
   const howMuchWishlist = localStorage.getItem("wishlistProducts");
-  wishlistProducts = JSON.parse(howMuchWishlist);
+  wishlistProducts = JSON.parse(howMuchWishlist) || [];
   if (wishlistProducts.length > 0) {
     wishlistNotice.style.display = "inline-block";
     wishlistNotice.innerHTML = `${wishlistProducts.length}`;
@@ -338,13 +338,13 @@ function noticeWishlist() {
 const shopingCartNotice = document.querySelector(".shop-icon-notification");
 const bottomBarShopNotice = document.getElementById("shopIconNotice");
 function noticeShopingCart() {
-  const howMuchShopCart = localStorage.getItem("shopingProducts");
-  shopingProducts = JSON.parse(howMuchShopCart);
-  if (shopingProducts.length > 0) {
+  const howMuchShopCart = localStorage.getItem("cartProducts");
+  cartProducts = JSON.parse(howMuchShopCart) || [];
+  if (cartProducts.length > 0) {
     shopingCartNotice.style.display = "inline-block";
-    shopingCartNotice.innerHTML = `${shopingProducts.length}`;
+    shopingCartNotice.innerHTML = `${cartProducts.length}`;
     bottomBarShopNotice.style.display = "inline-block";
-    bottomBarShopNotice.innerHTML = `${shopingProducts.length}`;
+    bottomBarShopNotice.innerHTML = `${cartProducts.length}`;
   } else {
     shopingCartNotice.style.display = "none";
     bottomBarShopNotice.style.display = "none";
