@@ -1,19 +1,17 @@
-const productcard = document.getElementById("productcard"); 
+const productcard = document.getElementById("productcard");
 
 function renderUrunler() {
   const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts"));
 
-  if(wishlistProducts){
+  if (wishlistProducts) {
     productcard.innerHTML = wishlistProducts
       .map(
         (product) =>
           `
       <div class="container-card">
-        <img onclick="deleteurun(${
-          product.id
-        })" class="icons" src="images/icon-delete.svg"/>
-        <img class="column-product" src="${product.image}" alt="${
-            product.title
+        <img onclick="deleteurun(${product.id
+          })" class="icons" src="images/icon-delete.svg"/>
+        <img class="column-product" src="${product.image}" alt="${product.title
           }" />
         <p class="col-paragraph">Add To Cart</p>
         <div>
@@ -28,7 +26,7 @@ function renderUrunler() {
       `
       )
       .join("");
-  } 
+  }
 }
 
 renderUrunler();
