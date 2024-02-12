@@ -310,6 +310,43 @@ urunKart.innerHTML = bestSellingProducts.map(
  
 
 /*Featured Product - Start*/
+const advertTrans = document.querySelectorAll(".advert-trans");
+const advertPages = document.querySelectorAll(".advertisement-image-text-box");
+let advertIndex = 0;
+let advertInterval = setInterval(nextAdvert, 5000);
+for (let i = 0; i < advertTrans.length; i++) {
+  advertTrans[i].addEventListener("click", () => {
+    advertIndex = i;
+    clearInterval(advertInterval);
+    advertInterval = setInterval(nextAdvert, 5000);
+    console.log(advertInterval);
+    for (let j = 0; j < advertTrans.length; j++) {
+      advertTrans[j].classList.remove("default-trans");
+      advertPages[j].classList.remove("default-advert");
+    }
+    advertTrans[i].classList.add("default-trans");
+    advertPages[i].classList.add("default-advert");
+  });
+}
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1010) {
+    asideBar.style.display = "inline-block";
+    scrollBody.style.overflowY = "scroll";
+    isBurgerOpen = !isBurgerOpen;
+  } else {
+    asideBar.style.display = "none";
+    isBurgerOpen = !isBurgerOpen;
+  }
+});
+function nextAdvert() {
+  advertPages[advertIndex].classList.remove("default-advert");
+  advertTrans[advertIndex].classList.remove("default-trans");
+  advertIndex = (advertIndex + 1) % advertPages.length;
+  advertPages[advertIndex].classList.add("default-advert");
+  advertTrans[advertIndex].classList.add("default-trans");
+}
+
+/*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
 const fpHours = document.getElementById("fp-hours");
 const fpMinutes = document.getElementById("fp-minutes");
@@ -422,6 +459,4 @@ function changeProducts() {
 
 function addToWishlist(product) {
 }
-
-
 /*Featured Product - End*/
