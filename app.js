@@ -11,8 +11,12 @@ function todaysUpdateCountdown() {
   let todaysRemainingTime = todaysCurrent.getTime();
 
   let todaysDays = Math.floor(todaysRemainingTime / (1000 * 60 * 60 * 24));
-  let todaysHours = Math.floor((todaysRemainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let todaysMins = Math.floor((todaysRemainingTime % (1000 * 60 * 60)) / (1000 * 60));
+  let todaysHours = Math.floor(
+    (todaysRemainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  let todaysMins = Math.floor(
+    (todaysRemainingTime % (1000 * 60 * 60)) / (1000 * 60)
+  );
   let todaysSecs = Math.floor((todaysRemainingTime % (1000 * 60)) / 1000);
 
   document.querySelector("#todays-countdown-days").textContent = todaysDays;
@@ -23,7 +27,6 @@ function todaysUpdateCountdown() {
 
 todaysUpdateCountdown();
 setInterval(todaysUpdateCountdown, 1000);
-
 
 function productCreateHeading(productHeading) {
   const returnHeading =
