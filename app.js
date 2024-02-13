@@ -82,9 +82,14 @@ async function showAllProducts() {
 let todaysCurrentProductsAmountFirst = 0;
 let todaysCurrentProductsAmountSecond = 4;
 
+
+let todaysProducts = [];
+
 async function urunleriGetir() {
   const response = await fetch("https://fakestoreapi.com/products");
   const todaysData = await response.json();
+  todaysProducts = todaysData;
+
   const currentTodaysProducts = todaysData.slice(
     todaysCurrentProductsAmountFirst,
     todaysCurrentProductsAmountSecond
@@ -97,7 +102,7 @@ async function urunleriGetir() {
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
-        <img class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
+        <img onclick="favoriteProduct(${product.id})" class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
       </div>
       <div>
         <img class="todays-frame-575-img" src="images/cart-icon.svg" >
@@ -137,4 +142,24 @@ function todaysChangeProducts() {
     todaysCurrentProductsAmountSecond += 4;
   }
   urunleriGetir();
+}
+
+function favoriteProduct(productId) {
+  const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts")) || [];
+
+  const wishlistProduct = wishlistProducts.find((product) => product.id === productId);
+
+  if(!wishlistProduct){
+    const productToAdd = todaysProducts.find((product) => product.id === productId);
+    const newWishlistProducts = [...wishlistProducts, productToAdd];
+    localStorage.setItem("wishlistProducts", JSON.stringify(newWishlistProducts));
+  } else {
+    deleteWishlistProduct(productId);
+  }
+}
+
+function deleteWishlistProduct(productId){
+  const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts")) || [];
+  const newWishlistProducts = wishlistProducts.filter((product) => product.id !== productId);
+  localStorage.setItem("wishlistProducts", JSON.stringify(newWishlistProducts));
 }
