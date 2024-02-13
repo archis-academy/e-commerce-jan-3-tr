@@ -134,7 +134,7 @@ todaysBtnRight.addEventListener("click", todaysChangeProducts);
 todaysAllProduct.addEventListener("click", showAllProducts);
 
 function todaysChangeProducts() {
-  if (todaysCurrentProductsAmountSecond === 24) {
+  if (todaysCurrentProductsAmountSecond === 20) {
     todaysCurrentProductsAmountFirst = 0;
     todaysCurrentProductsAmountSecond = 4;
   } else {
