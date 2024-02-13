@@ -6,18 +6,9 @@ const todaysAddToWishlistToButton = document.querySelector(
   ".todays-frame-575-wishlist-img"
 );
 
-let todaysFinishDiscountDate;
-if (localStorage.getItem("todaysFinishDiscountDate")) {
-  todaysFinishDiscountDate = new Date(
-    localStorage.getItem("todaysFinishDiscountDate")
-  );
-} else {
-  todaysFinishDiscountDate = new Date();
-  todaysFinishDiscountDate.setDate(todaysFinishDiscountDate.getDate() + 4);
-}
 function todaysUpdateCountdown() {
   let todaysCurrent = new Date();
-  let todaysRemainingTime = todaysFinishDiscountDate.getTime() - todaysCurrent.getTime();
+  let todaysRemainingTime = todaysCurrent.getTime();
 
   let todaysDays = Math.floor(todaysRemainingTime / (1000 * 60 * 60 * 24));
   let todaysHours = Math.floor((todaysRemainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -28,20 +19,20 @@ function todaysUpdateCountdown() {
   document.querySelector("#todays-countdown-hours").textContent = todaysHours;
   document.querySelector("#todays-countdown-minutes").textContent = todaysMins;
   document.querySelector("#todays-countdown-seconds").textContent = todaysSecs;
-
-  localStorage.setItem("todaysFinishDiscountDate", todaysFinishDiscountDate.getTime());
 }
+
 todaysUpdateCountdown();
 setInterval(todaysUpdateCountdown, 1000);
 
 
-function productCreatHeading(productHeading) {
+function productCreateHeading(productHeading) {
   const returnHeading =
     productHeading.length > 15
       ? productHeading.substring(0, 15).concat("...")
       : productHeading.product.title;
   return returnHeading;
 }
+
 function todaysReturnStars(rate) {
   let stars = "";
   for (let i = 0; i < rate.toFixed(0); i++) {
@@ -49,6 +40,7 @@ function todaysReturnStars(rate) {
   }
   return stars;
 }
+
 async function showAllProducts() {
   const response = await fetch("https://fakestoreapi.com/products");
   const todaysData = await response.json();
@@ -68,7 +60,7 @@ async function showAllProducts() {
     </div>
   </div>
   <div class="cart-frame-569">
-    <h2>${productCreatHeading(product.title)}</h2>
+    <h2>${productCreateHeading(product.title)}</h2>
     <div class="frame-567-discont">
     <p>${product.price - product.price * 0.5}</p>
     <s>${product.price}</s>
@@ -110,7 +102,7 @@ async function urunleriGetir() {
     </div>
   </div>
   <div class="cart-frame-569">
-    <h2>${productCreatHeading(product.title)}</h2>
+    <h2>${productCreateHeading(product.title)}</h2>
     <div class="frame-567-discont">
       <p>${product.price - product.price * 0.5}</p>
       <s>${product.price}</s>
