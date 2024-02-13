@@ -310,43 +310,6 @@ urunKart.innerHTML = bestSellingProducts.map(
  
 
 /*Featured Product - Start*/
-const advertTrans = document.querySelectorAll(".advert-trans");
-const advertPages = document.querySelectorAll(".advertisement-image-text-box");
-let advertIndex = 0;
-let advertInterval = setInterval(nextAdvert, 5000);
-for (let i = 0; i < advertTrans.length; i++) {
-  advertTrans[i].addEventListener("click", () => {
-    advertIndex = i;
-    clearInterval(advertInterval);
-    advertInterval = setInterval(nextAdvert, 5000);
-    console.log(advertInterval);
-    for (let j = 0; j < advertTrans.length; j++) {
-      advertTrans[j].classList.remove("default-trans");
-      advertPages[j].classList.remove("default-advert");
-    }
-    advertTrans[i].classList.add("default-trans");
-    advertPages[i].classList.add("default-advert");
-  });
-}
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 1010) {
-    asideBar.style.display = "inline-block";
-    scrollBody.style.overflowY = "scroll";
-    isBurgerOpen = !isBurgerOpen;
-  } else {
-    asideBar.style.display = "none";
-    isBurgerOpen = !isBurgerOpen;
-  }
-});
-function nextAdvert() {
-  advertPages[advertIndex].classList.remove("default-advert");
-  advertTrans[advertIndex].classList.remove("default-trans");
-  advertIndex = (advertIndex + 1) % advertPages.length;
-  advertPages[advertIndex].classList.add("default-advert");
-  advertTrans[advertIndex].classList.add("default-trans");
-}
-
-/*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
 const fpHours = document.getElementById("fp-hours");
 const fpMinutes = document.getElementById("fp-minutes");
@@ -401,6 +364,7 @@ if (localStorage.getItem("remainingDays")) {
 setInterval("timer()", 1000);
 
 
+
 const newProductsContainer = document.querySelector("#newProductsContainer");
 
 let currentProductsAmountFirst = 0;
@@ -410,7 +374,13 @@ async function fetchProducts() {
   const response = await fetch("https://fakestoreapi.com/products");
   const data = await response.json();
 
-  console.log(data.length);
+  function returnStars(rate) {
+    let stars = "";
+    for (let i = 0; i < rate.toFixed(0); i++) {
+      stars += `<img class="newproduckt-stars" src="images/Vector.png" />`;
+    }
+    return stars;
+  }
 
   const currentProducts = data.slice(currentProductsAmountFirst, currentProductsAmountSecond);
 
@@ -424,11 +394,7 @@ async function fetchProducts() {
                <p class="newproduct-box-p">$</p>
                <p class="newproduct-box-p">${product.price}</p>
                <div class="newproduct-box-stars">
-               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
-               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
-               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
-               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
-               <img class="newproduckt-stars" src="images/Vector.png" alt="" />
+               ${returnStars(product.rating.rate)}
                </div>
                <p class="point">(32)</p>
               </div>
