@@ -2,31 +2,40 @@ const todaysProduct = document.querySelector(".todays-frame-577");
 const todaysBtnRight = document.querySelector(".todays-frame-726-btn-right");
 const todaysBtnLeft = document.querySelector(".todays-frame-726-btn-left");
 const todaysAllProduct = document.querySelector(".todays-btn");
-const todaysAddToWishlistToButton = document.querySelector(
-  ".todays-frame-575-wishlist-img"
-);
 
-function todaysUpdateCountdown() {
-  let todaysCurrent = new Date();
-  let todaysRemainingTime = todaysCurrent.getTime();
-
-  let todaysDays = Math.floor(todaysRemainingTime / (1000 * 60 * 60 * 24));
-  let todaysHours = Math.floor(
-    (todaysRemainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  let todaysMins = Math.floor(
-    (todaysRemainingTime % (1000 * 60 * 60)) / (1000 * 60)
-  );
-  let todaysSecs = Math.floor((todaysRemainingTime % (1000 * 60)) / 1000);
-
-  document.querySelector("#todays-countdown-days").textContent = todaysDays;
-  document.querySelector("#todays-countdown-hours").textContent = todaysHours;
-  document.querySelector("#todays-countdown-minutes").textContent = todaysMins;
-  document.querySelector("#todays-countdown-seconds").textContent = todaysSecs;
+var indirimBitisTarihi = localStorage.getItem("indirimBitisTarihi");
+if (!indirimBitisTarihi) {
+  indirimBitisTarihi = new Date();
+  indirimBitisTarihi.setDate(indirimBitisTarihi.getDate() + 4);
+  localStorage.setItem("indirimBitisTarihi", indirimBitisTarihi);
+} else {
+  indirimBitisTarihi = new Date(indirimBitisTarihi);
 }
 
-todaysUpdateCountdown();
-setInterval(todaysUpdateCountdown, 1000);
+function sayaçGüncelle() {
+  var şuAn = new Date();
+  var kalanZaman = indirimBitisTarihi - şuAn;
+
+  function twoDigits(n) {
+    return n <= 9 ? "0" + n : n;
+  }
+
+  var gün = Math.floor(kalanZaman / (1000 * 60 * 60 * 24));
+  var saat = Math.floor(
+    (kalanZaman % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  var dakika = Math.floor((kalanZaman % (1000 * 60 * 60)) / (1000 * 60));
+  var saniye = Math.floor((kalanZaman % (1000 * 60)) / 1000);
+
+  document.getElementById("todays-countdown-days").innerHTML = twoDigits(gün);
+  document.getElementById("todays-countdown-hours").innerHTML = twoDigits(saat);
+  document.getElementById("todays-countdown-minutes").innerHTML =
+    twoDigits(dakika);
+  document.getElementById("todays-countdown-seconds").innerHTML =
+    twoDigits(saniye);
+}
+
+var sayaçGüncellemeAralığı = setInterval(sayaçGüncelle, 1000);
 
 function productCreateHeading(productHeading) {
   const returnHeading =
@@ -55,10 +64,14 @@ async function showAllProducts() {
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
-        <img class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
+        <img onclick="favoriteProduct(${
+          product.id
+        })"  class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
       </div>
       <div>
-        <img class="todays-frame-575-img" src="images/cart-icon.svg" >
+        <img onclick="todaysSellCartProduct(${
+          product.id
+        })"  class="todays-frame-575-img" src="images/cart-icon.svg" >
       </div>
     </div>
   </div>
@@ -82,7 +95,6 @@ async function showAllProducts() {
 let todaysCurrentProductsAmountFirst = 0;
 let todaysCurrentProductsAmountSecond = 4;
 
-
 let todaysProducts = [];
 
 async function urunleriGetir() {
@@ -102,10 +114,14 @@ async function urunleriGetir() {
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
-        <img onclick="favoriteProduct(${product.id})" class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
+        <img onclick="favoriteProduct(${
+          product.id
+        })" class="todays-frame-575-wishlist-img" fill="#000000" src="images/wishlist-icon.svg" >
       </div>
       <div>
-        <img class="todays-frame-575-img" src="images/cart-icon.svg" >
+        <img onclick="todaysSellCartProduct(${
+          product.id
+        })" class="todays-frame-575-img" src="images/cart-icon.svg" >
       </div>
     </div>
   </div>
@@ -145,21 +161,61 @@ function todaysChangeProducts() {
 }
 
 function favoriteProduct(productId) {
-  const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts")) || [];
+  const wishlistProducts =
+    JSON.parse(localStorage.getItem("wishlistProducts")) || [];
 
-  const wishlistProduct = wishlistProducts.find((product) => product.id === productId);
+  const wishlistProduct = wishlistProducts.find(
+    (product) => product.id === productId
+  );
 
-  if(!wishlistProduct){
-    const productToAdd = todaysProducts.find((product) => product.id === productId);
+  if (!wishlistProduct) {
+    const productToAdd = todaysProducts.find(
+      (product) => product.id === productId
+    );
     const newWishlistProducts = [...wishlistProducts, productToAdd];
-    localStorage.setItem("wishlistProducts", JSON.stringify(newWishlistProducts));
+    localStorage.setItem(
+      "wishlistProducts",
+      JSON.stringify(newWishlistProducts)
+    );
   } else {
     deleteWishlistProduct(productId);
   }
 }
 
-function deleteWishlistProduct(productId){
-  const wishlistProducts = JSON.parse(localStorage.getItem("wishlistProducts")) || [];
-  const newWishlistProducts = wishlistProducts.filter((product) => product.id !== productId);
+function deleteWishlistProduct(productId) {
+  const wishlistProducts =
+    JSON.parse(localStorage.getItem("wishlistProducts")) || [];
+  const newWishlistProducts = wishlistProducts.filter(
+    (product) => product.id !== productId
+  );
   localStorage.setItem("wishlistProducts", JSON.stringify(newWishlistProducts));
+}
+//! cart product
+
+function todaysSellCartProduct(productId) {
+  const todaysSellProducts =
+    JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+  const todaysCartProduct = todaysSellProducts.find(
+    (product) => product.id === productId
+  );
+
+  if (!todaysCartProduct) {
+    const productToAdd = todaysProducts.find(
+      (product) => product.id === productId
+    );
+    const newTodaysSellProducts = [...todaysSellProducts, productToAdd];
+    localStorage.setItem("cartProducts", JSON.stringify(newTodaysSellProducts));
+  } else {
+    deleteCartProduct(productId);
+  }
+}
+
+function deleteCartProduct(productId) {
+  const todaysSellProducts =
+    JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const newTodaysSellProducts = todaysSellProducts.filter(
+    (product) => product.id !== productId
+  );
+  localStorage.setItem("cartProducts", JSON.stringify(newTodaysSellProducts));
 }
