@@ -267,18 +267,18 @@ const urunler = [
   },
 ];
 
-
 function indirimYap(fiyat, indirimYuzdesi) {
-return fiyat - (fiyat * indirimYuzdesi) / 100;
+  return fiyat - (fiyat * indirimYuzdesi) / 100;
 }
 
 bestSellingProducts = [];
-bestSellingProducts.push(urunler[2],urunler[7], urunler[4],urunler[5]);
+bestSellingProducts.push(urunler[2], urunler[7], urunler[4], urunler[5]);
 const urunKart = document.querySelector(".cl-boxes");
 
-urunKart.innerHTML = bestSellingProducts.map(
-(urun) =>
-  `<section class="productCard">
+urunKart.innerHTML = bestSellingProducts
+  .map(
+    (urun) =>
+      `<section class="productCard">
     <div class="box-img">
         <div class="column-icons">
           <img src="images/heart small.png" alt="" />
@@ -304,29 +304,27 @@ urunKart.innerHTML = bestSellingProducts.map(
     </div>
     
   </section>`
-  ).join("");
-  //  Yakup/E--3-Homepage-Browse-By-Category- start 
-  
-  let categoryItems = document.querySelectorAll('.browse-by-category-group');
-categoryItems.forEach(function(item) {
-  item.addEventListener('click', function(event) {
-    categoryItems.forEach(function(item) {
-      item.style.backgroundColor = '';
-      item.style.color = '';
-      item.style.stroke = '';
-  
+  )
+  .join("");
+
+//  Yakup/E--3-Homepage-Browse-By-Category- start
+
+let categoryItems = document.querySelectorAll(".browse-by-category-group");
+
+categoryItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    categoryItems.forEach((item) => {
+      item.style.backgroundColor = "";
+      item.style.color = "";
+      item.style.stroke = "";
     });
-    event.target.style.backgroundColor = '#DB4444';
-    event.target.style.color = 'white';
-    event.target.style.stroke = 'white';
+    item.style.backgroundColor = "#DB4444";
+    item.style.color = "white";
+    item.style.stroke = "white";
   });
 });
 
- 
-
-
- //  Yakup/E--3-Homepage-Browse-By-Category- end
-
+//  Yakup/E--3-Homepage-Browse-By-Category- end
 
 /*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
