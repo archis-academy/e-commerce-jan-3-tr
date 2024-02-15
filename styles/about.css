@@ -16,7 +16,7 @@
   max-width: 600px;
 }
 .title-about {
-  font-size: 80px;
+  font-size: 54px;
   font-style: normal;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -34,7 +34,7 @@
 }
 .container-about {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 200px;
   flex-wrap: wrap;
@@ -49,26 +49,30 @@
   border: 1px solid gray;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   gap: 10px;
+  padding: 10px;
 }
 .box.active {
-  background-color: orangered;
+  background-color: #DB4444;
 }
 .round-button.active {
-  background-color: orangered;
+  background-color: #DB4444;
 }
 
 .container-column-about {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 300px;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
 }
 .number-about {
-  font-size: 26px;
+  font-size: 32px;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -84,7 +88,7 @@
 .column-img {
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
+  width: 200px;
   height: 350px;
   margin-left: auto;
   margin-right: auto;
@@ -127,7 +131,7 @@
 }
 .about-p {
   font-family: "Roboto", sans-serif;
-}
+ }
 .about-p-one {
   font-family: "Roboto", sans-serif;
   margin-top: -20px;
@@ -136,4 +140,15 @@
   display: flex;
   gap: 20px;
   cursor: pointer;
+}
+@media (max-width:600px) {
+  .side-img{
+    width: 100%;
+  }
+  .container-about{
+   padding: 0%;
+   margin-top: 30px;
+   margin-bottom:30px;
+   margin-left: 60px;
+  }
 }
