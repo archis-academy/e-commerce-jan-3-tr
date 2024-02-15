@@ -62,7 +62,9 @@ height: 56px;
   display: grid;
   place-items: center;
   border: 2px solid black;
+  cursor: pointer;
 }
+
 /* Yakup/E--3-Homepage-Browse-By-Category- end */
 
 

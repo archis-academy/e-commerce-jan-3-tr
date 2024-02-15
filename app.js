@@ -305,9 +305,28 @@ urunKart.innerHTML = bestSellingProducts.map(
     
   </section>`
   ).join("");
-
+  //  Yakup/E--3-Homepage-Browse-By-Category- start 
   
+  let categoryItems = document.querySelectorAll('.browse-by-category-group');
+categoryItems.forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    categoryItems.forEach(function(item) {
+      item.style.backgroundColor = '';
+      item.style.color = '';
+      item.style.stroke = '';
+  
+    });
+    event.target.style.backgroundColor = '#DB4444';
+    event.target.style.color = 'white';
+    event.target.style.stroke = 'white';
+  });
+});
+
  
+
+
+ //  Yakup/E--3-Homepage-Browse-By-Category- end
+
 
 /*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
