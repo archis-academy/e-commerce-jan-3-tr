@@ -281,7 +281,7 @@ urunKart.innerHTML = bestSellingProducts
       `<section class="productCard">
     <div class="box-img">
         <div class="column-icons">
-          <img src="images/heart small.png" alt="" />
+          <img src="images/heart-small.png" alt="" />
           <img src="images/Group.png" alt="" />
         </div>
         <img src="${urun.image}" alt="${urun.title}" />
@@ -316,14 +316,23 @@ categoryItems.forEach((item) => {
     categoryItems.forEach((item) => {
       item.style.backgroundColor = "";
       item.style.color = "";
-      item.style.stroke = "";
+      item.querySelectorAll("path").forEach(path => {
+        path.style.stroke = ""; // Tüm path'ların stroke'unu sıfırla
+      });
+      item.querySelectorAll("line").forEach(linePath => {
+        linePath.style.stroke = ""; // line içindeki path'ların stroke'unu sıfırla
+      });
     });
     item.style.backgroundColor = "#DB4444";
     item.style.color = "white";
-    item.style.stroke = "white";
+    item.querySelectorAll("path").forEach(path => {
+      path.style.stroke = "white"; // Seçilen öğenin path'larının stroke'unu beyaz yap
+    });
+    item.querySelectorAll("line").forEach(linePath => {
+      linePath.style.stroke = "white"; // Seçilen öğenin line içindeki path'larının stroke'unu beyaz yap
+    });
   });
 });
-
 //  Yakup/E--3-Homepage-Browse-By-Category- end
 
 /*Featured Product - Start*/
