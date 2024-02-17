@@ -53,6 +53,18 @@
   flex-wrap: wrap;
   gap: 87px;
 }
+@media only screen and (max-width: 500px) {
+  .todays-flash-sales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .todays-frame-727 {
+    display: flex;
+    gap: 15px;
+  }
+}
 .todays-flash-sales h4 {
   font-size: 36px;
   letter-spacing: 4%;
@@ -77,7 +89,7 @@
   flex-direction: column;
   gap: 16px;
 }
-.todays-discont-percent {
+.todays-discount-percent {
   width: 55px;
   height: 26px;
   background-color: #db4444;
@@ -130,16 +142,16 @@
   justify-content: center;
   gap: 8px;
 }
-.frame-567-discont {
+.frame-567-discount {
   display: flex;
   gap: 12px;
 }
-.frame-567-discont s {
+.frame-567-discount s {
   color: #bab7b7;
   font-size: 16px;
   line-height: 24px;
 }
-.frame-567-discont p {
+.frame-567-discount p {
   color: #db4444;
   font-size: 16px;
   line-height: 24px;

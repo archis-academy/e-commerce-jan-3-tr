@@ -27,10 +27,12 @@ function sayaçGüncelle() {
   var dakika = Math.floor((kalanZaman % (1000 * 60 * 60)) / (1000 * 60));
   var saniye = Math.floor((kalanZaman % (1000 * 60)) / 1000);
 
-  document.getElementById("todays-countdown-days").innerHTML = twoDigits(gün);
-  document.getElementById("todays-countdown-hours").innerHTML = twoDigits(saat);
+  document.getElementById("todays-countdown-days").innerHTML =
+    twoDigits(gün) + ":";
+  document.getElementById("todays-countdown-hours").innerHTML =
+    twoDigits(saat) + ":";
   document.getElementById("todays-countdown-minutes").innerHTML =
-    twoDigits(dakika);
+    twoDigits(dakika) + ":";
   document.getElementById("todays-countdown-seconds").innerHTML =
     twoDigits(saniye);
 }
@@ -54,13 +56,14 @@ function todaysReturnStars(rate) {
 }
 
 async function showAllProducts() {
+  
   const response = await fetch("https://fakestoreapi.com/products");
   const todaysData = await response.json();
   const productHtmlArray = todaysData.map((product) => {
     return ` 
 <div class="cart-with-flat-discover">
   <div class="cart-frame-570">
-    <div class="todays-discont-percent">-50%</div>
+    <div class="todays-discount-percent">-50%</div>
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
@@ -77,7 +80,7 @@ async function showAllProducts() {
   </div>
   <div class="cart-frame-569">
     <h2>${productCreateHeading(product.title)}</h2>
-    <div class="frame-567-discont">
+    <div class="frame-567-discount">
     <p>${product.price - product.price * 0.5}</p>
     <s>${product.price}</s>
     </div>
@@ -92,6 +95,8 @@ async function showAllProducts() {
   });
   todaysProduct.innerHTML = productHtmlArray.join("");
 }
+showAllProducts();
+
 let todaysCurrentProductsAmountFirst = 0;
 let todaysCurrentProductsAmountSecond = 4;
 
@@ -110,13 +115,17 @@ async function urunleriGetir() {
     return ` 
 <div class="cart-with-flat-discover">
   <div class="cart-frame-570">
-    <div class="todays-discont-percent">-50%</div>
+    <div class="todays-discount-percent">-50%</div>
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
-        <img onclick="favoriteProduct(${
-          product.id
-        })" class="todays-frame-575-wishlist-img" fill="#000000" src="images/wishlist-icon.svg" >
+      <svg id="product-${product.id}" onclick="favoriteProduct(${
+      product.id
+    })" class="icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="products-${
+      product.id
+    }" d="M11 7C8.239 7 6 9.216 6 11.95C6 14.157 6.875 19.395 15.488 24.69C15.6423 24.7839 15.8194 24.8335 16 24.8335C16.1806 24.8335 16.3577 24.7839 16.512 24.69C25.125 19.395 26 14.157 26 11.95C26 9.216 23.761 7 21 7C18.239 7 16 10 16 10C16 10 13.761 7 11 7Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
       </div>
       <div>
         <img onclick="todaysSellCartProduct(${
@@ -127,7 +136,7 @@ async function urunleriGetir() {
   </div>
   <div class="cart-frame-569">
     <h2>${productCreateHeading(product.title)}</h2>
-    <div class="frame-567-discont">
+    <div class="frame-567-discount">
       <p>${product.price - product.price * 0.5}</p>
       <s>${product.price}</s>
     </div>
@@ -142,8 +151,8 @@ async function urunleriGetir() {
   });
   todaysProduct.innerHTML = productHtmlArray.join("");
 }
-showAllProducts();
-urunleriGetir();
+
+
 
 todaysBtnLeft.addEventListener("click", todaysChangeProducts);
 todaysBtnRight.addEventListener("click", todaysChangeProducts);
@@ -161,6 +170,8 @@ function todaysChangeProducts() {
 }
 
 function favoriteProduct(productId) {
+  document.getElementById(`product-${productId}`).style.fill = "red";
+  document.getElementById(`products-${productId}`).style.stroke = "red";
   const wishlistProducts =
     JSON.parse(localStorage.getItem("wishlistProducts")) || [];
 
@@ -183,6 +194,8 @@ function favoriteProduct(productId) {
 }
 
 function deleteWishlistProduct(productId) {
+  document.getElementById(`product-${productId}`).style.fill = "none";
+  document.getElementById(`products-${productId}`).style.stroke = "black";
   const wishlistProducts =
     JSON.parse(localStorage.getItem("wishlistProducts")) || [];
   const newWishlistProducts = wishlistProducts.filter(
@@ -190,7 +203,6 @@ function deleteWishlistProduct(productId) {
   );
   localStorage.setItem("wishlistProducts", JSON.stringify(newWishlistProducts));
 }
-//! cart product
 
 function todaysSellCartProduct(productId) {
   const todaysSellProducts =
@@ -219,3 +231,4 @@ function deleteCartProduct(productId) {
   );
   localStorage.setItem("cartProducts", JSON.stringify(newTodaysSellProducts));
 }
+urunleriGetir();
