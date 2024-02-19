@@ -1,0 +1,161 @@
+.container-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+.img-container-about {
+  gap: 200px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.dev-about-col {
+  max-width: 600px;
+}
+.title-about {
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.p-container-about {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1 px;
+}
+.side-img {
+  width: 400px;
+  height: 400px;
+}
+.container-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  
+}
+.box.active {
+  background-color: #db4444;
+}
+.round-button.active {
+  background-color: #db4444;
+}
+
+.container-column-about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+.number-about {
+  font-size: 32px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.clickable {
+  cursor: pointer;
+}
+
+.clicked {
+  color: white;
+}
+
+.column-img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.round-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.container-cl-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 220px;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 100px;
+}
+.about-p-cl {
+  display: block;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.about-p {
+  font-family: "Roboto", sans-serif;
+}
+.about-p-one {
+  font-family: "Roboto", sans-serif;
+  margin-top: -20px;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .side-img {
+    width: 100%;
+  }
+  .container-about {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container-column-about{
+    gap: 70px;
+  }
+  .container-cl-about{
+    gap: 70px;
+  }
+}
