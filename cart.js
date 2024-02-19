@@ -2,7 +2,7 @@
 //cartProducts - localStorage
 
 /*Cart Page End*/
-const apiEndPoint = "https://fakestoreapi.com/products";
+const setProducts = document.getElementsByClassName("cart-products");
 
 async function getUrunler(id) {
   const responseUrunler = await fetch(
@@ -11,7 +11,12 @@ async function getUrunler(id) {
   const urunler = await responseUrunler.json();
   return urunler;
 }
-console.log(getUrunler(1));
+const productsLocal = localStorage.getItem("cartProducts");
+
+// const eachProduct = productsLocal.map((id) => id);
+// console.log(eachProduct);
+console.log(productsLocal);
+console.log(setProducts);
 
 /*
 
