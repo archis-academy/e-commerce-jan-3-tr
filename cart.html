@@ -4,10 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exclusive E-Commerce Cart</title>
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
   </head>
   <body>
-    
+    <section class="cart-page">
+      <div class="cart-title-container">
+        <p class="cart-title-home">Home</p>
+        <p class="cart-title-home">/</p>
+        <p>Cart</p>
+      </div>
+
+      <div class="cart-table-container">
+        <table>
+          <tr>
+            <th class="cart-table-head">Product</th>
+            <th class="cart-table-head">Price</th>
+            <th class="cart-table-head">Quantity</th>
+            <th class="cart-table-head">Subtotal</th>
+          </tr>
+          <!-- Products -->
+          <!-- <tr>
+            <td class="cart-table-body">
+              <span
+                ><img src="./images/05-delivery.png" alt="" /> LCD MONITOR</span
+              >
+            </td>
+            <td class="cart-table-body">$650</td>
+            <td class="cart-table-body">
+              <div class="cart-table-quantity-container">
+                <select class="cart-table-quantity" name="Quantity">
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                </select>
+              </div>
+            </td>
+            <td class="cart-table-body">$650</td>
+          </tr> -->
+        </table>
+
+        <div class="cart-table-btns">
+          <button class="cart-table-btn">Return To Shop</button>
+          <button class="cart-table-btn">Update Cart</button>
+        </div>
+      </div>
+
+      <div class="cart-input-and-total">
+        <div class="cart-input-container">
+          <input
+            type="text"
+            placeholder="Coupon Code"
+            class="cart-input-text"
+          />
+
+          <button class="cart-input-btn">Apply Coupon</button>
+        </div>
+
+        <div class="cart-total">
+          <h3>Cart Total</h3>
+
+          <div class="cart-total-subtotal cart-total-el">
+            <p>Subtotal:</p>
+            <p>$1750</p>
+          </div>
+          <div class="cart-total-shipping cart-total-el">
+            <p>Shipping:</p>
+            <p>Free</p>
+          </div>
+          <div class="cart-total-coupon cart-total-el">
+            <p>Coupon Applied:</p>
+            <p>0</p>
+          </div>
+          <div class="cart-total-total cart-total-el">
+            <p>Total:</p>
+            <p>$1750</p>
+          </div>
+          <div class="cart-total-btn-container">
+            <button class="cart-total-process">Process to checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./cart.js"></script>
   </body>
 </html>
