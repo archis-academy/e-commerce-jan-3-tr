@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exclusive E-Commerce Cart</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/shared.css" />
-    <link rel="stylesheet" href="styles/cart.css" />
   </head>
   <body>
     <section class="cart-page">
@@ -22,33 +22,13 @@
       </div>
 
       <div class="cart-table-container">
-        <table>
-          <tr>
+        <table id="table">
+          <thead>
             <th class="cart-table-head">Product</th>
             <th class="cart-table-head">Price</th>
             <th class="cart-table-head">Quantity</th>
             <th class="cart-table-head">Subtotal</th>
-          </tr>
-          <!-- Products -->
-          <tr class="cart-products">
-            <!-- 
-            <td class="cart-table-body">
-              <span
-                ><img src="./images/05-delivery.png" alt="" /> LCD MONITOR</span
-              >
-            </td>
-            <td class="cart-table-body">$650</td>
-            <td class="cart-table-body">
-              <div class="cart-table-quantity-container">
-                <select class="cart-table-quantity" name="Quantity">
-                  <option>01</option>
-                  <option>02</option>
-                  <option>03</option>
-                </select>
-              </div>
-            </td>
-            <td class="cart-table-body">$650</td>
-          --></tr>
+          </thead>
         </table>
 
         <div class="cart-table-btns">

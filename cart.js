@@ -1,47 +1,33 @@
 /*Cart Page Start*/
-//cartProducts - localStorage
 
+const productsLocal = JSON.parse(localStorage.getItem("cartProducts"));
+const table = document.getElementById("table");
+const setProducts = document.createElement("tbody");
+
+setProducts.innerHTML = productsLocal.map(
+  (product) =>
+    `<tr><td class="cart-table-body">
+    <span><img src="${product.image}" alt="${product.title}" /> ${product.title}</span>
+    </td>
+    <td class="cart-table-body">$${product.price}</td>
+    <td class="cart-table-body">
+    <div class="cart-table-quantity-container">
+      <select class="cart-table-quantity" name="Quantity" id="cart-table-option">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+    </td>
+    <td class="cart-table-body" id="cart-subtotal-${product.id}"></td></tr>`
+);
+
+table.appendChild(setProducts);
 /*Cart Page End*/
-const setProducts = document.getElementsByClassName("cart-products");
-
-async function getUrunler(id) {
-  const responseUrunler = await fetch(
-    `https://fakestoreapi.com/products/${id}`
-  );
-  const urunler = await responseUrunler.json();
-  return urunler;
-}
-const productsLocal = localStorage.getItem("cartProducts");
-
-// const eachProduct = productsLocal.map((id) => id);
-// console.log(eachProduct);
-console.log(productsLocal);
-console.log(setProducts);
-
-/*
-
-let cartProducts = [];
-
-function shopingDeleteProduct(productId) {
-  document.getElementById(`productShopCart-${productId}`).style.display =
-    "inline-block";
-  document.getElementById(`checkIcon-${productId}`).style.display = "none";
-  const newShopingProduct = cartProducts.filter(
-    (product) => product.id !== productId
-  );
-  localStorage.setItem("cartProducts", JSON.stringify(newShopingProduct));
-  cartProducts = newShopingProduct;
-  noticeShopingCart();
-}
-function defaultShopingProduct(productId) {
-  const defaultShoping = localStorage.getItem("cartProducts");
-  cartProducts = JSON.parse(defaultShoping) || [];
-  cartProducts.forEach((i) => {
-    productId = i.id;
-    document.getElementById(`productShopCart-${productId}`).style.display =
-      "none";
-    document.getElementById(`checkIcon-${productId}`).style.display =
-      "inline-block";
-  });
-}
-*/
