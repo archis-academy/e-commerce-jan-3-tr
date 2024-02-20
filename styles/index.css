@@ -52,9 +52,9 @@
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 30px;
 }
-.browse-by-category-bottom img {
-  width: 56px;
-  height: 56px;
+.browse-by-category-mid-arrow img {
+  width: 46px;
+  height: 46px;
 }
 .browse-by-category-group {
   display: flex;
