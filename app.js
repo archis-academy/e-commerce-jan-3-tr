@@ -267,18 +267,18 @@ const urunler = [
   },
 ];
 
-
 function indirimYap(fiyat, indirimYuzdesi) {
-return fiyat - (fiyat * indirimYuzdesi) / 100;
+  return fiyat - (fiyat * indirimYuzdesi) / 100;
 }
 
 bestSellingProducts = [];
-bestSellingProducts.push(urunler[2],urunler[7], urunler[4],urunler[5]);
+bestSellingProducts.push(urunler[2], urunler[7], urunler[4], urunler[5]);
 const urunKart = document.querySelector(".cl-boxes");
 
-urunKart.innerHTML = bestSellingProducts.map(
-(urun) =>
-  `<section class="productCard">
+urunKart.innerHTML = bestSellingProducts
+  .map(
+    (urun) =>
+      `<section class="productCard">
     <div class="box-img">
         <div class="column-icons">
           <img src="images/heart small.png" alt="" />
@@ -304,10 +304,8 @@ urunKart.innerHTML = bestSellingProducts.map(
     </div>
     
   </section>`
-  ).join("");
-
-  
- 
+  )
+  .join("");
 
 /*Featured Product - Start*/
 const fpDays = document.getElementById("fp-days");
@@ -363,8 +361,6 @@ if (localStorage.getItem("remainingDays")) {
 
 setInterval("timer()", 1000);
 
-
-
 const newProductsContainer = document.querySelector("#newProductsContainer");
 
 let currentProductsAmountFirst = 0;
@@ -382,10 +378,14 @@ async function fetchProducts() {
     return stars;
   }
 
-  const currentProducts = data.slice(currentProductsAmountFirst, currentProductsAmountSecond);
+  const currentProducts = data.slice(
+    currentProductsAmountFirst,
+    currentProductsAmountSecond
+  );
 
-  newProductsContainer.innerHTML = currentProducts.map((product) => {
-    return `<div class="newproduct-box" >
+  newProductsContainer.innerHTML = currentProducts
+    .map((product) => {
+      return `<div class="newproduct-box" >
               <div class="newproduct-box-one">
                <img  class="newproduct-box-img" src="${product.image}"/>
               </div>
@@ -399,10 +399,10 @@ async function fetchProducts() {
                <p class="point">(32)</p>
               </div>
             </div>`;
-  }).join("");
+    })
+    .join("");
 }
 fetchProducts();
-
 
 const changeBtnLeft = document.querySelector("#changeBtnLeft");
 
@@ -423,6 +423,5 @@ function changeProducts() {
   fetchProducts();
 }
 
-function addToWishlist(product) {
-}
+function addToWishlist(product) {}
 /*Featured Product - End*/
