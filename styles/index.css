@@ -732,66 +732,66 @@ body {
       letter-spacing: 1.44px;
     }
 
-    <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery {
+    .na-gallery {
       display: flex;
       gap: 30px;
     }
 
-    <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery img {
+    .na-gallery img {
       display: block;
       width: 100%;
     }
 
-    <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-col-one {
+    .na-gallery-col-one {
       position: relative;
       display: flex;
       flex: 1 1 0;
     }
 
-    <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text {
+    .na-gallery-text {
       position: absolute;
       bottom: 5%;
       left: 5%;
     }
 
-    <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-women {
+    .na-gallery-text-women {
       position: absolute;
       bottom: 5%;
       left: 3%;
     }
 
-    <<<<<<< HEAD .na-gallery-text-title {
+    HEAD .na-gallery-text-title {
       font-family: 'Inter', sans-serif;
 
-      =======.na-gallery-text-title {
+      .na-gallery-text-title {
         font-family: "Inter", sans-serif;
-        >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f font-size: 24px;
+        font-size: 24px;
         font-weight: 600;
         line-height: 24px;
         letter-spacing: 0.72px;
         color: #fafafa;
       }
 
-      <<<<<<< HEAD .na-gallery-text-description {
+      HEAD .na-gallery-text-description {
         margin: 16px 0;
         color: #fafafa;
         font-family: 'Poppins', sans-serif;
 
-        =======.na-gallery-text-description {
+        .na-gallery-text-description {
           margin: 16px 0;
           color: #fafafa;
           font-family: "Poppins", sans-serif;
-          >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f font-size: 14px;
+          font-size: 14px;
           font-weight: 400;
           line-height: 21px;
         }
 
-        <<<<<<< HEAD .na-gallery-text-btn {
+        .na-gallery-text-btn {
           font-family: 'Poppins', sans-serif;
 
-          =======.na-gallery-text-btn {
+          .na-gallery-text-btn {
             font-family: "Poppins", sans-serif;
-            >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f font-size: 16px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 24px;
             color: #fafafa;
@@ -799,13 +799,13 @@ body {
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-btn:hover {
+          .na-gallery-text-btn:hover {
             display: inline-block;
             scale: 1.1;
             color: white;
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-col-two {
+          .na-gallery-col-two {
             display: flex;
             height: 145px;
             flex-direction: column;
@@ -813,43 +813,43 @@ body {
             gap: 32px;
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-row-one {
+          .na-row-one {
             position: relative;
             flex: 1 1 0;
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-row-two {
+          .na-row-two {
             flex: 1 1 0;
             display: flex;
             gap: 30px;
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-row-col-one {
+          .na-row-col-one {
             flex: 1 1 0;
             position: relative;
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-row-col-two {
+          .na-row-col-two {
             flex: 1 1 0;
             position: relative;
           }
 
-          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-services {
+          .na-services {
             display: flex;
             margin: 140px auto;
             gap: 88px;
             max-width: 943px;
           }
 
-          <<<<<<< HEAD .na-service-delivery {
+          .na-service-delivery {
             flex: 1 1 0;
           }
 
-          =======.na-service-delivery {
+          .na-service-delivery {
             flex: 1 1 0;
           }
 
-          >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-service-icon {
+          .na-service-icon {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -859,7 +859,6 @@ body {
             gap: 25px;
           }
 
-          <<<<<<< HEAD
 
           /* Yakup/E--3-Homepage-Browse-By-Category- end */
           .na-service-customer {
@@ -873,7 +872,7 @@ body {
           .na-services h2 {
             font-family: 'Poppins', sans-serif;
 
-            =======.na-service-customer {
+            .na-service-customer {
               flex: 1 1 0;
             }
 
@@ -883,27 +882,27 @@ body {
 
             .na-services h2 {
               font-family: "Poppins", sans-serif;
-              >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f font-size: 20px;
+              font-size: 20px;
               font-weight: 600;
               line-height: 28px;
               color: #000;
               text-align: center;
             }
 
-            <<<<<<< HEAD .na-services h5 {
+            .na-services h5 {
               color: #000;
               font-family: 'Poppins', sans-serif;
 
-              =======.na-services h5 {
+              .na-services h5 {
                 color: #000;
                 font-family: "Poppins", sans-serif;
-                >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f font-size: 14px;
+                font-size: 14px;
                 font-weight: 400;
                 line-height: 21px;
                 text-align: center;
               }
 
-              <<<<<<< HEAD .na-services h5 {
+              .na-services h5 {
                 color: #000;
                 font-family: 'Poppins', sans-serif;
                 font-size: 14px;
@@ -921,7 +920,7 @@ body {
                   flex-direction: column;
                 }
 
-                =======@media (max-width: 738px) {
+                @media (max-width: 738px) {
                   .na-gallery {
                     flex-direction: column;
                   }
@@ -930,17 +929,17 @@ body {
                     flex-direction: column;
                   }
 
-                  >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-women {
+                  .na-gallery-text-women {
                     left: 5%;
                     bottom: 7%;
                   }
 
-                  <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-context {
+                  .na-context {
                     padding-bottom: 40px;
                   }
                 }
 
-                <<<<<<< HEAD @media (max-width:500px) {
+                @media (max-width:500px) {
                   .na-row-two {
                     flex-direction: column;
                   }
@@ -953,7 +952,7 @@ body {
                     margin: 80px auto;
                   }
 
-                  =======@media (max-width: 500px) {
+                  @media (max-width: 500px) {
                     .na-row-two {
                       flex-direction: column;
                     }
@@ -966,98 +965,92 @@ body {
                       margin: 80px auto;
                     }
 
-                    >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-context {
+                    .na-context {
                       padding-bottom: 35px;
                     }
                   }
 
-                  <<<<<<< HEAD @media (max-width:400px) {
-                    =======@media (max-width: 400px) {
-                      >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-title {
+                  @media (max-width:400px) {
+                    @media (max-width: 400px) {
+                      .na-gallery-text-title {
                         font-size: 20px;
                         line-height: 20px;
                       }
 
-                      <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-description {
+                      .na-gallery-text-description {
                         margin: 8px 0;
                         font-size: 10px;
                         line-height: 17px;
                       }
 
-                      <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-btn {
+                      .na-gallery-text-btn {
                         font-size: 12px;
                         line-height: 20px;
                       }
 
-                      <<<<<<< HEAD .section-na {
+                      .section-na {
                         padding: 10px;
                       }
 
-                      =======.section-na {
+                      .section-na {
                         padding: 10px;
                       }
 
-                      >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-context {
+                      .na-context {
                         padding-bottom: 30px;
                       }
                     }
 
-                    <<<<<<< HEAD @media (max-width:300px) {
-                      =======@media (max-width: 300px) {
-                        >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-title {
+                    @media (max-width:300px) {
+                      @media (max-width: 300px) {
+                        .na-gallery-text-title {
                           font-size: 16px;
                           line-height: 16px;
                         }
 
-                        <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-description {
+                        .na-gallery-text-description {
                           margin: 4px 0;
                           font-size: 6px;
                           line-height: 13px;
                         }
 
-                        <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-btn {
+                        .na-gallery-text-btn {
                           font-size: 8px;
                           line-height: 16px;
                         }
 
-                        <<<<<<< HEAD .section-na {
+                        .section-na {
                           padding: 5px;
                         }
 
-                        =======.section-na {
+                        .section-na {
                           padding: 5px;
                         }
 
-                        >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-context {
+                        .na-context {
                           padding-bottom: 25px;
                         }
                       }
 
-                      <<<<<<< HEAD @media (max-width:230px) {
-                        =======@media (max-width: 230px) {
-                          >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-women h3 {
+                      @media (max-width:230px) {
+                        @media (max-width: 230px) {
+                          .na-gallery-text-women h3 {
                             font-size: 12px;
                             line-height: 12px;
                           }
 
-                          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-women p {
+                          .na-gallery-text-women p {
                             margin: 4px 0;
                             font-size: 4px;
                             line-height: 8px;
                           }
 
-                          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-gallery-text-women a {
+                          .na-gallery-text-women a {
                             font-size: 6px;
                             line-height: 12px;
                           }
 
-                          <<<<<<< HEAD=======>>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f .na-context {
+                          .na-context {
                             padding-bottom: 20px;
                           }
                         }
-
-                        <<<<<<< HEAD
-                        /* Section New Arrivals - End*/
-                        =======
-                        /* Section New Arrivals - End*/
-                        >>>>>>>332fe39b41a82e466c70c8f8dc8b3164a4f0785f
