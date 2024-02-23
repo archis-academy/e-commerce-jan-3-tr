@@ -422,6 +422,4 @@ function changeProducts() {
   }
   fetchProducts();
 }
-
-function addToWishlist(product) {}
 /*Featured Product - End*/
