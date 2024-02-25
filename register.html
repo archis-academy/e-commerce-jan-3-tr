@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exclusive E-Commerce Login</title>
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/register.css" />
@@ -12,53 +12,185 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
-    <section class="section-register">
-        <div class="container-register-img">
-            <img src="images/login-image.png" alt="cart" />
-        </div>
-        <div class="container-register-form">
-            <div class="register-form-context">
-              <h2 class="register-title">Register to Exclusive</h2>
-              <h5 class="register-subtitle">Enter your details below</h5>
-              <form class="register-form" id="register-form">
-                <input
-                  class="register-form-fullname"
-                  name="name"
-                  id="name-register"
-                  type="text"
-                  placeholder="Fullname"
-                  required
-                  autocomplete="off"
-                />
-                <input
-                  class="register-form-mail"
-                  name="email"
-                  id="email-register"
-                  type="text"
-                  placeholder="Email or Phone Number"
-                  required
-                  autocomplete="off"
-                />
-                <input
-                  class="register-form-password"
-                  name="password"
-                  id="password-register"
-                  type="password"
-                  placeholder="Password"
-                  required
-                  autocomplete="off"
-                />
-    
-                <div class="register-form-btn-container">
-                  <button class="register-form-btn" id="register-btn" type="submit">Register</button>
-                  <a href="login.html">Log In</a>
-                </div>
-              </form>
+  </head>
+  <body>
+    <header class="exclusive-header-continer">
+      <div class="exclusive-top-header-container">
+        <div class="top-header-position">
+          <div class="top-header-box">
+            <div class="top-header-text-box">
+              <p class="top-header-text">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%!
+              </p>
+              <ul>
+                <li class="top-header-link">
+                  <a href="#"><strong>ShopNow</strong></a>
+                </li>
+              </ul>
             </div>
+            <select class="top-header-language" name="" id="language">
+              <option value="" disabled selected hidden>English</option>
+            </select>
+          </div>
         </div>
+      </div>
+      <nav class="exclusive-navbar-container">
+        <div class="navbar-link-logo-box">
+          <h1 class="navbar-logo">Exclusive</h1>
+        </div>
+      </nav>
+    </header>
+    <hr class="header-bottom-line" />
+    <nav class="bottom-side-bar">
+      <div class="side-bar-fixed-bottom">
+        <a href="index.html">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/home-icon.svg"
+          />
+        </a>
+        <div class="navbar-shoping-box side-bar-shop-icon">
+          <img
+            class="navbar-shop-icon"
+            src="images/homepage-header/cart-icon.svg"
+            alt=""
+          />
+          <span class="shop-icon-notification">1</span>
+        </div>
+        <div class="navbar-like-box side-bar-like-icon">
+          <a href="wishlist.html">
+            <img
+              class="navbar-like-icon"
+              src="images/homepage-header/wishlist-icon.svg"
+              alt=""
+            />
+          </a>
+          <span class="like-icon-notification">1</span>
+        </div>
+        <div class="bottom-side-user-box">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/user-icon.svg"
+          />
+          <div class="user-logIn-links-card bottom-side-bar-card">
+            <ul class="user-logIn-links-list">
+              <li>
+                <a class="user-logIn-link" href="#">
+                  <svg
+                    class="user-logIn-icon"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Manage My Account</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Group.svg"
+                  />
+                  My Order</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/icon-cancel.svg"
+                  />
+                  My Cancellations</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-Reviews.svg"
+                  />
+                  My Reviews</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-logout.svg"
+                  />
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="section-register">
+      <div class="container-register-img">
+        <img src="images/login-image.png" alt="cart" />
+      </div>
+      <div class="container-register-form">
+        <div class="register-form-context">
+          <h2 class="register-title">Register to Exclusive</h2>
+          <h5 class="register-subtitle">Enter your details below</h5>
+          <form class="register-form" id="register-form">
+            <input
+              class="register-form-fullname"
+              name="name"
+              id="name-register"
+              type="text"
+              placeholder="Fullname"
+              required
+              autocomplete="off"
+            />
+            <input
+              class="register-form-mail"
+              name="email"
+              id="email-register"
+              type="text"
+              placeholder="Email or Phone Number"
+              required
+              autocomplete="off"
+            />
+            <input
+              class="register-form-password"
+              name="password"
+              id="password-register"
+              type="password"
+              placeholder="Password"
+              required
+              autocomplete="off"
+            />
+
+            <div class="register-form-btn-container">
+              <button class="register-form-btn" id="register-btn" type="submit">
+                Register
+              </button>
+              <a href="login.html">Log In</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
-   <script src="register.js"></script>
-</body>
+    <script src="register.js"></script>
+  </body>
 </html>

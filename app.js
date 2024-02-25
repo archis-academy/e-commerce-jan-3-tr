@@ -633,3 +633,65 @@ if (localStorage.getItem("remainingDays")) {
 setInterval("timer()", 1000);
 
 /*Featured Product - End*/
+
+const newProductsContainer = document.querySelector("#newProductsContainer");
+
+let currentProductsAmountFirst = 0;
+let currentProductsAmountSecond = 8;
+
+async function fetchProducts() {
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+
+  function returnStars(rate) {
+    let stars = "";
+    for (let i = 0; i < rate.toFixed(0); i++) {
+      stars += `<img class="newproduckt-stars" src="images/Vector.png" />`;
+    }
+    return stars;
+  }
+
+  const currentProducts = data.slice(
+    currentProductsAmountFirst,
+    currentProductsAmountSecond
+  );
+
+  newProductsContainer.innerHTML = currentProducts
+    .map((product) => {
+      return `<div class="newproduct-box" >
+              <div class="newproduct-box-one">
+               <img  class="newproduct-box-img" src="${product.image}"/>
+              </div>
+               <h1 class="newproduct-box-h1">${product.title}</h1>
+               <div class="newproduct-box-two">
+               <p class="newproduct-box-p">$</p>
+               <p class="newproduct-box-p">${product.price}</p>
+               <div class="newproduct-box-stars">
+               ${returnStars(product.rating.rate)}
+               </div>
+               <p class="point">(32)</p>
+              </div>
+            </div>`;
+    })
+    .join("");
+}
+fetchProducts();
+
+const changeBtnLeft = document.querySelector("#changeBtnLeft");
+
+changeBtnLeft.addEventListener("click", changeProducts);
+
+const changeBtnRight = document.querySelector("#changeBtnRight");
+
+changeBtnRight.addEventListener("click", changeProducts);
+
+function changeProducts() {
+  if (currentProductsAmountSecond === 16) {
+    currentProductsAmountFirst = 0;
+    currentProductsAmountSecond = 8;
+  } else {
+    currentProductsAmountFirst += 8;
+    currentProductsAmountSecond += 8;
+  }
+  fetchProducts();
+}
