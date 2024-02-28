@@ -48,6 +48,8 @@ function deleteCartProduct(productId) {
   cartProducts = newShopingProduct;
   renderProduct();
   noticeShopingCart();
+  cartTotalPrice();
+  cartTotal();
 }
 function subtotalCart(productId, productPrice) {
   const cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
@@ -63,24 +65,65 @@ function subtotalCart(productId, productPrice) {
   );
   subtotalQuantity.innerHTML = `$${tableQuantity * productPrice}`;
   cartTotalPrice();
+  cartTotal();
 }
-
+const cartTotalSubtotal = document.querySelector(".cart-total-subtotal-price");
+let subtotal = 0;
 function cartTotalPrice() {
-  const cartTotalSubtotal = document.querySelector(
-    ".cart-total-subtotal-price"
-  );
-
+  subtotal = 0;
   const subTotalList = document.querySelectorAll(".cart-subtotal");
-  let deneme = 0;
+
   subTotalList.forEach((element) => {
     const stringValue = element.innerHTML;
     const numericString = stringValue.replace(/[^0-9.]/g, "");
     const numberValue = parseFloat(numericString); // veya parseInt(stringValue, 10) kullanabilirsiniz
-    deneme += numberValue;
+    subtotal += numberValue;
 
-    return (cartTotalSubtotal.innerHTML = `$${deneme}`);
+    return (cartTotalSubtotal.innerHTML = `$${subtotal}`);
   });
 }
-
 cartTotalPrice();
+const coupons = ["coupon40"];
+
+const couponInput = document.querySelector(".cart-input-text");
+const discountAmount = document.querySelector(".cart-total-discount-amount");
+const totalPrice = document.querySelector(".cart-total-price");
+const couponButtonClose = document.querySelector(".cart-input-btn-close");
+const couponButton = document.querySelector(".cart-input-btn");
+let couponInputValue = couponInput.value.toLowerCase();
+if (couponInputValue === "") {
+  couponButton.style.display = "none";
+}
+
+couponInput.addEventListener("input", (e) => {
+  if (e.target.value === "") {
+    couponButton.style.display = "none";
+    couponButtonClose.style.display = "inline-block";
+  } else {
+    couponButtonClose.style.display = "none";
+    couponButton.style.display = "inline-block";
+    couponInputValue = e.target.value.toLowerCase();
+  }
+});
+let couponPrice = 0;
+couponButton.addEventListener("click", () => {
+  for (let i = 0; i < coupons.length; i++) {
+    if (couponInputValue === coupons[i]) {
+      alert("Kupon Geçerli !!");
+      coupons.splice(i, 1);
+      couponButton.style.display = "none";
+      couponInput.style.display = "none";
+      couponPrice = (subtotal / 100) * 40;
+      discountAmount.innerHTML = `-$${couponPrice}`;
+      cartTotal();
+      break;
+    } else {
+      alert("Geçersiz Kupon!!!");
+    }
+  }
+});
+function cartTotal() {
+  totalPrice.innerHTML = `$${subtotal - couponPrice}`;
+}
+cartTotal();
 /*Cart Page End*/
