@@ -62,5 +62,25 @@ function subtotalCart(productId, productPrice) {
     `#cart-subtotal-${productId}`
   );
   subtotalQuantity.innerHTML = `$${tableQuantity * productPrice}`;
+  cartTotalPrice();
 }
+
+function cartTotalPrice() {
+  const cartTotalSubtotal = document.querySelector(
+    ".cart-total-subtotal-price"
+  );
+
+  const subTotalList = document.querySelectorAll(".cart-subtotal");
+  let deneme = 0;
+  subTotalList.forEach((element) => {
+    const stringValue = element.innerHTML;
+    const numericString = stringValue.replace(/[^0-9.]/g, "");
+    const numberValue = parseFloat(numericString); // veya parseInt(stringValue, 10) kullanabilirsiniz
+    deneme += numberValue;
+
+    return (cartTotalSubtotal.innerHTML = `$${deneme}`);
+  });
+}
+
+cartTotalPrice();
 /*Cart Page End*/
