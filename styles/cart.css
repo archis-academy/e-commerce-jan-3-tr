@@ -26,6 +26,29 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+.cart-image-dlt-box {
+  position: relative;
+  width: 80px;
+}
+.delete-cart {
+  display: inline-block;
+  background-color: red;
+  font-size: 16px;
+  font-weight: 800;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+}
+.cart-image {
+  height: 85px;
+}
+
 .cart-table-container {
   display: flex;
   padding: 3vw 5vw;
