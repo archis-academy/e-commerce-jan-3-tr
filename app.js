@@ -344,12 +344,14 @@ async function showAllProducts() {
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
-        <img onclick="favoriteProduct(${product.id
-      })"  class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
+        <img onclick="favoriteProduct(${
+          product.id
+        })"  class="todays-frame-575-wishlist-img" src="images/wishlist-icon.svg" >
       </div>
       <div>
-        <img onclick="todaysSellCartProduct(${product.id
-      })"  class="todays-frame-575-img" src="images/cart-icon.svg" >
+        <img onclick="todaysSellCartProduct(${
+          product.id
+        })"  class="todays-frame-575-img" src="images/cart-icon.svg" >
       </div>
     </div>
   </div>
@@ -394,15 +396,18 @@ async function urunleriGetir() {
     <img src="${product.image}" alt="">
     <div class="todays-frame-575">
       <div>
-      <svg id="product-${product.id}" onclick="favoriteProduct(${product.id
-      })" class="icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="products-${product.id
-      }" d="M11 7C8.239 7 6 9.216 6 11.95C6 14.157 6.875 19.395 15.488 24.69C15.6423 24.7839 15.8194 24.8335 16 24.8335C16.1806 24.8335 16.3577 24.7839 16.512 24.69C25.125 19.395 26 14.157 26 11.95C26 9.216 23.761 7 21 7C18.239 7 16 10 16 10C16 10 13.761 7 11 7Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg id="product-${product.id}" onclick="favoriteProduct(${
+      product.id
+    })" class="icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="products-${
+      product.id
+    }" d="M11 7C8.239 7 6 9.216 6 11.95C6 14.157 6.875 19.395 15.488 24.69C15.6423 24.7839 15.8194 24.8335 16 24.8335C16.1806 24.8335 16.3577 24.7839 16.512 24.69C25.125 19.395 26 14.157 26 11.95C26 9.216 23.761 7 21 7C18.239 7 16 10 16 10C16 10 13.761 7 11 7Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
       </div>
       <div>
-        <img onclick="todaysSellCartProduct(${product.id
-      })" class="todays-frame-575-img" src="images/cart-icon.svg" >
+        <img onclick="todaysSellCartProduct(${
+          product.id
+        })" class="todays-frame-575-img" src="images/cart-icon.svg" >
       </div>
     </div>
   </div>
@@ -553,8 +558,8 @@ urunKart.innerHTML = bestSellingProducts
         <img src="${urun.image}" alt="${urun.title}" />
     </div>
     <div><p class="product-information">${urun.title
-        .substring(0, 20)
-        .concat(" ...")} </p>
+      .substring(0, 20)
+      .concat(" ...")} </p>
     </div>
     <div class="prices">
       <p class="price">${urun.price}₺</p>
@@ -568,7 +573,7 @@ urunKart.innerHTML = bestSellingProducts
       <img src="images/Vector.png" alt="" />
       <p class="point">(65)</p>
     </div>
-
+    
   </section>`
   )
   .join("");
@@ -628,3 +633,65 @@ if (localStorage.getItem("remainingDays")) {
 setInterval("timer()", 1000);
 
 /*Featured Product - End*/
+
+const newProductsContainer = document.querySelector("#newProductsContainer");
+
+let currentProductsAmountFirst = 0;
+let currentProductsAmountSecond = 8;
+
+async function fetchProducts() {
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+
+  function returnStars(rate) {
+    let stars = "";
+    for (let i = 0; i < rate.toFixed(0); i++) {
+      stars += `<img class="newproduckt-stars" src="images/Vector.png" />`;
+    }
+    return stars;
+  }
+
+  const currentProducts = data.slice(
+    currentProductsAmountFirst,
+    currentProductsAmountSecond
+  );
+
+  newProductsContainer.innerHTML = currentProducts
+    .map((product) => {
+      return `<div class="newproduct-box" >
+              <div class="newproduct-box-one">
+               <img  class="newproduct-box-img" src="${product.image}"/>
+              </div>
+               <h1 class="newproduct-box-h1">${product.title}</h1>
+               <div class="newproduct-box-two">
+               <p class="newproduct-box-p">$</p>
+               <p class="newproduct-box-p">${product.price}</p>
+               <div class="newproduct-box-stars">
+               ${returnStars(product.rating.rate)}
+               </div>
+               <p class="point">(32)</p>
+              </div>
+            </div>`;
+    })
+    .join("");
+}
+fetchProducts();
+
+const changeBtnLeft = document.querySelector("#changeBtnLeft");
+
+changeBtnLeft.addEventListener("click", changeProducts);
+
+const changeBtnRight = document.querySelector("#changeBtnRight");
+
+changeBtnRight.addEventListener("click", changeProducts);
+
+function changeProducts() {
+  if (currentProductsAmountSecond === 16) {
+    currentProductsAmountFirst = 0;
+    currentProductsAmountSecond = 8;
+  } else {
+    currentProductsAmountFirst += 8;
+    currentProductsAmountSecond += 8;
+  }
+  fetchProducts();
+}

@@ -1,153 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exclusive E-Commerce Login</title>
-  <link rel="stylesheet" href="styles/shared.css" />
-  <link rel="stylesheet" href="styles/login.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <section class="section-login">
-    <div class="container-login-img">
-      <img src="images/login-image.png" alt="cart" />
-    </div>
-    <div class="container-login-form">
-      <div class="login-form-context">
-        <h2 class="login-title">Log in to Exclusive</h2>
-        <h5 class="login-subtitle">Enter your details below</h5>
-        <form class="login-form" id="login-form">
-          <input class="login-form-text" id="email-login" type="text" placeholder="Email or Phone Number" required
-            autocomplete="off" />
-          <input class="login-form-password" id="password-login" type="password" placeholder="Password" required
-            autocomplete="off" />
-
-          <div class="login-form-btn-forget">
-            <button class="login-form-btn" id="log-in-btn" type="submit">Log In</button>
-            <a class="login-form-forget" href="#">Forget Password?</a>
-          </div>
-
-          <div class="login-form-register">
-            <p>Don't have an account?</p>
-            <a href="/register.html">Register</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-columns">
-
-        <div class="footer-column1">
-          <h3 class="footer-column-header">
-            Exclusive
-          </h3>
-          <a href="#" class="footer-column-content-sub">
-            Subscribe
-          </a>
-          <a href="#" class="footer-column-content">
-            Get 10% off your first order
-          </a>
-          <div class="footer-input-column-div"><input class="footer-column1-input" placeholder="Enter Your E-mail">
-            <img class="footer-icon-send" src="/images/icon-send.svg" alt="" srcset="">
-          </div>
-        </div>
-
-        <div class="footer-column2">
-          <h3 class="footer-column-header">
-            Support
-          </h3>
-          <p class="footer-column-content">
-            111 Bijoy sarani, Dhaka, <br> DH 1515, Bangladesh.
-          </p>
-          <p class="footer-column-content">
-            exclusive@gmail.com
-          </p>
-          <p class="footer-column-content">
-            +88015-88888-9999
-          </p>
-
-        </div>
-
-        <div class="footer-column3">
-          <h3 class="footer-column-header">
-            Account
-          </h3>
-          <a href="#" class="footer-column-content">
-            My Account
-          </a>
-          <a href="/login.html" class="footer-column-content">
-            Login / Register
-          </a>
-          <a href="/cart.html" class="footer-column-content">
-            Cart
-          </a>
-          <a href="/wishlist.html" class="footer-column-content">
-            Wishlist
-          </a>
-          <a href="/index.html" class="footer-column-content">
-            Shop
-          </a>
-        </div>
-
-
-        <div class="footer-column4">
-          <h3 class="footer-column-header">
-            Quick Link
-          </h3>
-          <a href="#" class="footer-column-content">
-            Privacy Policy
-          </a>
-          <a href="#" class="footer-column-content">
-            Terms Of Use
-          </a>
-          <a href="#" class="footer-column-content">
-            FAQ
-          </a>
-          <a href="#" class="footer-column-content">
-            Contact
-          </a>
-        </div>
-
-        <div class="footer-column5">
-          <h3 class="footer-column-header">
-            Download App
-          </h3>
-          <p class="footer-column5-text">Save $3 with App New User Only</p>
-          <div class="footer-column5-logos">
-            <div class="footer-column5-left">
-              <img src="/images/qr-code.png" alt="" srcset="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive E-Commerce Login</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="exclusive-header-continer">
+      <div class="exclusive-top-header-container">
+        <div class="top-header-position">
+          <div class="top-header-box">
+            <div class="top-header-text-box">
+              <p class="top-header-text">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%!
+              </p>
+              <ul>
+                <li class="top-header-link">
+                  <a href="#"><strong>ShopNow</strong></a>
+                </li>
+              </ul>
             </div>
-            <div class="footer-column5-right">
-              <img src="/images/badge-google-play.svg" alt="" srcset="">
-              <img src="/images/badge-app-store.svg" alt="" srcset="">
-            </div>
-          </div>
-          <div class="footer-column5-end-logos">
-            <img src="/images/icon-facebook.svg" alt="" srcset="" class="social_icon_footer">
-            <img src="/images/icon-twitter.svg" alt="" srcset="" class="social_icon_footer">
-            <img src="/images/icon-instagram.svg" alt="" srcset="" class="social_icon_footer">
-            <img src="/images/icon-linkedin.svg" alt="" srcset="" class="social_icon_footer">
+            <select class="top-header-language" name="" id="language">
+              <option value="" disabled selected hidden>English</option>
+            </select>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-line"></div>
-        <div class="footer-text"><img src="/images/Group.png" alt="" srcset="" id="footer-copyright-img">
-          Copyright
-          Rimel 2022. All right
-          reserved</div>
+      <nav class="exclusive-navbar-container">
+        <div class="navbar-link-logo-box">
+          <h1 class="navbar-logo">Exclusive</h1>
+        </div>
+      </nav>
+    </header>
+    <hr class="header-bottom-line" />
+    <nav class="bottom-side-bar">
+      <div class="side-bar-fixed-bottom">
+        <a href="index.html">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/home-icon.svg"
+          />
+        </a>
+        <div class="navbar-shoping-box side-bar-shop-icon">
+          <img
+            class="navbar-shop-icon"
+            src="images/homepage-header/cart-icon.svg"
+            alt=""
+          />
+          <span class="shop-icon-notification">1</span>
+        </div>
+        <div class="navbar-like-box side-bar-like-icon">
+          <a href="wishlist.html">
+            <img
+              class="navbar-like-icon"
+              src="images/homepage-header/wishlist-icon.svg"
+              alt=""
+            />
+          </a>
+          <span class="like-icon-notification">1</span>
+        </div>
+        <div class="bottom-side-user-box">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/user-icon.svg"
+          />
+          <div class="user-logIn-links-card bottom-side-bar-card">
+            <ul class="user-logIn-links-list">
+              <li>
+                <a class="user-logIn-link" href="#">
+                  <svg
+                    class="user-logIn-icon"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Manage My Account</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Group.svg"
+                  />
+                  My Order</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/icon-cancel.svg"
+                  />
+                  My Cancellations</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-Reviews.svg"
+                  />
+                  My Reviews</a
+                >
+              </li>
+              <li id="isLogOut">
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-logout.svg"
+                  />
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
-  <script src="login.js"></script>
-</body>
+    </nav>
+    <section class="section-login">
+      <div class="container-login-img">
+        <img src="images/login-image.png" alt="cart" />
+      </div>
+      <div class="container-login-form">
+        <div class="login-form-context">
+          <h2 class="login-title">Log in to Exclusive</h2>
+          <h5 class="login-subtitle">Enter your details below</h5>
+          <form class="login-form" id="login-form">
+            <input
+              class="login-form-text"
+              id="email-login"
+              type="text"
+              placeholder="Email or Phone Number"
+              required
+              autocomplete="off"
+            />
+            <input
+              class="login-form-password"
+              id="password-login"
+              type="password"
+              placeholder="Password"
+              required
+              autocomplete="off"
+            />
 
+            <div class="login-form-btn-forget">
+              <button class="login-form-btn" id="log-in-btn" type="submit">
+                Log In
+              </button>
+              <a class="login-form-forget" href="#">Forget Password?</a>
+            </div>
+
+            <div class="login-form-register">
+              <p>Don't have an account?</p>
+              <a href="/register.html">Register</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-column1">
+            <h3 class="footer-column-header">Exclusive</h3>
+            <a href="#" class="footer-column-content-sub"> Subscribe </a>
+            <a href="#" class="footer-column-content">
+              Get 10% off your first order
+            </a>
+            <div class="footer-input-column-div">
+              <input
+                class="footer-column1-input"
+                placeholder="Enter Your E-mail"
+              />
+              <img
+                class="footer-icon-send"
+                src="/images/icon-send.svg"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+
+          <div class="footer-column2">
+            <h3 class="footer-column-header">Support</h3>
+            <p class="footer-column-content">
+              111 Bijoy sarani, Dhaka, <br />
+              DH 1515, Bangladesh.
+            </p>
+            <p class="footer-column-content">exclusive@gmail.com</p>
+            <p class="footer-column-content">+88015-88888-9999</p>
+          </div>
+
+          <div class="footer-column3">
+            <h3 class="footer-column-header">Account</h3>
+            <a href="#" class="footer-column-content"> My Account </a>
+            <a href="/login.html" class="footer-column-content">
+              Login / Register
+            </a>
+            <a href="/cart.html" class="footer-column-content"> Cart </a>
+            <a href="/wishlist.html" class="footer-column-content">
+              Wishlist
+            </a>
+            <a href="/index.html" class="footer-column-content"> Shop </a>
+          </div>
+
+          <div class="footer-column4">
+            <h3 class="footer-column-header">Quick Link</h3>
+            <a href="#" class="footer-column-content"> Privacy Policy </a>
+            <a href="#" class="footer-column-content"> Terms Of Use </a>
+            <a href="#" class="footer-column-content"> FAQ </a>
+            <a href="#" class="footer-column-content"> Contact </a>
+          </div>
+
+          <div class="footer-column5">
+            <h3 class="footer-column-header">Download App</h3>
+            <p class="footer-column5-text">Save $3 with App New User Only</p>
+            <div class="footer-column5-logos">
+              <div class="footer-column5-left">
+                <img src="/images/qr-code.png" alt="" srcset="" />
+              </div>
+              <div class="footer-column5-right">
+                <img src="/images/badge-google-play.svg" alt="" srcset="" />
+                <img src="/images/badge-app-store.svg" alt="" srcset="" />
+              </div>
+            </div>
+            <div class="footer-column5-end-logos">
+              <img
+                src="/images/icon-facebook.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+              <img
+                src="/images/icon-twitter.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+              <img
+                src="/images/icon-instagram.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+              <img
+                src="/images/icon-linkedin.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-line"></div>
+          <div class="footer-text">
+            <img
+              src="/images/Group.png"
+              alt=""
+              srcset=""
+              id="footer-copyright-img"
+            />
+            Copyright Rimel 2022. All right reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="login.js"></script>
+  </body>
 </html>

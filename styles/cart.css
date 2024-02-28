@@ -1,0 +1,7 @@
+.navbar-logIn {
+  display: none;
+}
+.navbar-user-logIn-box,
+.navbar-user-icon {
+  display: block;
+}
