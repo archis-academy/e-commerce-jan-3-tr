@@ -541,7 +541,6 @@ img {
 .products-big-box {
   max-width: 1300px;
   margin: 50px auto 50px auto;
-
 }
 
 .our-products {
@@ -558,12 +557,11 @@ img {
 
 .our-products-box-img {
   width: 30px;
-
 }
 
 .products-h5 {
-  font-family: 'Poppins', sans-serif;
-  color: #DB4444;
+  font-family: "Poppins", sans-serif;
+  color: #db4444;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -571,7 +569,7 @@ img {
 }
 
 .products-h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -580,14 +578,12 @@ img {
 
 .our-products-lower {
   display: flex;
-
 }
 
 .our-products-box-one {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .products-button {
@@ -602,28 +598,25 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-
 }
 
 .button-view {
-  background-color: #DB4444;
-  color: #FAFAFA;
-  font-family: 'Poppins', sans-serif;
+  background-color: #db4444;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   line-height: 24px;
   border: none;
   border: 5px;
   padding: 7px 25px 7px 25px;
-
 }
 .new-product {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
-
 }
 
 .newproduct-box {
@@ -632,21 +625,20 @@ img {
 }
 
 .newproduct-box-one {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   display: flex;
   justify-content: center;
-
 }
 
 .newproduct-box-img {
- width: 270px;
- height: 250px;
+  width: 270px;
+  height: 250px;
 }
 
 .newproduct-box-h1 {
   margin-top: 25px;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500px;
   height: 100px;
 }
@@ -659,15 +651,14 @@ img {
 
 .newproduct-box-p {
   font-size: 16px;
-  color: #DB4444;
-  font-family: 'Poppins', sans-serif;
+  color: #db4444;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   align-items: center;
 }
 
-.newproduct-box-stars{
+.newproduct-box-stars {
   gap: 5px;
-
 }
 
 .newproduckt-stars {
@@ -675,21 +666,18 @@ img {
   height: 20px;
 }
 
-.newproduct-box-icon{
+.newproduct-box-icon {
   display: flex;
   flex-direction: column;
   align-items: end;
-
 }
 
-
-.newproduct-icon{
+.newproduct-icon {
   width: 30px;
   height: 30px;
   border: none;
   background-color: #fff;
   border-radius: 50%;
-  
 }
 
 /* Section Featured Product - End*/
