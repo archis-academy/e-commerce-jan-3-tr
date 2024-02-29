@@ -138,6 +138,7 @@
   flex: 1;
 }
 .box-img {
+  height: 260px;
   padding: 5px;
   border: 5px solid #f7f7f7;
   position: relative;
@@ -405,6 +406,83 @@
   }
 }
 /* Section Featured Product - End*/
+.products-big-box {
+  max-width: 1300px;
+  margin: 50px auto 50px auto;
+}
+
+.our-products {
+  display: flex;
+  flex-direction: column;
+  gap: -25px;
+}
+
+.our-products-boxs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.our-products-box-img {
+  width: 30px;
+}
+
+.products-h5 {
+  font-family: "Poppins", sans-serif;
+  color: #db4444;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.products-h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.our-products-lower {
+  display: flex;
+}
+
+.our-products-box-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-button {
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  height: 30px;
+}
+.viewbtn {
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button-view {
+  background-color: #db4444;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  border: none;
+  border: 5px;
+  padding: 7px 25px 7px 25px;
+}
+.new-product {
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(234px, 280px));
+  justify-content: center;
+}
 /* Section New Arrivals - Start*/
 .section-na {
   max-width: 1170px;
