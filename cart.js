@@ -72,13 +72,15 @@ let subtotal = 0;
 function cartTotalPrice() {
   subtotal = 0;
   const subTotalList = document.querySelectorAll(".cart-subtotal");
-
+  if (subTotalList.length == 0) {
+    cartTotalSubtotal.innerHTML = "$0";
+  }
   subTotalList.forEach((element) => {
     const stringValue = element.innerHTML;
     const numericString = stringValue.replace(/[^0-9.]/g, "");
     const numberValue = parseFloat(numericString); // veya parseInt(stringValue, 10) kullanabilirsiniz
     subtotal += numberValue;
-
+    console.log(element);
     return (cartTotalSubtotal.innerHTML = `$${subtotal}`);
   });
 }
