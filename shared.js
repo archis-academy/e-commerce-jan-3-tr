@@ -474,15 +474,17 @@ function noticeShopingCart() {
 }
 noticeShopingCart();
 noticeWishlist();
-const logOut = document.querySelector("#isLogOut");
+
 isLogin = JSON.parse(localStorage.getItem("isLogin"));
-console.log(logOut);
-logOut.addEventListener("click", () => {
-  isLogin = false;
-  localStorage.setItem("isLogin", isLogin);
-  if (isLogin == false) {
-    window.location.href = "login.html";
-  }
+
+document.querySelectorAll("#isLogOut").forEach((e) => {
+  e.addEventListener("click", () => {
+    isLogin = false;
+    localStorage.setItem("isLogin", isLogin);
+    if (isLogin == false) {
+      window.location.href = "login.html";
+    }
+  });
 });
 if (isLogin == null) {
   window.location.href = "register.html";

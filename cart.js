@@ -17,7 +17,7 @@ function renderProduct() {
      ${product.title}
      </span>
     </td>
-    <td class="cart-table-body">$${product.price}</td>
+    <td class="cart-table-body">${product.price}₺</td>
     <td class="cart-table-body">
     <div class="cart-table-quantity-container">
       <select onchange="subtotalCart(${product.id} , ${product.price})" class="cart-table-quantity" name="Quantity" id="cart-table-option-${product.id}">
@@ -34,7 +34,7 @@ function renderProduct() {
       </select>
     </div>
     </td>
-    <td class="cart-table-body cart-subtotal" id="cart-subtotal-${product.id}">$${product.price}</td></tr>`
+    <td class="cart-table-body cart-subtotal" id="cart-subtotal-${product.id}">${product.price}₺</td></tr>`
     )
     .join("");
 }
@@ -50,6 +50,7 @@ function deleteCartProduct(productId) {
   noticeShopingCart();
   cartTotalPrice();
   cartTotal();
+  disSubtotal();
 }
 function subtotalCart(productId, productPrice) {
   const cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
@@ -63,9 +64,10 @@ function subtotalCart(productId, productPrice) {
   const subtotalQuantity = document.querySelector(
     `#cart-subtotal-${productId}`
   );
-  subtotalQuantity.innerHTML = `$${tableQuantity * productPrice}`;
+  subtotalQuantity.innerHTML = `${tableQuantity * productPrice}₺`;
   cartTotalPrice();
   cartTotal();
+  disSubtotal();
 }
 const cartTotalSubtotal = document.querySelector(".cart-total-subtotal-price");
 let subtotal = 0;
@@ -73,7 +75,7 @@ function cartTotalPrice() {
   subtotal = 0;
   const subTotalList = document.querySelectorAll(".cart-subtotal");
   if (subTotalList.length == 0) {
-    cartTotalSubtotal.innerHTML = "$0";
+    cartTotalSubtotal.innerHTML = "0₺";
   }
   subTotalList.forEach((element) => {
     const stringValue = element.innerHTML;
@@ -81,7 +83,7 @@ function cartTotalPrice() {
     const numberValue = parseFloat(numericString); // veya parseInt(stringValue, 10) kullanabilirsiniz
     subtotal += numberValue;
     console.log(element);
-    return (cartTotalSubtotal.innerHTML = `$${subtotal}`);
+    return (cartTotalSubtotal.innerHTML = `${subtotal}₺`);
   });
 }
 cartTotalPrice();
@@ -113,19 +115,29 @@ couponButton.addEventListener("click", () => {
     if (couponInputValue === coupons[i]) {
       alert("Kupon Geçerli !!");
       coupons.splice(i, 1);
+      couponPrice = (subtotal / 100) * 40;
       couponButton.style.display = "none";
       couponInput.style.display = "none";
-      couponPrice = (subtotal / 100) * 40;
-      discountAmount.innerHTML = `-$${couponPrice}`;
       cartTotal();
+      disSubtotal();
       break;
     } else {
       alert("Geçersiz Kupon!!!");
     }
   }
 });
+
+function disSubtotal() {
+  if (couponPrice > 0) {
+    discountAmount.innerHTML = `-${couponPrice}₺`;
+  } else {
+    discountAmount.innerHTML = `${couponPrice}₺`;
+    couponPrice = 0;
+  }
+  cartTotal();
+}
 function cartTotal() {
-  totalPrice.innerHTML = `$${subtotal - couponPrice}`;
+  totalPrice.innerHTML = `${subtotal - couponPrice}₺`;
 }
 cartTotal();
 /*Cart Page End*/
