@@ -16,7 +16,7 @@
 }
 .columns-1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 270px));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 270px));
   justify-content: center;
   gap: 20px;
   max-width: 1200px;
