@@ -124,7 +124,7 @@ couponButton.addEventListener("click", () => {
     if (couponInputValue === coupons[i]) {
       alert("Kupon Geçerli !!");
       coupons.splice(i, 1);
-      couponPrice = (subtotal / 100) * 40;
+
       couponButton.style.display = "none";
       couponInput.style.display = "none";
       cartTotal();
@@ -137,6 +137,7 @@ couponButton.addEventListener("click", () => {
 });
 
 function disSubtotal() {
+  couponPrice = (subtotal / 100) * 40;
   if (couponPrice > 0) {
     discountAmount.innerHTML = `-${couponPrice.toFixed(2)}₺`;
   } else {
