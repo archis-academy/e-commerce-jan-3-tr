@@ -96,7 +96,7 @@ function cartTotalPrice() {
   });
 }
 cartTotalPrice();
-const coupons = ["coupon40"];
+const coupons = ["ABC12", "XY789"];
 
 const couponInput = document.querySelector(".cart-input-text");
 const discountAmount = document.querySelector(".cart-total-discount-amount");
@@ -115,7 +115,7 @@ couponInput.addEventListener("input", (e) => {
   } else {
     couponButtonClose.style.display = "none";
     couponButton.style.display = "inline-block";
-    couponInputValue = e.target.value.toLowerCase();
+    couponInputValue = e.target.value;
   }
 });
 let couponPrice = 0;
@@ -129,7 +129,7 @@ couponButton.addEventListener("click", () => {
       couponInput.style.display = "none";
       cartTotal();
       disSubtotal();
-      break;
+      return;
     } else {
       alert("Geçersiz Kupon!!!");
     }
