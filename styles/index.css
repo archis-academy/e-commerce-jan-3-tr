@@ -141,7 +141,7 @@
 .todays-frame-725 {
   display: flex;
   flex-direction: column;
-  min-width: 600px;
+  max-width: 600px;
   gap: 24px;
 }
 .todays-frame-726 {
