@@ -11,16 +11,22 @@ function renderProduct() {
         `<tr><td class="cart-table-body">
     <span>
     <div class="cart-image-dlt-box">
-    <span onclick="deleteCartProduct(${product.id})" class="delete-cart">X</span>
+    <span onclick="deleteCartProduct(${
+      product.id
+    })" class="delete-cart">X</span>
     <img class="cart-image" src="${product.image}" alt="${product.title}" />
     </div>
      ${product.title}
      </span>
     </td>
-    <td class="cart-table-body">${product.price}₺</td>
+    <td class="cart-table-body">${product.price.toFixed(2)}₺</td>
     <td class="cart-table-body">
     <div class="cart-table-quantity-container">
-      <select onchange="subtotalCart(${product.id} , ${product.price})" class="cart-table-quantity" name="Quantity" id="cart-table-option-${product.id}">
+      <select onchange="subtotalCart(${product.id} , ${
+          product.price
+        })" class="cart-table-quantity" name="Quantity" id="cart-table-option-${
+          product.id
+        }">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -34,12 +40,15 @@ function renderProduct() {
       </select>
     </div>
     </td>
-    <td class="cart-table-body cart-subtotal" id="cart-subtotal-${product.id}">${product.price}₺</td></tr>`
+    <td class="cart-table-body cart-subtotal" id="cart-subtotal-${
+      product.id
+    }">${product.price.toFixed(2)}₺</td></tr>`
     )
     .join("");
 }
 renderProduct();
 table.appendChild(setProducts);
+
 function deleteCartProduct(productId) {
   const newShopingProduct = cartProducts.filter(
     (product) => product.id !== productId
@@ -64,7 +73,7 @@ function subtotalCart(productId, productPrice) {
   const subtotalQuantity = document.querySelector(
     `#cart-subtotal-${productId}`
   );
-  subtotalQuantity.innerHTML = `${tableQuantity * productPrice}₺`;
+  subtotalQuantity.innerHTML = `${(tableQuantity * productPrice).toFixed(2)}₺`;
   cartTotalPrice();
   cartTotal();
   disSubtotal();
@@ -83,7 +92,7 @@ function cartTotalPrice() {
     const numberValue = parseFloat(numericString); // veya parseInt(stringValue, 10) kullanabilirsiniz
     subtotal += numberValue;
     console.log(element);
-    return (cartTotalSubtotal.innerHTML = `${subtotal}₺`);
+    return (cartTotalSubtotal.innerHTML = `${subtotal.toFixed(2)}₺`);
   });
 }
 cartTotalPrice();
@@ -129,7 +138,7 @@ couponButton.addEventListener("click", () => {
 
 function disSubtotal() {
   if (couponPrice > 0) {
-    discountAmount.innerHTML = `-${couponPrice}₺`;
+    discountAmount.innerHTML = `-${couponPrice.toFixed(2)}₺`;
   } else {
     discountAmount.innerHTML = `${couponPrice}₺`;
     couponPrice = 0;
@@ -137,7 +146,17 @@ function disSubtotal() {
   cartTotal();
 }
 function cartTotal() {
-  totalPrice.innerHTML = `${subtotal - couponPrice}₺`;
+  totalPrice.innerHTML = `${(subtotal - couponPrice).toFixed(2)}₺`;
 }
 cartTotal();
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1010) {
+    asideBar.style.display = "none";
+    scrollBody.style.overflowY = "scroll";
+    isBurgerOpen = !isBurgerOpen;
+  } else {
+    asideBar.style.display = "none";
+    isBurgerOpen = !isBurgerOpen;
+  }
+});
 /*Cart Page End*/
