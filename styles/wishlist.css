@@ -10,16 +10,16 @@
   flex-direction: column;
   gap: 20px;
   max-width: 1200px;
+  min-height: 225px;
   margin: 80px auto;
   padding: 0 20px;
 }
 .columns-1 {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 270px));
+  justify-content: center;
   gap: 20px;
   max-width: 1200px;
-  flex: 1;
 }
 .container-card {
   display: flex;
@@ -30,7 +30,7 @@
 .columns-menu-1 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex: 1;
 }
 .col-p {
@@ -71,6 +71,7 @@
   cursor: pointer;
 }
 .column-product {
+  object-fit: contain;
   height: 275px;
 }
 .explanation-product {
@@ -95,6 +96,13 @@
   top: 12px;
   z-index: 1;
   cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.icons:hover {
+  background-color: #f5f5f5;
 }
 .icon-container {
   width: 16px;

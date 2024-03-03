@@ -3,116 +3,580 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Cards</title>
+    <title>Exclusive E-Commerce About</title>
     <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/shared.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <section class="container-one">
-      <div class="dev-about-col">
-        <h1 class="title-about">Our Story</h1>
-        <p class="p-container-about">
-          Launced in 2015, Exclusive is South Asia’s premier online shopping
-          makterplace with an active presense in Bangladesh. Supported by wide
-          range of tailored marketing, data and service solutions, Exclusive has
-          10,500 sallers and 300 brands and serves 3 millioons customers across
-          the region. <br />
-          <br /><br />
-          Exclusive has more than 1 Million products to offer, growing at a very
-          fast. Exclusive offers a diverse assotment in categories ranging from
-          consumer.
-        </p>
+    <header class="exclusive-header-continer">
+      <div class="exclusive-top-header-container">
+        <div class="top-header-position">
+          <div class="top-header-box">
+            <div class="top-header-text-box">
+              <p class="top-header-text">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%!
+              </p>
+              <ul>
+                <li class="top-header-link">
+                  <a href="#"><strong>ShopNow</strong></a>
+                </li>
+              </ul>
+            </div>
+            <select class="top-header-language" name="" id="language">
+              <option value="" disabled selected hidden>English</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="img-container-about">
-        <img class="side-img" src="images/Side Image.png" alt="" />
+      <nav class="exclusive-navbar-container">
+        <div class="navbar-link-logo-box">
+          <h1 class="navbar-logo">Exclusive</h1>
+          <ul class="navbar-links-box">
+            <li class="navbar-link"><a href="index.html">Home</a></li>
+            <li class="navbar-link"><a href="#">Contact</a></li>
+            <li class="navbar-link"><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="navbar-user-box">
+          <div class="navbar-search-box">
+            <input
+              class="navbar-search"
+              type="search"
+              name=""
+              id="searchInput"
+              placeholder="What are you looking for?"
+            />
+            <img
+              class="navbar-search-icon"
+              src="images/homepage-header/search-icon.svg"
+              alt=""
+            />
+            <div id="" class="search-category-data"></div>
+          </div>
+          <div class="navbar-like-box">
+            <a href="wishlist.html">
+              <img
+                class="navbar-like-icon"
+                src="images/homepage-header/wishlist-icon.svg"
+                alt=""
+              />
+            </a>
+            <span class="like-icon-notification">1</span>
+          </div>
+          <div class="navbar-shoping-box">
+            <a href="cart.html">
+              <img
+                class="navbar-shop-icon"
+                src="images/homepage-header/cart-icon.svg"
+                alt=""
+              />
+              <span class="shop-icon-notification">1</span>
+            </a>
+          </div>
+          <div class="navbar-user-logIn-box">
+            <img
+              class="navbar-user-icon"
+              src="images/homepage-header/user-icon.svg"
+              alt="user-icon"
+            />
+            <div class="user-logIn-links-card">
+              <ul class="user-logIn-links-list">
+                <li>
+                  <a class="user-logIn-link" href="#">
+                    <svg
+                      class="user-logIn-icon"
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Manage My Account</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Group.svg"
+                    />
+                    My Order</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/icon-cancel.svg"
+                    />
+                    My Cancellations</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Icon-Reviews.svg"
+                    />
+                    My Reviews</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Icon-logout.svg"
+                    />
+                    Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            class="navbar-burger-menu-icon"
+            src="images/homepage-header/burger-menu.svg"
+          />
+        </div>
+      </nav>
+    </header>
+    <hr class="header-bottom-line" />
+    <nav class="bottom-side-bar">
+      <div class="side-bar-fixed-bottom">
+        <a href="index.html">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/home-icon.svg"
+          />
+        </a>
+        <div class="navbar-shoping-box side-bar-shop-icon">
+          <a href="cart.html">
+            <img
+              class="navbar-shop-icon"
+              src="images/homepage-header/cart-icon.svg"
+              alt=""
+            />
+            <span id="shopIconNotice" class="shop-icon-notification">1</span>
+          </a>
+        </div>
+        <div class="navbar-like-box side-bar-like-icon">
+          <a href="wishlist.html">
+            <img
+              class="navbar-like-icon"
+              src="images/homepage-header/wishlist-icon.svg"
+              alt=""
+            />
+            <span id="likeIconNotice" class="like-icon-notification">1</span>
+          </a>
+        </div>
+        <div class="bottom-side-user-box">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/user-icon.svg"
+          />
+          <div class="user-logIn-links-card bottom-side-bar-card">
+            <ul class="user-logIn-links-list">
+              <li>
+                <a class="user-logIn-link" href="#">
+                  <svg
+                    class="user-logIn-icon"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Manage My Account</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Group.svg"
+                  />
+                  My Order</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/icon-cancel.svg"
+                  />
+                  My Cancellations</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-Reviews.svg"
+                  />
+                  My Reviews</a
+                >
+              </li>
+              <li id="isLogOut">
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-logout.svg"
+                  />
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <aside class="exclusive-aside-continer">
+      <ul class="aside-links-box">
+        <li class="aside-link">
+          <a class="link-dropdown womans-dropdown" href="#">
+            <div id="categoryData" class="category-data"></div>
+            <p>Woman’s Fashion</p>
+            <img
+              class="link-dropdown-arrow"
+              src="images/homepage-header/DropDown.svg"
+              alt=""
+          /></a>
+        </li>
+        <li class="aside-link">
+          <a class="link-dropdown mens-dropdown" href="#">
+            <div
+              id="categoryData"
+              class="category-data mens-category-data"
+            ></div>
+            <p>Men’s Fashion</p>
+            <img
+              class="link-dropdown-arrow"
+              src="images/homepage-header/DropDown.svg"
+              alt=""
+          /></a>
+        </li>
+        <li class="aside-link"><a href="#">Electronics</a></li>
+        <li class="aside-link"><a href="#">Home & Lifestyle</a></li>
+        <li class="aside-link"><a href="#">Medicine</a></li>
+        <li class="aside-link"><a href="#">Sports & Outdoor</a></li>
+        <li class="aside-link"><a href="#">Baby’s & Toys</a></li>
+        <li class="aside-link"><a href="#">Groceries & Pets</a></li>
+        <li class="aside-link"><a href="#">Health & Beauty</a></li>
+        <li class="aside-link burger-menu-link">
+          <a href="#"><strong>Contact</strong></a>
+        </li>
+        <li class="aside-link burger-menu-link">
+          <a href="about.html"><strong>About</strong></a>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="about-page-sections">
+      <div class="page-title">
+        <a class="page-title-link" href="index.html">Home</a>
+        <span>/</span>
+        <a class="page-title-link" href="about.html">About</a>
+      </div>
+      <div class="about-our-story">
+        <div class="our-story-text">
+          <h1 class="our-story-title">Our Story</h1>
+          <p class="our-story">
+            Launced in 2015, Exclusive is South Asia’s premier online shopping
+            makterplace with an active presense in Bangladesh. Supported by wide
+            range of tailored marketing, data and service solutions, Exclusive
+            has 10,500 sallers and 300 brands and serves 3 millioons customers
+            across the region.
+          </p>
+          <p class="our-story">
+            Exclusive has more than 1 Million products to offer, growing at a
+            very fast. Exclusive offers a diverse assotment in categories
+            ranging from consumer.
+          </p>
+        </div>
+        <img
+          class="shopping-girls-images animate__animated animate__backInRight"
+          src="/images/about-images/shoppin-girls.png"
+        />
+      </div>
+
+      <!--customer services category-->
+      <div class="customer-services-category">
+        <div class="services-categories">
+          <img
+            class="services-icon"
+            src="images/about-images/shopping-center-icon.png"
+          />
+          <h2 class="services-number">10.5k</h2>
+          <p class="services-tit">Sallers active our site</p>
+        </div>
+        <div class="services-categories">
+          <img class="services-icon" src="images/about-images/services.png" />
+          <h2 class="services-number">45.5k</h2>
+          <p class="services-tit">Customer active in our site</p>
+        </div>
+        <div class="services-categories">
+          <img
+            class="services-icon"
+            src="images/about-images/money-iconn.svg"
+          />
+          <h2 class="services-number">33k</h2>
+          <p class="services-tit">Mopnthly Produduct Sale</p>
+        </div>
+        <div class="services-categories">
+          <img
+            class="services-icon"
+            src="images/about-images/anual-money-icon.png"
+          />
+          <h2 class="services-number">25k</h2>
+          <p class="services-tit">Anual gross sale in our site</p>
+        </div>
+      </div>
+      <!--customers-->
+
+      <section class="container-column-about">
+        <div class="product-div-box">
+          <div class="column-img-one">
+            <img
+              class="column-img"
+              src="images/about-images/customer-first.png"
+              alt=""
+            />
+            <p class="number-about">Tom Cruise</p>
+            <p class="about-p-one">Product Designer</p>
+            <div class="icons">
+              <img src="images/about-images/icon-instagram.svg" alt="" />
+              <img src="images/about-images/Icon-Linkedin.svg" alt="" />
+              <img src="images/about-images/Icon-Twitter.svg" alt="" />
+            </div>
+          </div>
+          <div class="column-img-two">
+            <img
+              class="column-img"
+              src="images/about-images/customer-second.png"
+              alt=""
+            />
+            <p class="number-about">Emma Watson</p>
+            <p class="about-p-one">Founder & Chairman</p>
+            <div class="icons">
+              <img src="images/about-images/icon-instagram.svg" alt="" />
+              <img src="images/about-images/Icon-Linkedin.svg" alt="" />
+              <img src="images/about-images/Icon-Twitter.svg" alt="" />
+            </div>
+          </div>
+          <div class="column-img-three">
+            <img
+              class="column-img"
+              src="images/about-images/customer-third.png"
+              alt=""
+            />
+            <p class="number-about">Will Smith</p>
+            <p class="about-p-one">Managing Director</p>
+            <div class="icons">
+              <img src="images/about-images/icon-instagram.svg" alt="" />
+              <img src="images/about-images/Icon-Linkedin.svg" alt="" />
+              <img src="images/about-images/Icon-Twitter.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="round-button"></button>
+          <button class="round-button"></button>
+          <button class="round-button"></button>
+        </div>
+      </section>
+      <!--Delivery-->
+      <div class="na-services">
+        <div class="na-service-delivery">
+          <div class="na-service-icon">
+            <img
+              src="images/about-images/delivery-icon.png"
+              alt="icon-delivery"
+            />
+          </div>
+          <div class="na-service-context">
+            <h2>FREE AND FAST DELIVER</h2>
+            <h5>Free delivery for all orders over $140</h5>
+          </div>
+        </div>
+        <div class="na-service-customer">
+          <div class="na-service-icon">
+            <img
+              src="images/about-images/customer-service-icon.png"
+              alt="icon-delivery"
+            />
+          </div>
+          <div class="na-service-context">
+            <h2>24/7 CUSTOMER SERVICE</h2>
+            <h5>Friendly 24/7 customer support</h5>
+          </div>
+        </div>
+        <div class="na-service-guarantee">
+          <div class="na-service-icon">
+            <img
+              src="images/about-images/money-back-guarantee.png"
+              alt="icon-delivery"
+            />
+          </div>
+          <div class="na-service-context">
+            <h2>MONEY BACK GUARANTEE</h2>
+            <h5>We reurn money within 30 days</h5>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div class="container-about">
-      <div class="box" onclick="changeContent(this)">
-        <img src="images/Services.png" alt="" />
-        <strong class="number-about">10.5 K</strong>
-        <p class="about-p">Sallers active our site</p>
-      </div>
-      <div class="box" onclick="changeContent(this)">
-        <img src="images/dolar.png" alt="" />
-        <strong class="number-about">33 K</strong>
-        <p class="about-p">Customer active in our site</p>
-      </div>
-      <div class="box" onclick="changeContent(this)">
-        <img src="images/dolarss.png" alt="" />
-        <strong class="number-about">45.5 K</strong>
-        <p class="about-p">Mopnthly Produduct Sale</p>
-      </div>
-      <div class="box" onclick="changeContent(this)">
-        <img src="images/ticket.png" alt="" />
-        <strong class="number-about">25 K</strong>
-        <p class="about-p">Anual gross sale in our site</p>
-      </div>
-    </div>
+    <!-- Footer -->
 
-    <section class="container-column-about">
-      <div class="column-img-one">
-        <img class="column-img" src="images/resim1.jpg" alt="" />
-        <p class="number-about">Tom Cruise</p>
-        <p class="about-p-one">Product Designer</p>
-        <div class="icons">
-          <img src="images/icon-instagram.svg" alt="" />
-          <img src="images/Icon-Linkedin.svg" alt="" />
-          <img src="images/Icon-Twitter.svg" alt="" />
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-column1">
+            <h3 class="footer-column-header">Exclusive</h3>
+            <a href="#" class="footer-column-content-sub"> Subscribe </a>
+            <a href="#" class="footer-column-content">
+              Get 10% off your first order
+            </a>
+            <div class="footer-input-column-div">
+              <input
+                class="footer-column1-input"
+                placeholder="Enter Your E-mail"
+              />
+              <img
+                class="footer-icon-send"
+                src="/images/icon-send.svg"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+
+          <div class="footer-column2">
+            <h3 class="footer-column-header">Support</h3>
+            <p class="footer-column-content">
+              111 Bijoy sarani, Dhaka, <br />
+              DH 1515, Bangladesh.
+            </p>
+            <p class="footer-column-content">exclusive@gmail.com</p>
+            <p class="footer-column-content">+88015-88888-9999</p>
+          </div>
+
+          <div class="footer-column3">
+            <h3 class="footer-column-header">Account</h3>
+            <a href="#" class="footer-column-content"> My Account </a>
+            <a href="/login.html" class="footer-column-content">
+              Login / Register
+            </a>
+            <a href="/cart.html" class="footer-column-content"> Cart </a>
+            <a href="/wishlist.html" class="footer-column-content">
+              Wishlist
+            </a>
+            <a href="/index.html" class="footer-column-content"> Shop </a>
+          </div>
+
+          <div class="footer-column4">
+            <h3 class="footer-column-header">Quick Link</h3>
+            <a href="#" class="footer-column-content"> Privacy Policy </a>
+            <a href="#" class="footer-column-content"> Terms Of Use </a>
+            <a href="#" class="footer-column-content"> FAQ </a>
+            <a href="#" class="footer-column-content"> Contact </a>
+          </div>
+
+          <div class="footer-column5">
+            <h3 class="footer-column-header">Download App</h3>
+            <p class="footer-column5-text">Save $3 with App New User Only</p>
+            <div class="footer-column5-logos">
+              <div class="footer-column5-left">
+                <img src="/images/qr-code.png" alt="" srcset="" />
+              </div>
+              <div class="footer-column5-right">
+                <img src="/images/badge-google-play.svg" alt="" srcset="" />
+                <img src="/images/badge-app-store.svg" alt="" srcset="" />
+              </div>
+            </div>
+            <div class="footer-column5-end-logos">
+              <img
+                src="/images/icon-facebook.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+              <img
+                src="/images/icon-twitter.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+              <img
+                src="/images/icon-instagram.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+              <img
+                src="/images/icon-linkedin.svg"
+                alt=""
+                srcset=""
+                class="social_icon_footer"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-line"></div>
+          <div class="footer-text">
+            <img
+              src="/images/Group.png"
+              alt=""
+              srcset=""
+              id="footer-copyright-img"
+            />
+            Copyright Rimel 2022. All right reserved
+          </div>
         </div>
       </div>
-      <div class="column-img-two">
-        <img class="column-img" src="images/resim2.jpg" alt="" />
-        <p class="number-about">Emma Watson</p>
-        <p class="about-p-one">Founder & Chairman</p>
-        <div class="icons">
-          <img src="images/icon-instagram.svg" alt="" />
-          <img src="images/Icon-Linkedin.svg" alt="" />
-          <img src="images/Icon-Twitter.svg" alt="" />
-        </div>
-      </div>
-      <div class="column-img-three">
-        <img class="column-img" src="images/resim3.webp" alt="" />
-        <p class="number-about">Will Smith</p>
-        <p class="about-p-one">Managing Director</p>
-        <div class="icons">
-          <img src="images/icon-instagram.svg" alt="" />
-          <img src="images/Icon-Linkedin.svg" alt="" />
-          <img src="images/Icon-Twitter.svg" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <div class="button-container">
-      <button class="round-button"></button>
-      <button class="round-button"></button>
-      <button class="round-button"></button>
-    </div>
-
-    <div class="container-cl-about">
-      <div class="columns-about-cl">
-        <img src="images/ticket.png" alt="" />
-        <strong class="about-p-cl">FREE AND FAST DELIVERY</strong>
-        <p class="about-p">Free delivery for all orders over $140</p>
-      </div>
-      <div class="columns-about-cl">
-        <img src="images/ticket.png" alt="" />
-        <strong class="about-p-cl">24/7 CUSTOMER SERVICE</strong>
-        <p class="about-p">Friendly 24/7 customer support</p>
-      </div>
-      <div class="columns-about-cl">
-        <img src="images/ticket.png" alt="" />
-        <strong class="about-p-cl">MONEY BACK GUARANTEE</strong>
-        <p class="about-p">We reurn money within 30 days</p>
-      </div>
-    </div>
-
+    </footer>
     <script src="about.js"></script>
+    <script src="shared.js"></script>
   </body>
 </html>

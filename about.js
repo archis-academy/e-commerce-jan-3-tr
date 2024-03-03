@@ -1,59 +1,55 @@
-const boxes = document.querySelectorAll(".box");
+const elemanlar = document.querySelectorAll(".services-categories");
 
-boxes.forEach((box) => {
-  box.addEventListener("click",() => {
-    boxes.forEach((box) =>
-      box.classList.remove("active"));
-      box.classList.add("active");
+elemanlar.forEach((link) => {
+  link.addEventListener("click", () => {
+    elemanlar.forEach((link) => {
+      link.style.backgroundColor = "white";
     });
-  })
-
-boxes.forEach((box) => { 
-  box.addEventListener("click", () =>{
-    boxes.forEach((otherBox) => {
-      otherBox.classList.remove("clicked");
-    });
-    box.classList.add("clicked");
-  })
-})
-
-
+    link.style.backgroundColor = "#DB4444";
+  });
+});
 
 const buttons = document.querySelectorAll(".round-button");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    buttons.forEach((otherBox)=> {
-      otherBox.classList.remove('active');
+    buttons.forEach((otherBox) => {
+      otherBox.classList.remove("active");
     });
-    button.classList.add('active');
-  })
-})
+    button.classList.add("active");
+  });
+});
 
 const imageSets = [
-  ["images/image 46.png", "images/image 47.png", "images/image 51.png"],
-  ["images/resim1.jpg", "images/resim2.jpg", "images/resim3.webp"],
-  ["images/reism3.jpg", "images/image 46.png", "images/image 51.png"]
+  [
+    "images/about-images/customer-first.png",
+    "images/about-images/customer-second.png",
+    "images/about-images/customer-third.png",
+  ],
+  [
+    "images/about-images/customer-first.png",
+    "images/about-images/customer-second.png",
+    "images/about-images/customer-third.png",
+  ],
+  [
+    "images/about-images/customer-first.png",
+    "images/about-images/customer-second.png",
+    "images/about-images/customer-third.png",
+  ],
 ];
 
 const roundButtons = document.querySelectorAll(".round-button");
 const columnImages = document.querySelectorAll(".column-img");
-let currentImageSetIndex = 0 ;
+let currentImageSetIndex = 0;
 updateColumnImages();
-function updateColumnImages(){
-  for(let i = 0; i < columnImages.length; i++){
-    columnImages[i].src=imageSets[currentImageSetIndex][i];
-    }
+function updateColumnImages() {
+  for (let i = 0; i < columnImages.length; i++) {
+    columnImages[i].src = imageSets[currentImageSetIndex][i];
+  }
 }
 let imgIndex = 0;
-roundButtons.forEach((button,index) =>{
-  button.addEventListener("click" ,() => {
-    currentImageSetIndex=index;
+roundButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    currentImageSetIndex = index;
     updateColumnImages();
-  })
-})
-
-
-
-
-  
- 
+  });
+});

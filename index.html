@@ -4,30 +4,756 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exclusive E-Commerce</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Poppins:wght@500&family=Salsa&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Inter:wght@600&family=Poppins:wght@500&family=Salsa&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/shared.css" />
-    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
+    <header class="exclusive-header-continer">
+      <div class="exclusive-top-header-container">
+        <div class="top-header-position">
+          <div class="top-header-box">
+            <div class="top-header-text-box">
+              <p class="top-header-text">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%!
+              </p>
+              <ul>
+                <li class="top-header-link">
+                  <a href="#"><strong>ShopNow</strong></a>
+                </li>
+              </ul>
+            </div>
+            <select class="top-header-language" name="" id="language">
+              <option value="" disabled selected hidden>English</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <nav class="exclusive-navbar-container">
+        <div class="navbar-link-logo-box">
+          <h1 class="navbar-logo">Exclusive</h1>
+          <ul class="navbar-links-box">
+            <li class="navbar-link"><a href="index.html">Home</a></li>
+            <li class="navbar-link"><a href="#">Contact</a></li>
+            <li class="navbar-link"><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="navbar-user-box">
+          <div class="navbar-search-box">
+            <input
+              class="navbar-search"
+              type="search"
+              name=""
+              id="searchInput"
+              placeholder="What are you looking for?"
+            />
+            <img
+              class="navbar-search-icon"
+              src="images/homepage-header/search-icon.svg"
+              alt=""
+            />
+            <div id="" class="search-category-data"></div>
+          </div>
+          <div class="navbar-like-box">
+            <a href="wishlist.html">
+              <img
+                class="navbar-like-icon"
+                src="images/homepage-header/wishlist-icon.svg"
+                alt=""
+              />
+              <span class="like-icon-notification">1</span>
+            </a>
+          </div>
+          <div class="navbar-shoping-box">
+            <a href="cart.html">
+              <img
+                class="navbar-shop-icon"
+                src="images/homepage-header/cart-icon.svg"
+                alt=""
+              />
+              <span class="shop-icon-notification">1</span>
+            </a>
+          </div>
+          <div class="navbar-user-logIn-box">
+            <img
+              class="navbar-user-icon"
+              src="images/homepage-header/user-icon.svg"
+              alt="user-icon"
+            />
+            <div class="user-logIn-links-card">
+              <ul class="user-logIn-links-list">
+                <li>
+                  <a class="user-logIn-link" href="#">
+                    <svg
+                      class="user-logIn-icon"
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Manage My Account</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Group.svg"
+                    />
+                    My Order</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/icon-cancel.svg"
+                    />
+                    My Cancellations</a
+                  >
+                </li>
+                <li>
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Icon-Reviews.svg"
+                    />
+                    My Reviews</a
+                  >
+                </li>
+                <li id="isLogOut">
+                  <a class="user-logIn-link" href="#"
+                    ><img
+                      class="user-logIn-icon"
+                      src="images/homepage-header/Icon-logout.svg"
+                    />
+                    Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            class="navbar-burger-menu-icon"
+            src="images/homepage-header/burger-menu.svg"
+          />
+        </div>
+      </nav>
+    </header>
+    <hr class="header-bottom-line" />
+    <aside class="exclusive-aside-section-continer">
+      <aside class="exclusive-aside-continer">
+        <ul class="aside-links-box">
+          <li class="aside-link">
+            <a class="link-dropdown womans-dropdown" href="#">
+              <div id="categoryData" class="category-data"></div>
+              <p>Woman’s Fashion</p>
+              <img
+                class="link-dropdown-arrow"
+                src="images/homepage-header/DropDown.svg"
+                alt=""
+            /></a>
+          </li>
+          <li class="aside-link">
+            <a class="link-dropdown mens-dropdown" href="#">
+              <div
+                id="categoryData"
+                class="category-data mens-category-data"
+              ></div>
+              <p>Men’s Fashion</p>
+              <img
+                class="link-dropdown-arrow"
+                src="images/homepage-header/DropDown.svg"
+                alt=""
+            /></a>
+          </li>
+          <li class="aside-link"><a href="#">Electronics</a></li>
+          <li class="aside-link"><a href="#">Home & Lifestyle</a></li>
+          <li class="aside-link"><a href="#">Medicine</a></li>
+          <li class="aside-link"><a href="#">Sports & Outdoor</a></li>
+          <li class="aside-link"><a href="#">Baby’s & Toys</a></li>
+          <li class="aside-link"><a href="#">Groceries & Pets</a></li>
+          <li class="aside-link"><a href="#">Health & Beauty</a></li>
+          <li class="aside-link burger-menu-link">
+            <a href="#"><strong>Contact</strong></a>
+          </li>
+          <li class="aside-link burger-menu-link">
+            <a href="about.html"><strong>About</strong></a>
+          </li>
+        </ul>
+      </aside>
+      <hr class="aside-section-between-line" />
+      <section class="exclusive-advertisement-continer">
+        <div class="exclusive-advertisement-box">
+          <div class="advertisement-image-text-box default-advert">
+            <img
+              class="advertisement-image-box"
+              src="images/homepage-header/advert-computer.png"
+            />
+            <button class="advert-btn">
+              <span class="advert-btn-text">Shop Now</span
+              ><img
+                class="advert-arrow-icon"
+                src="images/homepage-header/icons arrow-right.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="advertisement-image-text-box">
+            <img
+              class="advertisement-image-box"
+              src="images/homepage-header/advert-coat.png"
+            />
+            <button class="advert-btn">
+              <span class="advert-btn-text">Shop Now</span
+              ><img
+                class="advert-arrow-icon"
+                src="images/homepage-header/icons arrow-right.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="advertisement-image-text-box">
+            <img
+              class="advertisement-image-box"
+              src="images/homepage-header/advert-phone.png"
+            />
+            <button class="advert-btn">
+              <span class="advert-btn-text">Shop Now</span
+              ><img
+                class="advert-arrow-icon"
+                src="images/homepage-header/icons arrow-right.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="advertisement-image-text-box">
+            <img
+              class="advertisement-image-box"
+              src="images/homepage-header/advert-shoes.png"
+            />
+            <button class="advert-btn">
+              <span class="advert-btn-text">Shop Now</span
+              ><img
+                class="advert-arrow-icon"
+                src="images/homepage-header/icons arrow-right.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="advertisement-image-text-box">
+            <img
+              class="advertisement-image-box"
+              src="images/homepage-header/advert-suit.png"
+            />
+            <button class="advert-btn">
+              <span class="advert-btn-text">Shop Now</span
+              ><img
+                class="advert-arrow-icon"
+                src="images/homepage-header/icons arrow-right.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+        <div class="advertisement-transition-box">
+          <span class="advert-trans default-trans"></span>
+          <span class="advert-trans"></span>
+          <span class="advert-trans"></span>
+          <span class="advert-trans"></span>
+          <span class="advert-trans"></span>
+        </div>
+      </section>
+    </aside>
+    <nav class="bottom-side-bar">
+      <div class="side-bar-fixed-bottom">
+        <a href="index.html">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/home-icon.svg"
+          />
+        </a>
+        <div class="navbar-shoping-box side-bar-shop-icon">
+          <a href="cart.html">
+            <img
+              class="navbar-shop-icon"
+              src="images/homepage-header/cart-icon.svg"
+              alt=""
+            />
+            <span id="shopIconNotice" class="shop-icon-notification">1</span>
+          </a>
+        </div>
+        <div class="navbar-like-box side-bar-like-icon">
+          <a href="wishlist.html">
+            <img
+              class="navbar-like-icon"
+              src="images/homepage-header/wishlist-icon.svg"
+              alt=""
+            />
+            <span id="likeIconNotice" class="like-icon-notification">1</span>
+          </a>
+        </div>
+        <div class="bottom-side-user-box">
+          <img
+            class="side-bar-bottom-icon"
+            src="images/homepage-header/user-icon.svg"
+          />
+          <div class="user-logIn-links-card bottom-side-bar-card">
+            <ul class="user-logIn-links-list">
+              <li>
+                <a class="user-logIn-link" href="#">
+                  <svg
+                    class="user-logIn-icon"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Manage My Account</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Group.svg"
+                  />
+                  My Order</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/icon-cancel.svg"
+                  />
+                  My Cancellations</a
+                >
+              </li>
+              <li>
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-Reviews.svg"
+                  />
+                  My Reviews</a
+                >
+              </li>
+              <li id="isLogOut">
+                <a class="user-logIn-link" href="#"
+                  ><img
+                    class="user-logIn-icon"
+                    src="images/homepage-header/Icon-logout.svg"
+                  />
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Homepage Today's Products Section start -->
+    <section class="todays-frame-728">
+      <div class="todays-frame-727">
+        <div class="todays-frame-725">
+          <div class="todays-h5">
+            <div></div>
+            <h5>Today`s</h5>
+          </div>
+          <div class="todays-flash-sales">
+            <h4>Flash Sales</h4>
+            <div class="todays-flash-sales-countdown">
+              <div class="todays-day">
+                <p class="todays-sentences">Days</p>
+                <p id="todays-countdown-days" class="todays-countdown"></p>
+              </div>
+              <div class="todays-hours">
+                <p class="todays-sentences">Hours</p>
+                <p id="todays-countdown-hours" class="todays-countdown"></p>
+              </div>
+              <div class="todays-minute">
+                <p class="todays-sentences">Minutes</p>
+                <p id="todays-countdown-minutes" class="todays-countdown"></p>
+              </div>
+              <div class="todays-second">
+                <p class="todays-sentences">Seconds</p>
+                <p id="todays-countdown-seconds" class="todays-countdown"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="todays-frame-726">
+          <img
+            onclick="todaysChangeProducts()"
+            class="todays-frame-726-btn-left"
+            src="images/icons_arrow-left.png"
+            alt=""
+          />
+          <img
+            onclick="todaysChangeProducts()"
+            class="todays-frame-726-btn-right"
+            src="images/icons arrow-right.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="todays-frame-577"></div>
+      <div class="todays-btn"><button>View All Products</button></div>
+    </section>
+    <!-- Homepage Today's Products Section end -->
+
+    <div class="home-page-browse-by-category">
+      <hr />
+      <div class="browse-by-category-top">
+        <div class="browse-by-category-frame-729">
+          <div></div>
+          <h4>Categories</h4>
+        </div>
+        <div class="browse-by-category-mid">
+          <h3>Browse By Category</h3>
+          <div class="browse-by-category-mid-arrow">
+            <img src="images/icons_arrow-left.png" alt="" />
+            <img src="images/icons arrow-right.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="browse-by-category-bottom">
+        <div class="browse-by-category-phones browse-by-category-group">
+          <svg
+            class="products"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_877_868)">
+              <path
+                d="M38.9375 6.125H17.0625C15.5523 6.125 14.3281 7.34922 14.3281 8.85938V47.1406C14.3281 48.6508 15.5523 49.875 17.0625 49.875H38.9375C40.4477 49.875 41.6719 48.6508 41.6719 47.1406V8.85938C41.6719 7.34922 40.4477 6.125 38.9375 6.125Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M25.6667 7H31.1354"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M28 44.0052V44.0305"
+                stroke="black"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="15.1667"
+                y1="39.8334"
+                x2="40.8333"
+                y2="39.8334"
+                stroke="black"
+                stroke-width="2"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_877_868">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Phones</p>
+        </div>
+        <div class="browse-by-category-computers browse-by-category-group">
+          <svg
+            class="products"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_877_613)">
+              <path
+                d="M46.6667 9.33337H9.33333C8.04467 9.33337 7 10.378 7 11.6667V35C7 36.2887 8.04467 37.3334 9.33333 37.3334H46.6667C47.9553 37.3334 49 36.2887 49 35V11.6667C49 10.378 47.9553 9.33337 46.6667 9.33337Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16.3333 46.6666H39.6667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 37.3334V46.6667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M35 37.3334V46.6667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 32H48"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_877_613">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Computers</p>
+        </div>
+        <div class="browse-by-category-smartwatch browse-by-category-group">
+          <svg
+            class="products"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_877_629)">
+              <path
+                d="M35 14H21C17.134 14 14 17.134 14 21V35C14 38.866 17.134 42 21 42H35C38.866 42 42 38.866 42 35V21C42 17.134 38.866 14 35 14Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 42V49H35V42"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 14V7H35V14"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="24"
+                y1="23"
+                x2="24"
+                y2="34"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="28"
+                y1="28"
+                x2="28"
+                y2="34"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="32"
+                y1="26"
+                x2="32"
+                y2="34"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_877_629">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <p>SmartWatch</p>
+        </div>
+        <div class="browse-by-category-camera browse-by-category-group">
+          <svg
+            class="products"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_877_6)">
+              <path
+                d="M11.6667 16.3334H14C15.2377 16.3334 16.4247 15.8417 17.2998 14.9665C18.175 14.0914 18.6667 12.9044 18.6667 11.6667C18.6667 11.0479 18.9125 10.4544 19.3501 10.0168C19.7877 9.57921 20.3812 9.33337 21 9.33337H35C35.6188 9.33337 36.2123 9.57921 36.6499 10.0168C37.0875 10.4544 37.3333 11.0479 37.3333 11.6667C37.3333 12.9044 37.825 14.0914 38.7002 14.9665C39.5753 15.8417 40.7623 16.3334 42 16.3334H44.3333C45.571 16.3334 46.758 16.825 47.6332 17.7002C48.5083 18.5754 49 19.7624 49 21V42C49 43.2377 48.5083 44.4247 47.6332 45.2999C46.758 46.175 45.571 46.6667 44.3333 46.6667H11.6667C10.429 46.6667 9.242 46.175 8.36683 45.2999C7.49167 44.4247 7 43.2377 7 42V21C7 19.7624 7.49167 18.5754 8.36683 17.7002C9.242 16.825 10.429 16.3334 11.6667 16.3334"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M28 37.3334C31.866 37.3334 35 34.1994 35 30.3334C35 26.4674 31.866 23.3334 28 23.3334C24.134 23.3334 21 26.4674 21 30.3334C21 34.1994 24.134 37.3334 28 37.3334Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_877_6">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <p>Camera</p>
+        </div>
+        <div class="browse-by-category-headphones browse-by-category-group">
+          <svg
+            class="products"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_877_644)">
+              <path
+                d="M16.3333 30.3334H14C11.4227 30.3334 9.33331 32.4227 9.33331 35V42C9.33331 44.5774 11.4227 46.6667 14 46.6667H16.3333C18.9106 46.6667 21 44.5774 21 42V35C21 32.4227 18.9106 30.3334 16.3333 30.3334Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M42 30.3334H39.6667C37.0893 30.3334 35 32.4227 35 35V42C35 44.5774 37.0893 46.6667 39.6667 46.6667H42C44.5773 46.6667 46.6667 44.5774 46.6667 42V35C46.6667 32.4227 44.5773 30.3334 42 30.3334Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9.33331 35V28C9.33331 23.0493 11.3 18.3014 14.8007 14.8007C18.3013 11.3 23.0493 9.33337 28 9.33337C32.9507 9.33337 37.6986 11.3 41.1993 14.8007C44.7 18.3014 46.6666 23.0493 46.6666 28V35"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_877_644">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <p>HeadPhones</p>
+        </div>
+        <div class="browse-by-category-gaming browse-by-category-group">
+          <svg
+            class="products"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_877_809)">
+              <path
+                d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14 28H23.3333M18.6667 23.3334V32.6667"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M35 25.6666V25.6908"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M42 30.3333V30.3574"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_877_809">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <p>Gaming</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!-- Yakup/E--3-Homepage-Browse-By-Category- end -->
+
     <div id="container" class="header-container">
       <div class="cl-header-column">
         <span class="brown"></span>
@@ -40,6 +766,8 @@
     </div>
     <div class="cl-container">
       <div class="cl-boxes"></div>
+
+      <div class="cl-box"></div>
     </div>
     <!-- Featured Product -->
     <!-- I use classname's names with fp -->
@@ -79,6 +807,45 @@
       </div>
     </section>
     <!-- New Arrivals -->
+
+    <section class="products-big-box">
+      <div class="our-products">
+        <div class="our-products-boxs">
+          <img
+            class="our-products-box-img"
+            src="images/Our-Products-orange.jpg"
+            alt="Our-Products-orange"
+          />
+          <h5 class="products-h5">Our Products</h5>
+        </div>
+        <div class="our-products-box-one">
+          <h3 class="products-h3">Explore Our Products</h3>
+          <div>
+            <button
+              onclick="changeProducts()"
+              id="changeBtnLeft"
+              class="products-button"
+            >
+              <img src="images/icons_arrow-left.png" alt="" />
+            </button>
+            <button
+              onclick="changeProducts()"
+              id="changeBtnRight"
+              class="products-button"
+            >
+              <img src="images/icons arrow-right.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="newProductsContainer" class="new-product"></div>
+        <div class="viewbtn">
+          <button class="button-view">View All Products</button>
+        </div>
+      </div>
+    </section>
+
     <!-- I use classname's names with na -->
     <section class="section-na">
       <div class="na-context">
@@ -137,7 +904,11 @@
       <div class="na-services">
         <div class="na-service-delivery">
           <div class="na-service-icon">
-            <img src="images/05-delivery.png" alt="icon-delivery" />
+            <img
+              class="na-service-icon-img"
+              src="images/05-delivery.png"
+              alt="icon-delivery"
+            />
           </div>
           <div class="na-service-context">
             <h2>FREE AND FAST DELIVER</h2>
@@ -146,7 +917,11 @@
         </div>
         <div class="na-service-customer">
           <div class="na-service-icon">
-            <img src="images/06-customer.png" alt="icon-delivery" />
+            <img
+              class="na-service-icon-img"
+              src="images/06-customer.png"
+              alt="icon-delivery"
+            />
           </div>
           <div class="na-service-context">
             <h2>24/7 CUSTOMER SERVICE</h2>
@@ -155,7 +930,11 @@
         </div>
         <div class="na-service-guarantee">
           <div class="na-service-icon">
-            <img src="images/07-guarantee.png" alt="icon-delivery" />
+            <img
+              class="na-service-icon-img"
+              src="images/07-guarantee.png"
+              alt="icon-delivery"
+            />
           </div>
           <div class="na-service-context">
             <h2>MONEY BACK GUARANTEE</h2>
@@ -164,6 +943,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-columns">
@@ -273,5 +1055,6 @@
       </div>
     </footer>
     <script src="app.js"></script>
+    <script src="shared.js"></script>
   </body>
 </html>

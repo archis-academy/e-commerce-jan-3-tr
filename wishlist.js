@@ -1,5 +1,5 @@
 const productcard = document.getElementById("productcard");
-console.log(bestSellingProducts);
+
 console.log("test");
 function renderUrunler() {
   let test = localStorage.getItem("wishlistProducts");
@@ -37,26 +37,26 @@ function renderUrunler() {
 
 renderUrunler();
 function addCartProduct(productId) {
-  const newShopingProduct = bestSellingProducts.find(
+  const newShopingProduct = wishlistProducts.find(
     (product) => product.id === productId
   );
 
-  const unparsedProducts = localStorage.getItem("shopingProducts");
+  const unparsedProducts = localStorage.getItem("cartProducts");
 
   if (unparsedProducts) {
-    shopingProducts = JSON.parse(unparsedProducts);
+    cartProducts = JSON.parse(unparsedProducts);
   }
 
-  const isMatch = shopingProducts.find(
+  const isMatch = cartProducts.find(
     (product) => product.id === newShopingProduct.id
   );
 
   if (!isMatch) {
-    const productsToAdd = [...shopingProducts, newShopingProduct];
+    const productsToAdd = [...cartProducts, newShopingProduct];
 
-    localStorage.setItem("shopingProducts", JSON.stringify(productsToAdd));
+    localStorage.setItem("cartProducts", JSON.stringify(productsToAdd));
 
-    shopingProducts = productsToAdd;
+    cartProducts = productsToAdd;
   }
   noticeShopingCart();
 }
